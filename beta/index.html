@@ -3,718 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Rangeway Energy - America's premium EV charging network along scenic highways. Experience world-class hospitality and fast charging at breathtaking locations.">
-    <meta name="keywords" content="EV charging, electric vehicle charging, scenic highways, premium charging network, hospitality, travel, Rangeway Energy">
-    <meta name="author" content="Rangeway Energy">
-
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Rangeway Energy - America's Premium EV Charging Experience">
-    <meta property="og:description" content="Experience world-class EV charging along America's most scenic highways with premium hospitality and amenities.">
-    <meta property="og:image" content="/images/banner.png">
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Rangeway Energy - America's Premium EV Charging Experience">
-    <meta name="twitter:description" content="Experience world-class EV charging along America's most scenic highways with premium hospitality and amenities.">
-
-    <title>Rangeway Energy - America's Premium EV Charging Experience</title>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/images/banner.png">
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- Preload Critical Assets -->
-    <link rel="preload" href="images/waystation-exterior1-az.jpg" as="image">
+    <title>Rangeway Energy - America's Scenic Highway Charging Network</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <!-- ==================== NAVIGATION BAR ==================== -->
-    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
-        <div class="nav-container">
-
-            <!-- Logo -->
-            <div class="nav-logo">
-                <a href="/" aria-label="Rangeway Energy Home">
-                    <img src="images/banner.png" alt="Rangeway Energy Logo" class="logo-img">
-                </a>
-            </div>
-
-            <!-- Main Navigation Links -->
-            <ul class="nav-menu" id="navMenu">
-                <li class="nav-item">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h2>Rangeway Energy</h2>
+                </div>
+                <div class="nav-menu" id="navMenu">
                     <a href="#travelers" class="nav-link">For Travelers</a>
-                </li>
-                <li class="nav-item">
                     <a href="#partners" class="nav-link">For Partners</a>
-                </li>
-                <li class="nav-item">
                     <a href="#communities" class="nav-link">For Communities</a>
-                </li>
-            </ul>
-
-            <!-- Right Side Actions -->
-            <div class="nav-actions">
-                <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                <!-- Login placeholder for future implementation -->
-                <div class="nav-login-placeholder">
-                    <!-- <a href="#login" class="btn btn-secondary">Login</a> -->
+                </div>
+                <button class="btn-primary">Get in Touch</button>
+                <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
-
-            <!-- Mobile Hamburger Menu -->
-            <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-
         </div>
     </nav>
 
-    <!-- ==================== HERO SECTION ==================== -->
-    <section class="hero" id="hero">
-        <div class="hero-background">
-            <img src="images/waystation-exterior1-az.jpg" alt="Premium EV charging station along scenic highway" class="hero-image">
-            <div class="hero-overlay"></div>
-        </div>
-
-        <div class="hero-content">
-            <h1 class="hero-title">Where Adventure Meets Infrastructure</h1>
-            <p class="hero-subtitle">
-                More than charging stations—we're curated destinations along America's most scenic highways.
-                Experience premium hospitality, breathtaking locations, and the freedom to explore without compromise.
-                Your journey is our obsession.
-            </p>
-
-            <div class="hero-cta">
-                <a href="#network" class="btn btn-large btn-primary">Explore Our Network</a>
-                <a href="#rewards" class="btn btn-large btn-secondary">Join Pathfinder Rewards</a>
-            </div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="hero-scroll-indicator">
-            <span class="scroll-text">Scroll to explore</span>
-            <div class="scroll-arrow"></div>
-        </div>
-    </section>
-
-    <!-- ==================== NETWORK SHOWCASE SECTION ==================== -->
-    <section class="network-showcase" id="network">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-
-            <div class="section-header">
-                <h2 class="section-title">The Rangeway Network</h2>
-                <p class="section-description">
-                    A curated network of charging destinations connecting the adventures you love.
-                    From coast to coast, we're building infrastructure that inspires exploration.
-                </p>
-            </div>
-
-            <div class="network-content">
-                <!-- Network map or interactive visualization will go here -->
-                <div class="network-placeholder">
-                    <p>Interactive network map coming soon</p>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1>America's Scenic Highway Charging Network</h1>
+                    <p>Experience premium EV charging along the nation's most beautiful routes. Ultra-fast 350kW charging meets comfort and convenience at every waystation.</p>
+                    <button class="btn-primary btn-large">Find a Waystation</button>
+                </div>
+                <div class="hero-image">
+                    <img src="images/waystation-exterior1-az.jpg" alt="Rangeway Energy Waystation">
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- ==================== FEATURE CARDS SECTION ==================== -->
-    <section class="features" id="features">
+    <!-- Service Cards -->
+    <section class="services">
         <div class="container">
+            <div class="services-grid">
+                <div class="service-card" id="travelers">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>For Travelers</h3>
+                    <p>Premium charging experiences along scenic highways with comfortable amenities and reliable service.</p>
+                    <a href="#" class="card-link">Learn More →</a>
+                </div>
 
-            <div class="section-header">
-                <h2 class="section-title">Experience the Difference</h2>
-                <p class="section-description">
-                    We're not building charging networks—we're crafting destinations that celebrate your journey
-                </p>
+                <div class="service-card" id="partners">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M3 9h18"/>
+                            <path d="M9 21V9"/>
+                        </svg>
+                    </div>
+                    <h3>For Partners</h3>
+                    <p>Join our network and bring premium EV charging infrastructure to your community or business.</p>
+                    <a href="#" class="card-link">Partner With Us →</a>
+                </div>
+
+                <div class="service-card" id="communities">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>For Communities</h3>
+                    <p>Boost local economies with strategic waystation placement along major scenic routes.</p>
+                    <a href="#" class="card-link">Explore Benefits →</a>
+                </div>
             </div>
-
-            <div class="feature-grid">
-
-                <!-- Feature Card 1 -->
-                <article class="feature-card">
-                    <div class="feature-icon">
-                        <!-- Icon placeholder -->
-                        <div class="icon-placeholder"></div>
-                    </div>
-                    <h3 class="feature-title">Ultra-Fast, Ultra-Reliable</h3>
-                    <p class="feature-description">
-                        Industry-leading 99.5% uptime meets speeds up to 350kW. We obsess over reliability
-                        because your adventure shouldn't wait. Every charger is monitored 24/7 with
-                        proactive maintenance and instant issue resolution.
-                    </p>
-                </article>
-
-                <!-- Feature Card 2 -->
-                <article class="feature-card">
-                    <div class="feature-icon">
-                        <!-- Icon placeholder -->
-                        <div class="icon-placeholder"></div>
-                    </div>
-                    <h3 class="feature-title">Hospitality Reimagined</h3>
-                    <p class="feature-description">
-                        Artisan coffee bars, curated local products, and lounge spaces designed by travelers,
-                        for travelers. Clean restrooms, filtered water refills, and WiFi that actually works.
-                        We're raising the bar on what a charging stop should be.
-                    </p>
-                </article>
-
-                <!-- Feature Card 3 -->
-                <article class="feature-card">
-                    <div class="feature-icon">
-                        <!-- Icon placeholder -->
-                        <div class="icon-placeholder"></div>
-                    </div>
-                    <h3 class="feature-title">Scenic by Design</h3>
-                    <p class="feature-description">
-                        Every location is hand-selected for its views, proximity to adventure, and connection
-                        to local character. We don't just occupy space—we enhance the journey along America's
-                        most iconic highways and hidden gems.
-                    </p>
-                </article>
-
-            </div>
-
         </div>
     </section>
 
-    <!-- ==================== OUR NETWORK SECTION ==================== -->
-    <section class="our-network" id="our-network">
+    <!-- App Section Placeholder -->
+    <section class="app-section">
         <div class="container">
-
-            <div class="section-header">
-                <h2 class="section-title">Charging Network Built for Adventure</h2>
-                <p class="section-description">
-                    Our hub-and-spoke model combines flagship Basecamps with convenient Waystations,
-                    creating a seamless charging experience along America's most scenic highways.
-                    Each location is strategically positioned to turn range anxiety into range confidence.
-                </p>
+            <div class="app-content">
+                <h2>Plan Your Journey</h2>
+                <p>Mobile app coming soon. Find waystations, check availability, and plan your scenic route.</p>
             </div>
-
-            <div class="network-types-grid">
-
-                <!-- Basecamp Card -->
-                <article class="network-type-card">
-                    <div class="network-type-image">
-                        <img src="images/baker-exterior1.jpg" alt="Rangeway Basecamp - Premium destination charging hub" loading="lazy">
-                        <div class="network-type-badge">Basecamp</div>
-                    </div>
-                    <div class="network-type-content">
-                        <h3 class="network-type-title">Basecamps: Destination Hubs</h3>
-                        <p class="network-type-description">
-                            Our flagship locations are more than charging stations—they're community gathering spaces
-                            and adventure headquarters. Featuring 8-12 ultra-fast chargers, full-service amenities,
-                            curated retail, gourmet dining options, and comfortable lounge spaces with local art and culture.
-                        </p>
-                        <ul class="network-type-features">
-                            <li>8-12 high-power charging stalls (up to 350kW)</li>
-                            <li>Premium lounge with seating & WiFi</li>
-                            <li>Artisan coffee bar & local food offerings</li>
-                            <li>Curated retail & regional products</li>
-                            <li>Clean restrooms & outdoor spaces</li>
-                            <li>EV education center & trip planning</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <!-- Waystation Card -->
-                <article class="network-type-card">
-                    <div class="network-type-image">
-                        <img src="images/waystation-exterior-alamo2.jpg" alt="Rangeway Waystation - Convenient highway charging" loading="lazy">
-                        <div class="network-type-badge">Waystation</div>
-                    </div>
-                    <div class="network-type-content">
-                        <h3 class="network-type-title">Waystations: Strategic Stops</h3>
-                        <p class="network-type-description">
-                            Perfectly positioned between Basecamps, Waystations ensure you're never far from a charge.
-                            Compact yet premium, these locations deliver fast, reliable charging with essential amenities
-                            in scenic locations that make every stop worthwhile.
-                        </p>
-                        <ul class="network-type-features">
-                            <li>4-6 high-speed charging stalls (150-350kW)</li>
-                            <li>Covered charging canopy with lighting</li>
-                            <li>Grab-and-go refreshments & coffee</li>
-                            <li>Clean restroom facilities</li>
-                            <li>Scenic viewpoints & rest areas</li>
-                            <li>24/7 operation & support</li>
-                        </ul>
-                    </div>
-                </article>
-
-            </div>
-
-            <div class="network-model-explanation">
-                <h3 class="network-model-title">The Hub-Satellite Model</h3>
-                <p class="network-model-text">
-                    Our network strategy mirrors how travelers actually explore. Basecamps serve as destination
-                    anchors—places you plan to visit and linger. Waystations fill the gaps, providing reliable
-                    charging every 75-100 miles along major routes. Together, they eliminate range anxiety while
-                    elevating every mile of your journey. Whether you're road-tripping cross-country or exploring
-                    regional gems, Rangeway keeps you charged, comfortable, and confident.
-                </p>
-            </div>
-
         </div>
     </section>
 
-    <!-- ==================== STATISTICS SECTION ==================== -->
-    <section class="statistics" id="stats">
+    <!-- Statistics -->
+    <section class="stats">
         <div class="container">
-
             <div class="stats-grid">
-
                 <div class="stat-item">
-                    <div class="stat-number" data-target="50">0</div>
-                    <div class="stat-label">Premium Locations Nationwide</div>
-                    <div class="stat-sublabel">Basecamps & Waystations</div>
+                    <h3>50</h3>
+                    <p>Locations</p>
                 </div>
-
                 <div class="stat-item">
-                    <div class="stat-number" data-target="99.5">0</div>
-                    <div class="stat-label">% Network Uptime</div>
-                    <div class="stat-sublabel">Industry-Leading Reliability</div>
+                    <h3>350kW</h3>
+                    <p>Charging</p>
                 </div>
-
                 <div class="stat-item">
-                    <div class="stat-number" data-target="350">0</div>
-                    <div class="stat-label">kW Peak Charging</div>
-                    <div class="stat-sublabel">80% charge in under 20 minutes</div>
+                    <h3>99%</h3>
+                    <p>Uptime</p>
                 </div>
-
                 <div class="stat-item">
-                    <div class="stat-number" data-target="100000">0</div>
-                    <div class="stat-label">Happy Travelers</div>
-                    <div class="stat-sublabel">Join the community</div>
-                </div>
-
-                <div class="stat-item">
-                    <div class="stat-number" data-target="24">0</div>
-                    <div class="stat-label">/7 Support & Monitoring</div>
-                    <div class="stat-sublabel">We're always here</div>
-                </div>
-
-                <div class="stat-item">
-                    <div class="stat-number" data-target="15">0</div>
-                    <div class="stat-label">Scenic Highway Routes</div>
-                    <div class="stat-sublabel">More being added monthly</div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ==================== WHY RANGEWAY SECTION ==================== -->
-    <section class="why-rangeway" id="why-rangeway">
-        <div class="container">
-
-            <div class="section-header">
-                <h2 class="section-title">Why Rangeway is Different</h2>
-                <p class="section-description">
-                    We're redefining what an EV charging network can be—because you deserve better than parking lot infrastructure
-                </p>
-            </div>
-
-            <div class="why-grid">
-
-                <!-- Value Prop 1 -->
-                <article class="why-card">
-                    <div class="why-icon">
-                        <span class="why-emoji">🏔️</span>
-                    </div>
-                    <h3 class="why-title">Location, Location, Location</h3>
-                    <p class="why-description">
-                        We don't settle for strip malls or parking lots. Every Rangeway location is chosen for
-                        its natural beauty, cultural significance, and proximity to adventure. Charging becomes
-                        part of the experience, not a detour from it.
-                    </p>
-                </article>
-
-                <!-- Value Prop 2 -->
-                <article class="why-card">
-                    <div class="why-icon">
-                        <span class="why-emoji">☕</span>
-                    </div>
-                    <h3 class="why-title">Hospitality First</h3>
-                    <p class="why-description">
-                        We're hospitality people who happen to do charging, not the other way around. Expect
-                        barista-quality coffee, comfortable seating, immaculate facilities, and staff who
-                        actually care about your journey. It's infrastructure with soul.
-                    </p>
-                </article>
-
-                <!-- Value Prop 3 -->
-                <article class="why-card">
-                    <div class="why-icon">
-                        <span class="why-emoji">⚡</span>
-                    </div>
-                    <h3 class="why-title">Obsessively Reliable</h3>
-                    <p class="why-description">
-                        99.5% uptime isn't luck—it's engineering, maintenance, and 24/7 monitoring. Every charger
-                        reports health metrics in real-time. Issues are fixed before you arrive. When others
-                        fail, we show up.
-                    </p>
-                </article>
-
-                <!-- Value Prop 4 -->
-                <article class="why-card">
-                    <div class="why-icon">
-                        <span class="why-emoji">🌱</span>
-                    </div>
-                    <h3 class="why-title">Sustainably Powered</h3>
-                    <p class="why-description">
-                        100% renewable energy powers our network through on-site solar, battery storage, and
-                        renewable energy credits. We're not just facilitating clean transportation—we're
-                        demonstrating what sustainable infrastructure looks like.
-                    </p>
-                </article>
-
-                <!-- Value Prop 5 -->
-                <article class="why-card">
-                    <div class="why-icon">
-                        <span class="why-emoji">🤝</span>
-                    </div>
-                    <h3 class="why-title">Community Driven</h3>
-                    <p class="why-description">
-                        We partner with local businesses, showcase regional artists, and source from nearby
-                        producers. Rangeway stations become community anchors, not corporate outposts.
-                        Your charge supports local economies.
-                    </p>
-                </article>
-
-                <!-- Value Prop 6 -->
-                <article class="why-card">
-                    <div class="why-icon">
-                        <span class="why-emoji">🎯</span>
-                    </div>
-                    <h3 class="why-title">Adventure Enablers</h3>
-                    <p class="why-description">
-                        We're building infrastructure where adventurers want to go—national parks, scenic byways,
-                        mountain towns, coastal routes. Rangeway doesn't just connect cities; we unlock access
-                        to America's most incredible destinations.
-                    </p>
-                </article>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ==================== LOCATION CAROUSEL SECTION ==================== -->
-    <section class="locations" id="locations">
-        <div class="container">
-
-            <div class="section-header">
-                <h2 class="section-title">Explore Our Destinations</h2>
-                <p class="section-description">
-                    From desert vistas to alpine peaks, coastal highways to mountain passes—discover locations
-                    that make charging a highlight of your journey, not a necessary evil
-                </p>
-            </div>
-
-            <div class="location-carousel">
-                <div class="carousel-container">
-
-                    <!-- Location Card 1 -->
-                    <div class="location-card">
-                        <div class="location-image">
-                            <img src="images/waystation-exterior1-az.jpg" alt="Arizona Waystation" loading="lazy">
-                        </div>
-                        <div class="location-info">
-                            <h3 class="location-name">Arizona Desert Waystation</h3>
-                            <p class="location-description">Experience the Southwest's majesty</p>
-                        </div>
-                    </div>
-
-                    <!-- Location Card 2 -->
-                    <div class="location-card">
-                        <div class="location-image">
-                            <img src="images/waystation-exterior1-shasta.jpg" alt="Shasta Waystation" loading="lazy">
-                        </div>
-                        <div class="location-info">
-                            <h3 class="location-name">Mount Shasta Waystation</h3>
-                            <p class="location-description">Mountain views and fresh alpine air</p>
-                        </div>
-                    </div>
-
-                    <!-- Location Card 3 -->
-                    <div class="location-card">
-                        <div class="location-image">
-                            <img src="images/waystation-exterior4-pch.jpg" alt="Pacific Coast Highway Waystation" loading="lazy">
-                        </div>
-                        <div class="location-info">
-                            <h3 class="location-name">Pacific Coast Waystation</h3>
-                            <p class="location-description">Oceanfront charging on Highway 1</p>
-                        </div>
-                    </div>
-
-                    <!-- Location Card 4 -->
-                    <div class="location-card">
-                        <div class="location-image">
-                            <img src="images/waystation-exterior1-jt.jpg" alt="Joshua Tree Waystation" loading="lazy">
-                        </div>
-                        <div class="location-info">
-                            <h3 class="location-name">Joshua Tree Waystation</h3>
-                            <p class="location-description">High desert oasis for adventurers</p>
-                        </div>
-                    </div>
-
-                    <!-- Location Card 5 -->
-                    <div class="location-card">
-                        <div class="location-image">
-                            <img src="images/baker-exterior1.jpg" alt="Baker Trailhead" loading="lazy">
-                        </div>
-                        <div class="location-info">
-                            <h3 class="location-name">Baker Trailhead Station</h3>
-                            <p class="location-description">Gateway to Death Valley adventures</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Carousel Controls -->
-                <div class="carousel-controls">
-                    <button class="carousel-btn carousel-prev" aria-label="Previous location">
-                        <span class="arrow-left"></span>
-                    </button>
-                    <button class="carousel-btn carousel-next" aria-label="Next location">
-                        <span class="arrow-right"></span>
-                    </button>
-                </div>
-
-                <!-- Carousel Indicators -->
-                <div class="carousel-indicators">
-                    <button class="indicator active" aria-label="Go to slide 1"></button>
-                    <button class="indicator" aria-label="Go to slide 2"></button>
-                    <button class="indicator" aria-label="Go to slide 3"></button>
-                    <button class="indicator" aria-label="Go to slide 4"></button>
-                    <button class="indicator" aria-label="Go to slide 5"></button>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ==================== PATHFINDER REWARDS SECTION ==================== -->
-    <section class="pathfinder-rewards" id="rewards">
-        <div class="container">
-
-            <div class="section-header">
-                <h2 class="section-title">Introducing Pathfinder Rewards</h2>
-                <p class="section-description">
-                    Our loyalty program rewards the journey, not just the miles. Earn points with every charge,
-                    unlock exclusive benefits, and join a community of like-minded adventurers exploring America's
-                    roads less traveled.
-                </p>
-            </div>
-
-            <div class="rewards-content">
-
-                <div class="rewards-intro">
-                    <p class="rewards-text">
-                        Pathfinder Rewards recognizes that you're not just charging—you're exploring, discovering,
-                        and pushing boundaries. As you journey through our network, you'll progress through tiers
-                        that unlock increasingly premium benefits, from priority charging to exclusive events,
-                        lounge access, and personalized concierge services.
-                    </p>
-                </div>
-
-                <div class="rewards-tiers">
-
-                    <!-- Tier 1: Explorer -->
-                    <article class="reward-tier">
-                        <div class="tier-badge tier-explorer">
-                            <span class="tier-icon">🧭</span>
-                        </div>
-                        <h3 class="tier-name">Explorer</h3>
-                        <p class="tier-tagline">Begin your journey</p>
-                        <ul class="tier-benefits">
-                            <li>5% charging discount</li>
-                            <li>Birthday rewards</li>
-                            <li>Early access to new locations</li>
-                            <li>Member newsletter</li>
-                        </ul>
-                    </article>
-
-                    <!-- Tier 2: Voyager -->
-                    <article class="reward-tier">
-                        <div class="tier-badge tier-voyager">
-                            <span class="tier-icon">🗺️</span>
-                        </div>
-                        <h3 class="tier-name">Voyager</h3>
-                        <p class="tier-tagline">Expand your horizons</p>
-                        <ul class="tier-benefits">
-                            <li>10% charging discount</li>
-                            <li>Free coffee & refreshments</li>
-                            <li>Priority customer support</li>
-                            <li>Quarterly bonus points</li>
-                        </ul>
-                    </article>
-
-                    <!-- Tier 3: Pioneer -->
-                    <article class="reward-tier">
-                        <div class="tier-badge tier-pioneer">
-                            <span class="tier-icon">⛰️</span>
-                        </div>
-                        <h3 class="tier-name">Pioneer</h3>
-                        <p class="tier-tagline">Blaze new trails</p>
-                        <ul class="tier-benefits">
-                            <li>15% charging discount</li>
-                            <li>Premium lounge access</li>
-                            <li>Reserved charging stalls</li>
-                            <li>Exclusive member events</li>
-                        </ul>
-                    </article>
-
-                    <!-- Tier 4: Trailblazer -->
-                    <article class="reward-tier tier-featured">
-                        <div class="tier-badge tier-trailblazer">
-                            <span class="tier-icon">🏔️</span>
-                        </div>
-                        <h3 class="tier-name">Trailblazer</h3>
-                        <p class="tier-tagline">Elite status</p>
-                        <ul class="tier-benefits">
-                            <li>20% charging discount</li>
-                            <li>Concierge trip planning</li>
-                            <li>Free guest charges</li>
-                            <li>VIP event invitations</li>
-                            <li>Annual adventure package</li>
-                        </ul>
-                    </article>
-
-                </div>
-
-                <div class="rewards-cta">
-                    <p class="rewards-cta-text">
-                        Ready to start earning rewards on every adventure?
-                    </p>
-                    <a href="https://pathfinder.rangeway.energy" class="btn btn-large btn-primary" target="_blank" rel="noopener">
-                        Explore Pathfinder Rewards
-                    </a>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ==================== CALL TO ACTION SECTION ==================== -->
-    <section class="cta-section" id="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Your Next Adventure Awaits</h2>
-                <p class="cta-description">
-                    Join over 100,000 travelers who've discovered that charging can be as inspiring as the destination.
-                    Download our app, plan your route, and experience infrastructure that actually enhances your journey.
-                </p>
-                <div class="cta-buttons">
-                    <a href="#download" class="btn btn-large btn-primary">Download the App</a>
-                    <a href="#contact" class="btn btn-large btn-outline">Plan Your Trip</a>
+                    <h3>24/7</h3>
+                    <p>Support</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== FOOTER ==================== -->
-    <footer class="footer" id="footer">
+    <!-- Network Section -->
+    <section class="network">
         <div class="container">
+            <div class="network-header">
+                <h2>A Network Built for Adventure</h2>
+                <p>Rangeway Energy is expanding across America's most scenic highways, connecting travelers to breathtaking destinations with reliable, ultra-fast charging infrastructure.</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Feature Cards -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-image">
+                        <img src="images/waystation-exterior1-jt.jpg" alt="Ultra-fast Charging">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Ultra-Fast Charging</h3>
+                        <p>350kW chargers deliver up to 200 miles of range in just 15 minutes, getting you back on the road quickly.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-image">
+                        <img src="images/trailhead-interior1.jpg" alt="Premium Comfort">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Premium Comfort</h3>
+                        <p>Relax in comfortable lounges with refreshments, clean facilities, and scenic views while you charge.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-image">
+                        <img src="images/waystation-exterior4-pch.jpg" alt="Scenic Routes">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Scenic Routes</h3>
+                        <p>Strategically located along America's most beautiful highways, making every charge stop part of the journey.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-image">
+                        <img src="images/waystation-exterior1-shasta.jpg" alt="Sustainable">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Sustainable</h3>
+                        <p>100% renewable energy powers our network, supporting a cleaner future for travel and tourism.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
             <div class="footer-grid">
-
-                <!-- Footer Column 1: About -->
-                <div class="footer-column">
-                    <div class="footer-logo">
-                        <img src="images/banner.png" alt="Rangeway Energy" class="footer-logo-img">
-                    </div>
-                    <p class="footer-description">
-                        Redefining EV charging as a premium experience, not a necessary evil.
-                        Building infrastructure that inspires exploration along America's most scenic highways.
-                    </p>
-                    <div class="footer-social">
-                        <!-- Social media icons will go here -->
-                        <div class="social-placeholder">
-                            <span>Social Links</span>
-                        </div>
-                    </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Press</a>
+                    <a href="#">Contact</a>
                 </div>
-
-                <!-- Footer Column 2: For Travelers -->
-                <div class="footer-column">
-                    <h4 class="footer-heading">For Travelers</h4>
-                    <ul class="footer-links">
-                        <li><a href="#network">Network Map</a></li>
-                        <li><a href="#app">Mobile App</a></li>
-                        <li><a href="#rewards">Pathfinder Rewards</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#support">Travel Support</a></li>
-                    </ul>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <a href="#">For Travelers</a>
+                    <a href="#">For Partners</a>
+                    <a href="#">For Communities</a>
                 </div>
-
-                <!-- Footer Column 3: For Partners -->
-                <div class="footer-column">
-                    <h4 class="footer-heading">For Partners</h4>
-                    <ul class="footer-links">
-                        <li><a href="#host">Become a Host</a></li>
-                        <li><a href="#business">Business Solutions</a></li>
-                        <li><a href="#fleet">Fleet Programs</a></li>
-                        <li><a href="#wholesale">Wholesale Energy</a></li>
-                        <li><a href="#api">Developer API</a></li>
-                    </ul>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="#">Help Center</a>
+                    <a href="#">Network Status</a>
+                    <a href="#">FAQs</a>
                 </div>
-
-                <!-- Footer Column 4: Company -->
-                <div class="footer-column">
-                    <h4 class="footer-heading">Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#careers">Careers</a></li>
-                        <li><a href="#news">News & Press</a></li>
-                        <li><a href="#sustainability">Sustainability</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
                 </div>
-
-                <!-- Footer Column 5: Resources -->
-                <div class="footer-column">
-                    <h4 class="footer-heading">Resources</h4>
-                    <ul class="footer-links">
-                        <li><a href="#help">Help Center</a></li>
-                        <li><a href="#guides">Travel Guides</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#safety">Safety</a></li>
-                    </ul>
-                </div>
-
             </div>
-
-            <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <div class="footer-legal">
-                    <p>&copy; 2024 Rangeway Energy. All rights reserved.</p>
-                    <ul class="legal-links">
-                        <li><a href="#privacy">Privacy Policy</a></li>
-                        <li><a href="#terms">Terms of Service</a></li>
-                        <li><a href="#cookies">Cookie Policy</a></li>
-                        <li><a href="#accessibility">Accessibility</a></li>
-                    </ul>
-                </div>
+                <p>&copy; 2025 Rangeway Energy. All rights reserved.</p>
             </div>
-
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="assets/js/main.js"></script>
-
+    <script src="js/main.js"></script>
 </body>
 </html>
