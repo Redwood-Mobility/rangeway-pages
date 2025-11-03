@@ -1,0 +1,27 @@
+/* Print Styles */
+@media print {
+    .modern-nav,
+    .skip-link,
+    .hamburger,
+    .social-icons,
+    footer,
+    .cta-section-modern,
+    .scroll-indicator {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+
+    a {
+        text-decoration: underline;
+        color: #000;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}

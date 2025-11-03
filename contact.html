@@ -1,0 +1,147 @@
+---
+layout: default
+title: "Contact Us | Rangeway Energy"
+description: "Get in touch with Rangeway Energy. Whether you're an investor, partner, or EV traveler, we'd love to hear from you."
+keywords: "contact Rangeway Energy, EV charging inquiries, investment opportunities"
+og_image: "/images/waystation-exterior2-jt.jpg"
+permalink: /contact/
+---
+
+<!-- Hero Section -->
+<section class="hero-modern" style="min-height: 50vh;">
+    <div class="hero-background" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('{{ '/images/waystation-exterior2-jt.jpg' | relative_url }}');"></div>
+    <div class="hero-content-modern">
+        <h1 class="hero-title-modern">
+            Get <span class="hero-title-highlight">In Touch</span>
+        </h1>
+        <p class="hero-description-modern">
+            Whether you're an investor, partner, or EV traveler, we'd love to hear from you.
+        </p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section>
+    <div class="container">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="section-header-modern" style="margin-bottom: 3rem;">
+                <span class="section-badge">Contact Information</span>
+                <h2>Let's Talk</h2>
+                <p>Reach out to us via email, phone, or connect with us on social media</p>
+            </div>
+
+            <div style="display: grid; gap: 2rem;">
+                <div class="difference-card">
+                    <div style="display: flex; align-items: start; gap: 1rem;">
+                        <i class="fas fa-building" style="color: var(--golden-highway); font-size: 1.5rem; margin-top: 0.25rem;"></i>
+                        <div>
+                            <strong style="color: var(--coastal-cream); display: block; margin-bottom: 0.5rem; font-size: 1.1rem;">Headquarters</strong>
+                            <p style="color: var(--fog-gray); margin: 0; line-height: 1.6;">
+                                {{ site.organization.address.street }}<br>
+                                {{ site.organization.address.city }}, {{ site.organization.address.state }} {{ site.organization.address.zip }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="difference-card">
+                    <div style="display: flex; align-items: start; gap: 1rem;">
+                        <i class="fas fa-envelope" style="color: var(--golden-highway); font-size: 1.5rem; margin-top: 0.25rem;"></i>
+                        <div>
+                            <strong style="color: var(--coastal-cream); display: block; margin-bottom: 0.5rem; font-size: 1.1rem;">Email</strong>
+                            <p style="margin: 0 0 0.5rem 0;">
+                                <a href="mailto:{{ site.organization.email }}" style="color: var(--golden-highway); text-decoration: none; font-size: 1.1rem;">
+                                    {{ site.organization.email }}
+                                </a>
+                            </p>
+                            <p style="margin: 0; font-size: 0.95rem; color: var(--fog-gray);">
+                                For investment inquiries:<br>
+                                <a href="mailto:invest@rangeway.energy" style="color: var(--golden-highway); text-decoration: none;">
+                                    invest@rangeway.energy
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="difference-card">
+                    <div style="display: flex; align-items: start; gap: 1rem;">
+                        <i class="fas fa-phone" style="color: var(--golden-highway); font-size: 1.5rem; margin-top: 0.25rem;"></i>
+                        <div>
+                            <strong style="color: var(--coastal-cream); display: block; margin-bottom: 0.5rem; font-size: 1.1rem;">Phone</strong>
+                            <p style="margin: 0;">
+                                <a href="tel:{{ site.organization.phone_raw }}" style="color: var(--golden-highway); text-decoration: none; font-size: 1.2rem;">
+                                    {{ site.organization.phone }}
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="padding: 2rem; background: rgba(240, 144, 96, 0.1); border-radius: var(--radius-md); border: 1px solid rgba(240, 144, 96, 0.2); text-align: center;">
+                    <h4 style="color: var(--golden-highway); margin-bottom: 1.5rem; font-size: 1.2rem;">Connect With Us</h4>
+                    <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="{{ site.social.twitter }}" target="_blank" rel="noopener noreferrer"
+                           style="display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; background: rgba(255, 255, 255, 0.05); border-radius: 50%; color: var(--fog-gray); transition: all 0.3s ease; text-decoration: none;">
+                            <i class="fa-brands fa-x-twitter" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer"
+                           style="display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; background: rgba(255, 255, 255, 0.05); border-radius: 50%; color: var(--fog-gray); transition: all 0.3s ease; text-decoration: none;">
+                            <i class="fa-brands fa-instagram" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer"
+                           style="display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; background: rgba(255, 255, 255, 0.05); border-radius: 50%; color: var(--fog-gray); transition: all 0.3s ease; text-decoration: none;">
+                            <i class="fa-brands fa-linkedin" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <a href="{{ site.social.youtube }}" target="_blank" rel="noopener noreferrer"
+                           style="display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; background: rgba(255, 255, 255, 0.05); border-radius: 50%; color: var(--fog-gray); transition: all 0.3s ease; text-decoration: none;">
+                            <i class="fa-brands fa-youtube" style="font-size: 1.5rem;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Links -->
+<section class="difference-section">
+    <div class="container">
+        <div class="section-header-modern">
+            <span class="section-badge">Quick Links</span>
+            <h2>Looking for Something Specific?</h2>
+        </div>
+
+        <div class="difference-grid">
+            <div class="difference-card">
+                <div class="difference-icon-large">💼</div>
+                <h3>Investment Opportunities</h3>
+                <p>Learn about our market opportunity, expansion plans, and how to invest in the future of scenic route EV charging.</p>
+                <a href="https://investors.rangeway.energy" target="_blank" rel="noopener noreferrer"
+                   style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--golden-highway); text-decoration: none; font-weight: 600; margin-top: 1rem;">
+                    Investor Portal <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+
+            <div class="difference-card">
+                <div class="difference-icon-large">🎁</div>
+                <h3>Pathfinder Rewards</h3>
+                <p>Join our membership program for exclusive discounts, priority access, and special perks when we open.</p>
+                <a href="https://rangeway.app" target="_blank" rel="noopener noreferrer"
+                   style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--golden-highway); text-decoration: none; font-weight: 600; margin-top: 1rem;">
+                    Join Now <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="difference-card">
+                <div class="difference-icon-large">📰</div>
+                <h3>Press & Media</h3>
+                <p>Media inquiries, press releases, and brand assets. We're always happy to talk about the future of EV travel.</p>
+                <a href="mailto:media@rangeway.energy?subject=Press%20Inquiry"
+                   style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--golden-highway); text-decoration: none; font-weight: 600; margin-top: 1rem;">
+                    Media Contact <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

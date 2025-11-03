@@ -1,0 +1,83 @@
+<!-- Podcast Section -->
+<section style="background: var(--mountain-charcoal); padding: 3rem 0; border-top: 1px solid rgba(240, 144, 96, 0.2);">
+    <div class="container" style="max-width: 800px;">
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <h2 style="color: var(--coastal-cream); font-size: 1.75rem; margin-bottom: 0.5rem;">
+                Latest Podcast Episode
+            </h2>
+            <p style="color: var(--fog-gray);">Listen to the newest episode</p>
+        </div>
+        <div style="position: relative; width: 100%; max-width: 740px; margin: 0 auto;">
+            <div style="position: relative; padding-bottom: 27.03%; height: 0; overflow: hidden;">
+                <iframe src="https://player.fireside.fm/v2/los7u-af/latest?theme=dark"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                        frameborder="0"
+                        scrolling="no"
+                        title="Latest Podcast Episode"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="modern-footer">
+    <div class="footer-content">
+        <div class="footer-section footer-brand">
+            <h4>{{ site.organization.name }}</h4>
+            <p class="footer-tagline">{{ site.organization.tagline }}</p>
+            <p class="footer-mission">Making EV road trips to America's scenic destinations preferable, not just possible.</p>
+
+            <div class="footer-social">
+                <a href="{{ site.social.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="{{ site.social.youtube }}" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h4>Network</h4>
+            <a href="{{ '/network/' | relative_url }}">Our Locations</a>
+        </div>
+
+        <div class="footer-section">
+            <h4>For Travelers</h4>
+            <a href="https://rangeway.app" target="_blank" rel="noopener noreferrer">Pathfinder Rewards</a>
+            <a href="{{ '/for-travelers/' | relative_url }}">Plan Your Trip</a>
+        </div>
+
+        <div class="footer-section">
+            <h4>Company</h4>
+            <a href="{{ '/why-rangeway/' | relative_url }}">Why Rangeway</a>
+            <a href="https://investors.rangeway.energy" target="_blank" rel="noopener noreferrer">For Investors</a>
+            <a href="{{ '/contact/' | relative_url }}">Contact</a>
+        </div>
+
+        <div class="footer-section footer-contact">
+            <h4>Get in Touch</h4>
+            <p>{{ site.organization.address.street }}</p>
+            <p>{{ site.organization.address.city }}, {{ site.organization.address.state }} {{ site.organization.address.zip }}</p>
+            <p><a href="tel:{{ site.organization.phone_raw }}">{{ site.organization.phone }}</a></p>
+            <p><a href="mailto:{{ site.organization.email }}">{{ site.organization.email }}</a></p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.organization.name }}. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://fieldnotes.rangeway.energy" target="_blank" rel="noopener noreferrer">Field Notes Newsletter</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- External JavaScript -->
+<script src="{{ '/assets/js/modern.js' | relative_url }}?v={{ site.asset_version }}"></script>

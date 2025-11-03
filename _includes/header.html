@@ -1,0 +1,127 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="title" content="{{ page.title | default: site.title }}">
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    {% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}">
+    {% endif %}
+    <meta name="author" content="{{ site.organization.name }}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+    <!-- Theme Color for Mobile -->
+    <meta name="theme-color" content="#F09060">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:title" content="{{ page.title | default: site.title }}">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:image" content="{{ site.url }}{{ page.og_image | default: '/images/waystation-exterior1-az.jpg' }}">
+    <meta property="og:site_name" content="{{ site.organization.name }}">
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ page.url | absolute_url }}">
+    <meta property="twitter:title" content="{{ page.title | default: site.title }}">
+    <meta property="twitter:description" content="{{ page.description | default: site.description }}">
+    <meta property="twitter:image" content="{{ site.url }}{{ page.og_image | default: '/images/waystation-exterior1-az.jpg' }}">
+    <meta name="twitter:site" content="@rangewayenergy">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "{{ site.organization.name }}",
+        "url": "{{ site.url }}",
+        "logo": "{{ site.url }}/images/banner.png",
+        "description": "{{ site.organization.tagline }}",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "{{ site.organization.address.street }}",
+            "addressLocality": "{{ site.organization.address.city }}",
+            "addressRegion": "{{ site.organization.address.state }}",
+            "postalCode": "{{ site.organization.address.zip }}",
+            "addressCountry": "US"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "{{ site.organization.phone }}",
+            "contactType": "Customer Service",
+            "email": "{{ site.organization.email }}"
+        },
+        "sameAs": [
+            "{{ site.social.twitter }}",
+            "{{ site.social.instagram }}",
+            "{{ site.social.linkedin }}",
+            "{{ site.social.youtube }}"
+        ]
+    }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="{{ '/assets/css/modern.css' | relative_url }}?v={{ site.asset_version }}">
+    <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}" media="print">
+
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://tinylytics.app">
+
+    {% if site.analytics.enabled %}
+    <!-- Analytics -->
+    <script src="https://tinylytics.app/embed/{{ site.analytics.tinylytics_id }}.js" defer></script>
+    {% endif %}
+</head>
+
+<!-- Skip to main content for accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav role="navigation" aria-label="Main navigation" class="modern-nav">
+    <div class="nav-container">
+        <a href="{{ '/' | relative_url }}" class="logo-link" aria-label="Rangeway Energy Home">
+            <img src="https://rangeway.energy/images/banner.png" alt="Rangeway Energy" class="nav-logo" />
+        </a>
+
+        <button class="hamburger"
+                onclick="toggleMenu()"
+                aria-label="Toggle navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active" aria-current="page"{% endif %}>Home</a>
+            <a href="{{ '/why-rangeway/' | relative_url }}" {% if page.url contains '/why-rangeway' %}class="active" aria-current="page"{% endif %}>Why Rangeway</a>
+            <a href="{{ '/network/' | relative_url }}" {% if page.url contains '/network' %}class="active" aria-current="page"{% endif %}>Network</a>
+            <a href="{{ '/for-travelers/' | relative_url }}" {% if page.url contains '/for-travelers' %}class="active" aria-current="page"{% endif %}>For Travelers</a>
+            <a href="{{ site.organization.newsroom_site }}" target="_blank" rel="noopener noreferrer">Newsroom</a>
+            <a href="{{ '/contact/' | relative_url }}" {% if page.url contains '/contact' %}class="active" aria-current="page"{% endif %}>Contact</a>
+
+            <div class="social-icons" role="list" aria-label="Social media links">
+                <a href="{{ site.social.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Follow us on X (Twitter)">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="Follow us on LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="{{ site.social.youtube }}" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to our YouTube channel">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
