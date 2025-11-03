@@ -9,11 +9,49 @@ html {
     scroll-behavior: smooth;
 }
 
+/* CSS Variables for Light/Dark Mode */
+:root {
+    --bg-primary: #fff;
+    --bg-secondary: #fafafa;
+    --text-primary: #333;
+    --text-secondary: #666;
+    --text-heading: #1a1a1a;
+    --card-bg: #fff;
+    --border-color: #eee;
+    --shadow-light: rgba(0,0,0,0.08);
+    --shadow-medium: rgba(0,0,0,0.1);
+    --shadow-heavy: rgba(0,0,0,0.12);
+    --accent-color: #F09060;
+    --accent-hover: #e07a48;
+    --nav-bg: #fff;
+    --footer-bg: #1a1a1a;
+    --footer-text: #ccc;
+    --stats-bg: #1a1a1a;
+}
+
+body.dark-mode {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2a2a2a;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --text-heading: #f5f5f5;
+    --card-bg: #2a2a2a;
+    --border-color: #444;
+    --shadow-light: rgba(0,0,0,0.3);
+    --shadow-medium: rgba(0,0,0,0.4);
+    --shadow-heavy: rgba(0,0,0,0.5);
+    --nav-bg: #2a2a2a;
+    --footer-bg: #0f0f0f;
+    --footer-text: #888;
+    --stats-bg: #0f0f0f;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
-    color: #333;
+    color: var(--text-primary);
     line-height: 1.6;
-    background: #fff;
+    background: var(--bg-primary);
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -28,7 +66,7 @@ h1 {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1.5rem;
-    color: #1a1a1a;
+    color: var(--text-heading);
 }
 
 h2 {
@@ -36,32 +74,32 @@ h2 {
     font-weight: 600;
     line-height: 1.3;
     margin-bottom: 1rem;
-    color: #1a1a1a;
+    color: var(--text-heading);
 }
 
 h3 {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 0.75rem;
-    color: #1a1a1a;
+    color: var(--text-heading);
 }
 
 h4 {
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #1a1a1a;
+    color: var(--text-heading);
 }
 
 p {
     font-size: 1.1rem;
-    color: #666;
+    color: var(--text-secondary);
     margin-bottom: 1rem;
 }
 
 /* Buttons */
 .btn-primary {
-    background: #F09060;
+    background: var(--accent-color);
     color: white;
     border: none;
     padding: 12px 28px;
@@ -76,13 +114,13 @@ p {
 }
 
 .btn-primary:hover {
-    background: #e07a48;
+    background: var(--accent-hover);
 }
 
 .btn-secondary {
-    background: white;
-    color: #F09060;
-    border: 2px solid #F09060;
+    background: var(--bg-primary);
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
     padding: 12px 28px;
     border-radius: 6px;
     font-size: 1rem;
@@ -93,7 +131,7 @@ p {
 }
 
 .btn-secondary:hover {
-    background: #F09060;
+    background: var(--accent-color);
     color: white;
 }
 
@@ -104,12 +142,13 @@ p {
 
 /* Navigation */
 .navbar {
-    background: white;
+    background: var(--nav-bg);
     padding: 1rem 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px var(--shadow-light);
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: background 0.3s ease;
 }
 
 .logo-img {
@@ -126,24 +165,49 @@ p {
 
 .logo h2 {
     font-size: 1.5rem;
-    color: #1a1a1a;
+    color: var(--text-heading);
     margin: 0;
 }
 
 .nav-menu {
     display: flex;
     gap: 2rem;
+    align-items: center;
 }
 
 .nav-link {
-    color: #333;
+    color: var(--text-primary);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #F09060;
+    color: var(--accent-color);
+}
+
+/* Dark Mode Toggle Button */
+.theme-toggle {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    color: var(--text-primary);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .mobile-menu-toggle {
@@ -156,7 +220,7 @@ p {
 .mobile-menu-toggle span {
     width: 25px;
     height: 3px;
-    background: #333;
+    background: var(--text-primary);
     border-radius: 2px;
     transition: 0.3s;
 }
@@ -164,7 +228,8 @@ p {
 /* Hero Section */
 .hero {
     padding: 80px 0;
-    background: #fafafa;
+    background: var(--bg-secondary);
+    transition: background 0.3s ease;
 }
 
 .hero-grid {
@@ -192,14 +257,15 @@ p {
 .hero-image img {
     width: 100%;
     border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 40px var(--shadow-medium);
 }
 
 /* Location Carousel */
 .location-carousel {
     padding: 40px 0;
-    background: white;
-    border-bottom: 1px solid #eee;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+    transition: background 0.3s ease;
 }
 
 .carousel-wrapper {
@@ -211,19 +277,19 @@ p {
 
 .location-badge {
     padding: 12px 24px;
-    background: #fafafa;
+    background: var(--bg-secondary);
     border-radius: 30px;
     font-size: 0.95rem;
     font-weight: 500;
-    color: #333;
-    border: 1px solid #e0e0e0;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
     transition: all 0.3s ease;
 }
 
 .location-badge:hover {
-    background: #F09060;
+    background: var(--accent-color);
     color: white;
-    border-color: #F09060;
+    border-color: var(--accent-color);
 }
 
 /* Services Section */
@@ -238,20 +304,20 @@ p {
 }
 
 .service-card {
-    background: white;
+    background: var(--card-bg);
     padding: 2.5rem;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 20px var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 30px var(--shadow-heavy);
 }
 
 .service-icon {
-    color: #F09060;
+    color: var(--accent-color);
     margin-bottom: 1.5rem;
 }
 
@@ -264,20 +330,21 @@ p {
 }
 
 .card-link {
-    color: #F09060;
+    color: var(--accent-color);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .card-link:hover {
-    color: #e07a48;
+    color: var(--accent-hover);
 }
 
 /* Network Map Section */
 .network-map {
     padding: 80px 0;
-    background: #fafafa;
+    background: var(--bg-secondary);
+    transition: background 0.3s ease;
 }
 
 .network-map-grid {
@@ -293,20 +360,21 @@ p {
 
 .network-map-content p {
     font-size: 1.2rem;
-    color: #666;
+    color: var(--text-secondary);
 }
 
 .network-map-image img {
     width: 100%;
     border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 40px var(--shadow-medium);
 }
 
 /* Statistics Section */
 .stats {
     padding: 80px 0;
-    background: #1a1a1a;
+    background: var(--stats-bg);
     color: white;
+    transition: background 0.3s ease;
 }
 
 .stats-grid {
@@ -318,7 +386,7 @@ p {
 
 .stat-item h3 {
     font-size: 3rem;
-    color: #F09060;
+    color: var(--accent-color);
     margin-bottom: 0.5rem;
 }
 
@@ -349,7 +417,8 @@ p {
 /* Features Section */
 .features {
     padding: 80px 0;
-    background: #fafafa;
+    background: var(--bg-secondary);
+    transition: background 0.3s ease;
 }
 
 .features-grid {
@@ -359,17 +428,17 @@ p {
 }
 
 .feature-card {
-    background: white;
+    background: var(--card-bg);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 20px var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     height: 400px;
 }
 
 .feature-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 30px var(--shadow-heavy);
 }
 
 .feature-image-bg {
@@ -424,14 +493,15 @@ p {
 }
 
 .feature-content p {
-    color: #666;
+    color: var(--text-secondary);
 }
 
 /* Pathfinder Rewards Section */
 .pathfinder-rewards {
     padding: 80px 0;
-    background: white;
+    background: var(--bg-primary);
     text-align: center;
+    transition: background 0.3s ease;
 }
 
 .pathfinder-content {
@@ -445,15 +515,16 @@ p {
 
 .pathfinder-content p {
     font-size: 1.2rem;
-    color: #666;
+    color: var(--text-secondary);
     margin-bottom: 2rem;
 }
 
 /* Footer */
 .footer {
     padding: 60px 0 30px;
-    background: #1a1a1a;
+    background: var(--footer-bg);
     color: white;
+    transition: background 0.3s ease;
 }
 
 .footer-grid {
@@ -475,13 +546,13 @@ p {
 }
 
 .footer-section a {
-    color: #ccc;
+    color: var(--footer-text);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
-    color: #F09060;
+    color: var(--accent-color);
 }
 
 .footer-bottom {
@@ -519,10 +590,10 @@ p {
         top: 100%;
         left: 0;
         right: 0;
-        background: white;
+        background: var(--nav-bg);
         flex-direction: column;
         padding: 1rem;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 10px var(--shadow-medium);
     }
 
     .nav-menu.active {
@@ -533,7 +604,11 @@ p {
         display: flex;
     }
 
-    .nav-wrapper .btn-primary {
+    .nav-actions {
+        gap: 0.5rem;
+    }
+
+    .nav-actions .btn-primary {
         display: none;
     }
 
@@ -676,7 +751,7 @@ p {
 
 .section-header p {
     font-size: 1.2rem;
-    color: #666;
+    color: var(--text-secondary);
 }
 
 /* Benefits Grid */
@@ -689,7 +764,8 @@ p {
 /* How It Works Section */
 .how-it-works {
     padding: 80px 0;
-    background: #fafafa;
+    background: var(--bg-secondary);
+    transition: background 0.3s ease;
 }
 
 .steps-grid {
@@ -706,7 +782,7 @@ p {
 .step-number {
     width: 64px;
     height: 64px;
-    background: #F09060;
+    background: var(--accent-color);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -722,7 +798,7 @@ p {
 }
 
 .step-card p {
-    color: #666;
+    color: var(--text-secondary);
 }
 
 /* Network Map Section */
@@ -751,7 +827,7 @@ p {
 }
 
 .routes-list h4 {
-    color: #F09060;
+    color: var(--accent-color);
     margin-bottom: 1rem;
 }
 
@@ -762,9 +838,9 @@ p {
 
 .routes-list li {
     padding: 0.75rem 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--border-color);
     font-size: 1.05rem;
-    color: #333;
+    color: var(--text-primary);
 }
 
 .routes-list li:last-child {
@@ -774,13 +850,13 @@ p {
 .network-image img {
     width: 100%;
     border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 40px var(--shadow-medium);
 }
 
 /* Pathfinder CTA Section */
 .pathfinder-cta {
     padding: 80px 0;
-    background: linear-gradient(135deg, #F09060 0%, #e07a48 100%);
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-hover) 100%);
     text-align: center;
     color: white;
 }
@@ -805,7 +881,7 @@ p {
 
 .cta-content .btn-primary {
     background: white;
-    color: #F09060;
+    color: var(--accent-color);
 }
 
 .cta-content .btn-primary:hover {
@@ -877,7 +953,8 @@ p {
 /* Community Impact Section */
 .community-impact {
     padding: 80px 0;
-    background: white;
+    background: var(--bg-primary);
+    transition: background 0.3s ease;
 }
 
 .impact-grid {
@@ -887,10 +964,10 @@ p {
 }
 
 .impact-card {
-    background: #fafafa;
+    background: var(--bg-secondary);
     padding: 2.5rem;
     border-radius: 12px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .impact-card:hover {
@@ -898,7 +975,7 @@ p {
 }
 
 .impact-icon {
-    color: #F09060;
+    color: var(--accent-color);
     margin-bottom: 1.5rem;
 }
 
@@ -907,13 +984,14 @@ p {
 }
 
 .impact-card p {
-    color: #666;
+    color: var(--text-secondary);
 }
 
 /* Case Study Section */
 .case-study {
     padding: 80px 0;
-    background: #fafafa;
+    background: var(--bg-secondary);
+    transition: background 0.3s ease;
 }
 
 .case-study-card {
@@ -921,10 +999,11 @@ p {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
-    background: white;
+    background: var(--card-bg);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 20px var(--shadow-light);
+    transition: background 0.3s ease;
 }
 
 .case-study-image img {
@@ -939,7 +1018,7 @@ p {
 
 .location-tag {
     display: inline-block;
-    background: #F09060;
+    background: var(--accent-color);
     color: white;
     padding: 6px 16px;
     border-radius: 20px;
@@ -957,25 +1036,26 @@ p {
 .benefit-item h4 {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
-    color: #1a1a1a;
+    color: var(--text-heading);
 }
 
 .benefit-item p {
-    color: #666;
+    color: var(--text-secondary);
     font-size: 1rem;
 }
 
 /* Community Benefits Section */
 .community-benefits {
     padding: 80px 0;
-    background: white;
+    background: var(--bg-primary);
+    transition: background 0.3s ease;
 }
 
 .benefit-card {
-    background: #fafafa;
+    background: var(--bg-secondary);
     padding: 2.5rem;
     border-radius: 12px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .benefit-card:hover {
@@ -985,7 +1065,7 @@ p {
 .benefit-number {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #F09060;
+    color: var(--accent-color);
     margin-bottom: 1rem;
     opacity: 0.3;
 }
@@ -995,7 +1075,7 @@ p {
 }
 
 .benefit-card p {
-    color: #666;
+    color: var(--text-secondary);
 }
 
 /* Get Involved Section */
@@ -1098,7 +1178,8 @@ p {
 /* Partnership Models Section */
 .partnership-models {
     padding: 80px 0;
-    background: #fafafa;
+    background: var(--bg-secondary);
+    transition: background 0.3s ease;
 }
 
 .models-grid {
@@ -1110,16 +1191,17 @@ p {
 }
 
 .model-card {
-    background: white;
+    background: var(--card-bg);
     border-radius: 12px;
     padding: 3rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 20px var(--shadow-light);
     position: relative;
+    transition: background 0.3s ease;
 }
 
 .model-badge {
     display: inline-block;
-    background: #F09060;
+    background: var(--accent-color);
     color: white;
     padding: 6px 16px;
     border-radius: 20px;
@@ -1136,7 +1218,7 @@ p {
 }
 
 .model-subtitle {
-    color: #666;
+    color: var(--text-secondary);
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     font-weight: 400;
@@ -1145,7 +1227,7 @@ p {
 .model-description {
     margin-bottom: 2rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .model-features, .model-requirements {
@@ -1155,7 +1237,7 @@ p {
 .model-features h4, .model-requirements h4 {
     font-size: 1rem;
     margin-bottom: 1rem;
-    color: #1a1a1a;
+    color: var(--text-heading);
 }
 
 .model-card ul {
@@ -1167,7 +1249,7 @@ p {
     padding: 0.6rem 0;
     padding-left: 1.75rem;
     position: relative;
-    color: #555;
+    color: var(--text-secondary);
     font-size: 1rem;
 }
 
@@ -1175,7 +1257,7 @@ p {
     content: "✓";
     position: absolute;
     left: 0;
-    color: #F09060;
+    color: var(--accent-color);
     font-weight: bold;
     font-size: 1.1rem;
 }
@@ -1186,20 +1268,20 @@ p {
 }
 
 .benefit-card {
-    background: white;
+    background: var(--card-bg);
     padding: 2.5rem;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 20px var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .benefit-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 30px var(--shadow-heavy);
 }
 
 .benefit-icon {
-    color: #F09060;
+    color: var(--accent-color);
     margin-bottom: 1.5rem;
 }
 
@@ -1208,7 +1290,7 @@ p {
 }
 
 .benefit-card p {
-    color: #666;
+    color: var(--text-secondary);
     font-size: 1rem;
 }
 
@@ -1220,11 +1302,12 @@ p {
 }
 
 .process-step {
-    background: white;
+    background: var(--card-bg);
     padding: 2.5rem;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 20px var(--shadow-light);
     text-align: center;
+    transition: background 0.3s ease;
 }
 
 .process-step h3 {
@@ -1232,7 +1315,7 @@ p {
 }
 
 .process-step p {
-    color: #666;
+    color: var(--text-secondary);
     font-size: 1rem;
     text-align: center;
 }
@@ -1306,8 +1389,9 @@ p {
 /* Contact Hero Section */
 .contact-hero {
     padding: 100px 0 60px;
-    background: #fafafa;
+    background: var(--bg-secondary);
     text-align: center;
+    transition: background 0.3s ease;
 }
 
 .contact-hero-content {
@@ -1322,13 +1406,14 @@ p {
 
 .contact-hero-content p {
     font-size: 1.3rem;
-    color: #666;
+    color: var(--text-secondary);
 }
 
 /* Contact Options Section */
 .contact-options {
     padding: 80px 0;
-    background: white;
+    background: var(--bg-primary);
+    transition: background 0.3s ease;
 }
 
 .contact-options-grid {
@@ -1338,20 +1423,20 @@ p {
 }
 
 .contact-option-card {
-    background: #fafafa;
+    background: var(--bg-secondary);
     padding: 2.5rem;
     border-radius: 12px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .contact-option-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 30px var(--shadow-medium);
 }
 
 .contact-icon {
-    color: #F09060;
+    color: var(--accent-color);
     margin-bottom: 1.5rem;
     display: flex;
     justify-content: center;
@@ -1362,13 +1447,13 @@ p {
 }
 
 .contact-option-card p {
-    color: #666;
+    color: var(--text-secondary);
     margin-bottom: 1.5rem;
 }
 
 .contact-link {
     display: block;
-    color: #F09060;
+    color: var(--accent-color);
     text-decoration: none;
     font-weight: 500;
     font-size: 1.1rem;
@@ -1377,11 +1462,11 @@ p {
 }
 
 .contact-link:hover {
-    color: #e07a48;
+    color: var(--accent-hover);
 }
 
 .contact-phone {
-    color: #666;
+    color: var(--text-secondary);
     font-size: 1rem;
     margin-top: 0.5rem;
 }
@@ -1389,16 +1474,18 @@ p {
 /* Contact Form Section */
 .contact-form-section {
     padding: 80px 0;
-    background: #fafafa;
+    background: var(--bg-secondary);
+    transition: background 0.3s ease;
 }
 
 .contact-form-wrapper {
     max-width: 700px;
     margin: 0 auto;
-    background: white;
+    background: var(--card-bg);
     padding: 3rem;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 20px var(--shadow-light);
+    transition: background 0.3s ease;
 }
 
 .contact-form-header {
@@ -1411,7 +1498,7 @@ p {
 }
 
 .contact-form-header p {
-    color: #666;
+    color: var(--text-secondary);
     font-size: 1.05rem;
 }
 
@@ -1435,7 +1522,7 @@ p {
 .form-group label {
     font-weight: 500;
     margin-bottom: 0.5rem;
-    color: #333;
+    color: var(--text-primary);
     font-size: 0.95rem;
 }
 
@@ -1443,18 +1530,20 @@ p {
 .form-group select,
 .form-group textarea {
     padding: 12px 16px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, background 0.3s ease, color 0.3s ease;
+    background: var(--bg-primary);
+    color: var(--text-primary);
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #F09060;
+    border-color: var(--accent-color);
 }
 
 .form-group textarea {
@@ -1477,7 +1566,8 @@ p {
 /* Office Info Section */
 .office-info {
     padding: 80px 0;
-    background: white;
+    background: var(--bg-primary);
+    transition: background 0.3s ease;
 }
 
 .office-info-content {
@@ -1489,28 +1579,29 @@ p {
 }
 
 .office-info-card {
-    background: #fafafa;
+    background: var(--bg-secondary);
     padding: 2.5rem;
     border-radius: 12px;
+    transition: background 0.3s ease;
 }
 
 .office-info-card h3 {
     margin-bottom: 1rem;
-    color: #1a1a1a;
+    color: var(--text-heading);
 }
 
 .office-info-card p {
-    color: #666;
+    color: var(--text-secondary);
     line-height: 1.7;
 }
 
 .support-hours {
     margin-top: 1rem;
-    color: #333;
+    color: var(--text-primary);
 }
 
 .support-hours strong {
-    color: #F09060;
+    color: var(--accent-color);
 }
 
 /* Responsive Design for Contact Page */
