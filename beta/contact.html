@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Rangeway Energy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                        <h2>Rangeway Energy</h2>
+                    </a>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                    <a href="travelers.html" class="nav-link">For Travelers</a>
+                    <a href="partners.html" class="nav-link">For Partners</a>
+                    <a href="communities.html" class="nav-link">For Communities</a>
+                </div>
+                <a href="contact.html" class="btn-primary">Get in Touch</a>
+                <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1>Get in Touch</h1>
+                <p>Questions about Rangeway? We're here to help.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Options Section -->
+    <section class="contact-options">
+        <div class="container">
+            <div class="contact-options-grid">
+                <div class="contact-option-card">
+                    <div class="contact-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </div>
+                    <h3>General Inquiries</h3>
+                    <p>Have questions about our network, charging stations, or services?</p>
+                    <a href="mailto:hello@rangeway.energy" class="contact-link">hello@rangeway.energy</a>
+                    <p class="contact-phone">(555) 123-4567</p>
+                </div>
+
+                <div class="contact-option-card">
+                    <div class="contact-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Partnership Opportunities</h3>
+                    <p>Interested in hosting a Rangeway station or partnering with us?</p>
+                    <a href="partners.html" class="card-link">Learn About Partnerships →</a>
+                    <a href="mailto:partners@rangeway.energy" class="contact-link">partners@rangeway.energy</a>
+                </div>
+
+                <div class="contact-option-card">
+                    <div class="contact-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                    </div>
+                    <h3>Press & Media</h3>
+                    <p>Media inquiries, press kit requests, and interview opportunities.</p>
+                    <a href="mailto:press@rangeway.energy" class="contact-link">press@rangeway.energy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-form-wrapper">
+                <div class="contact-form-header">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a topic</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="press">Press & Media</option>
+                            <option value="support">Technical Support</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-large">Send Message</button>
+
+                    <p class="form-note">This form is currently for demonstration purposes. Backend integration coming soon.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Info Section -->
+    <section class="office-info">
+        <div class="container">
+            <div class="office-info-content">
+                <div class="office-info-card">
+                    <h3>Our Approach</h3>
+                    <p>Rangeway Energy is a remote-first company with team members across the United States. Our distributed approach allows us to better serve communities along America's scenic highways.</p>
+                </div>
+
+                <div class="office-info-card">
+                    <h3>Response Time</h3>
+                    <p>We aim to respond to all inquiries within 24 hours during business days. For urgent matters related to charging stations, please contact our 24/7 support line.</p>
+                    <p class="support-hours">24/7 Support: <strong>1-800-RANGEWAY</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Press</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <a href="travelers.html">For Travelers</a>
+                    <a href="partners.html">For Partners</a>
+                    <a href="communities.html">For Communities</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="#">Help Center</a>
+                    <a href="#">Network Status</a>
+                    <a href="#">FAQs</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rangeway Energy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

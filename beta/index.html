@@ -15,14 +15,16 @@
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
-                    <h2>Rangeway Energy</h2>
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                        <h2>Rangeway Energy</h2>
+                    </a>
                 </div>
                 <div class="nav-menu" id="navMenu">
-                    <a href="#travelers" class="nav-link">For Travelers</a>
-                    <a href="#partners" class="nav-link">For Partners</a>
-                    <a href="#communities" class="nav-link">For Communities</a>
+                    <a href="travelers.html" class="nav-link">For Travelers</a>
+                    <a href="partners.html" class="nav-link">For Partners</a>
+                    <a href="communities.html" class="nav-link">For Communities</a>
                 </div>
-                <button class="btn-primary">Get in Touch</button>
+                <a href="contact.html" class="btn-primary">Get in Touch</a>
                 <div class="mobile-menu-toggle" id="mobileMenuToggle">
                     <span></span>
                     <span></span>
@@ -37,13 +39,29 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <h1>America's Scenic Highway Charging Network</h1>
-                    <p>Experience premium EV charging along the nation's most beautiful routes. Ultra-fast 350kW charging meets comfort and convenience at every waystation.</p>
-                    <button class="btn-primary btn-large">Find a Waystation</button>
+                    <h1>Where the Journey Matters as Much as the Destination</h1>
+                    <p>Premium EV charging on America's most scenic highways. Ultra-fast power meets elevated hospitality at every stop.</p>
+                    <div class="hero-cta">
+                        <button class="btn-primary btn-large">Find a Location</button>
+                        <button class="btn-secondary btn-large">Join Pathfinder Rewards</button>
+                    </div>
                 </div>
                 <div class="hero-image">
                     <img src="images/waystation-exterior1-az.jpg" alt="Rangeway Energy Waystation">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Carousel -->
+    <section class="location-carousel">
+        <div class="container">
+            <div class="carousel-wrapper">
+                <div class="location-badge">Baker Basecamp</div>
+                <div class="location-badge">Mt. Shasta</div>
+                <div class="location-badge">Pacific Coast Highway</div>
+                <div class="location-badge">Joshua Tree</div>
+                <div class="location-badge">Alamo</div>
             </div>
         </div>
     </section>
@@ -61,8 +79,8 @@
                         </svg>
                     </div>
                     <h3>For Travelers</h3>
-                    <p>Premium charging experiences along scenic highways with comfortable amenities and reliable service.</p>
-                    <a href="#" class="card-link">Learn More →</a>
+                    <p>Transform charging stops into experiences worth savoring. Enjoy artisan coffee, curated local goods, and comfortable lounges while your EV powers up in minutes.</p>
+                    <a href="travelers.html" class="card-link">Learn More →</a>
                 </div>
 
                 <div class="service-card" id="partners">
@@ -74,8 +92,8 @@
                         </svg>
                     </div>
                     <h3>For Partners</h3>
-                    <p>Join our network and bring premium EV charging infrastructure to your community or business.</p>
-                    <a href="#" class="card-link">Partner With Us →</a>
+                    <p>Host a Rangeway charging site and become part of the premium EV infrastructure network. We handle installation, operations, and maintenance while you benefit from increased foot traffic.</p>
+                    <a href="partners.html" class="card-link">Partner With Us →</a>
                 </div>
 
                 <div class="service-card" id="communities">
@@ -88,19 +106,24 @@
                         </svg>
                     </div>
                     <h3>For Communities</h3>
-                    <p>Boost local economies with strategic waystation placement along major scenic routes.</p>
-                    <a href="#" class="card-link">Explore Benefits →</a>
+                    <p>Support local economies by bringing high-quality EV infrastructure to scenic highway corridors. Our waystations create jobs and drive tourism to your community.</p>
+                    <a href="communities.html" class="card-link">Explore Benefits →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- App Section Placeholder -->
-    <section class="app-section">
+    <!-- Network Map Section -->
+    <section class="network-map">
         <div class="container">
-            <div class="app-content">
-                <h2>Plan Your Journey</h2>
-                <p>Mobile app coming soon. Find waystations, check availability, and plan your scenic route.</p>
+            <div class="network-map-grid">
+                <div class="network-map-content">
+                    <h2>Our Network</h2>
+                    <p>We're building a network of premium charging destinations along America's most iconic scenic highway corridors. From the Pacific Coast Highway to Route 66, every Rangeway location is carefully selected to enhance your journey.</p>
+                </div>
+                <div class="network-map-image">
+                    <img src="images/baker-exterior1.jpg" alt="Rangeway Network">
+                </div>
             </div>
         </div>
     </section>
@@ -144,44 +167,55 @@
         <div class="container">
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-image">
-                        <img src="images/waystation-exterior1-jt.jpg" alt="Ultra-fast Charging">
-                    </div>
-                    <div class="feature-content">
-                        <h3>Ultra-Fast Charging</h3>
-                        <p>350kW chargers deliver up to 200 miles of range in just 15 minutes, getting you back on the road quickly.</p>
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-image">
-                        <img src="images/trailhead-interior1.jpg" alt="Premium Comfort">
-                    </div>
-                    <div class="feature-content">
-                        <h3>Premium Comfort</h3>
-                        <p>Relax in comfortable lounges with refreshments, clean facilities, and scenic views while you charge.</p>
+                    <div class="feature-image-bg" style="background-image: url('images/waystation-exterior-alamo2.jpg');">
+                        <div class="feature-overlay"></div>
+                        <div class="feature-content-overlay">
+                            <h3>Ultra-Fast Charging</h3>
+                            <p>350kW chargers deliver up to 200 miles of range in just 15 minutes, getting you back on the road quickly.</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-image">
-                        <img src="images/waystation-exterior4-pch.jpg" alt="Scenic Routes">
-                    </div>
-                    <div class="feature-content">
-                        <h3>Scenic Routes</h3>
-                        <p>Strategically located along America's most beautiful highways, making every charge stop part of the journey.</p>
+                    <div class="feature-image-bg" style="background-image: url('images/trailhead-interior1.jpg');">
+                        <div class="feature-overlay"></div>
+                        <div class="feature-content-overlay">
+                            <h3>Premium Comfort</h3>
+                            <p>Relax in comfortable lounges with refreshments, clean facilities, and scenic views while you charge.</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-image">
-                        <img src="images/waystation-exterior1-shasta.jpg" alt="Sustainable">
-                    </div>
-                    <div class="feature-content">
-                        <h3>Sustainable</h3>
-                        <p>100% renewable energy powers our network, supporting a cleaner future for travel and tourism.</p>
+                    <div class="feature-image-bg" style="background-image: url('images/waystation-exterior1-shasta.jpg');">
+                        <div class="feature-overlay"></div>
+                        <div class="feature-content-overlay">
+                            <h3>Scenic Routes</h3>
+                            <p>Strategically located along America's most beautiful highways, making every charge stop part of the journey.</p>
+                        </div>
                     </div>
                 </div>
+
+                <div class="feature-card">
+                    <div class="feature-image-bg" style="background-image: url('images/baker-exterior2.jpg');">
+                        <div class="feature-overlay"></div>
+                        <div class="feature-content-overlay">
+                            <h3>Sustainable</h3>
+                            <p>100% renewable energy powers our network, supporting a cleaner future for travel and tourism.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pathfinder Rewards Section -->
+    <section class="pathfinder-rewards">
+        <div class="container">
+            <div class="pathfinder-content">
+                <h2>Pathfinder Rewards</h2>
+                <p>Earn points with every charge and redeem them for free charging, exclusive merchandise, and premium experiences at Rangeway locations nationwide.</p>
+                <a href="https://pathfinder.rangeway.energy" class="btn-primary btn-large">Learn More</a>
             </div>
         </div>
     </section>
@@ -195,13 +229,13 @@
                     <a href="#">About Us</a>
                     <a href="#">Careers</a>
                     <a href="#">Press</a>
-                    <a href="#">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </div>
                 <div class="footer-section">
                     <h4>Services</h4>
-                    <a href="#">For Travelers</a>
-                    <a href="#">For Partners</a>
-                    <a href="#">For Communities</a>
+                    <a href="travelers.html">For Travelers</a>
+                    <a href="partners.html">For Partners</a>
+                    <a href="communities.html">For Communities</a>
                 </div>
                 <div class="footer-section">
                     <h4>Support</h4>
