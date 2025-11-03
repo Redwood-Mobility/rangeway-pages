@@ -34,37 +34,3 @@ document.addEventListener('click', (e) => {
         navMenu.classList.remove('active');
     }
 });
-
-// Dark Mode Toggle
-const themeToggle = document.getElementById('themeToggle');
-const body = document.body;
-
-// Check for saved theme preference or default to light mode
-const currentTheme = localStorage.getItem('theme') || 'light';
-
-// Apply saved theme on page load
-if (currentTheme === 'dark') {
-    body.classList.add('dark-mode');
-    updateThemeIcon(true);
-}
-
-// Toggle theme on button click
-if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-
-        // Save preference to localStorage
-        const isDarkMode = body.classList.contains('dark-mode');
-        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-
-        // Update icon
-        updateThemeIcon(isDarkMode);
-    });
-}
-
-// Update theme icon based on current mode
-function updateThemeIcon(isDarkMode) {
-    if (themeToggle) {
-        themeToggle.textContent = isDarkMode ? '☀️' : '🌙';
-    }
-}
