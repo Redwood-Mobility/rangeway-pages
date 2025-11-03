@@ -112,6 +112,12 @@ p {
     z-index: 100;
 }
 
+.logo-img {
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
 .nav-wrapper {
     display: flex;
     justify-content: space-between;
@@ -863,6 +869,7 @@ p {
     background-size: cover;
     background-position: center;
     min-height: 500px;
+    margin-top: 70px;
     display: flex;
     align-items: center;
 }
@@ -1064,6 +1071,7 @@ p {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
                 url('../images/baker-exterior2.jpg') center/cover no-repeat;
     padding: 120px 0;
+    margin-top: 70px;
     color: white;
     position: relative;
 }
