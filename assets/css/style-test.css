@@ -224,14 +224,7 @@ html {
         background: var(--text-primary);
     }
 
-    /* Adjust logo for dark mode - use white background variant in footer */
-    .footer .footer-section svg rect[fill="url(#footerLogoGrad)"] {
-        fill: white;
-    }
-
-    .footer .footer-section svg path {
-        fill: #4A4A4A;
-    }
+    /* Footer logo stays full color in dark mode too */
 
     /* Navbar border for dark mode */
     .navbar {
