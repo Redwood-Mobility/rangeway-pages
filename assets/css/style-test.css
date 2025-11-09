@@ -86,16 +86,21 @@ html {
         --footer-bg: #0f0f0f;
         --footer-text: #F5DEB3;
         --stats-bg: #0f0f0f;
+        --coastal-cream: #2a2a2a;
     }
 
     /* Ensure body text is visible in dark mode */
     body {
-        color: var(--text-primary);
+        color: var(--text-primary) !important;
     }
 
     /* Nav links in dark mode */
     .nav-link {
-        color: var(--text-primary);
+        color: var(--text-primary) !important;
+    }
+
+    .nav-link:hover {
+        color: var(--sunset-coral) !important;
     }
 
     /* Logo wordmark in header for dark mode */
@@ -106,17 +111,112 @@ html {
     /* Social icons in dark mode */
     .social-icon,
     .social-icon i {
-        color: var(--text-primary);
+        color: var(--text-primary) !important;
     }
 
     .social-icon:hover,
     .social-icon:hover i {
-        color: var(--accent-color);
+        color: var(--accent-color) !important;
     }
 
-    /* Headings in dark mode */
+    /* Headings in dark mode - force override */
     h1, h2, h3, h4 {
-        color: var(--text-heading);
+        color: var(--text-heading) !important;
+    }
+
+    /* Paragraphs and text */
+    p {
+        color: var(--text-secondary) !important;
+    }
+
+    /* Service cards and feature cards */
+    .service-card p,
+    .feature-card p,
+    .feature-content p,
+    .feature-content-overlay p {
+        color: var(--text-secondary) !important;
+    }
+
+    .service-card h3,
+    .feature-card h3,
+    .feature-content h3 {
+        color: var(--text-heading) !important;
+    }
+
+    /* Network map content */
+    .network-map-content h2,
+    .network-map-content h3,
+    .network-map-content p,
+    .network-map-content strong,
+    .network-map-content span {
+        color: inherit !important;
+    }
+
+    /* Stats section */
+    .stat-item p {
+        color: var(--text-secondary) !important;
+    }
+
+    /* Section headers */
+    .section-header h2 {
+        color: var(--text-heading) !important;
+    }
+
+    .section-header p {
+        color: var(--text-secondary) !important;
+    }
+
+    /* Hero content */
+    .hero-content h1 {
+        color: var(--text-heading) !important;
+    }
+
+    .hero-content p {
+        color: var(--text-secondary) !important;
+    }
+
+    /* Contact page elements */
+    .contact-option-card h3 {
+        color: var(--text-heading) !important;
+    }
+
+    .contact-option-card p {
+        color: var(--text-secondary) !important;
+    }
+
+    /* Office info cards */
+    .office-info-card h3 {
+        color: var(--text-heading) !important;
+    }
+
+    .office-info-card p {
+        color: var(--text-secondary) !important;
+    }
+
+    /* Investment cards */
+    .investment-card h3 {
+        color: var(--text-heading) !important;
+    }
+
+    .investment-card p {
+        color: var(--text-secondary) !important;
+    }
+
+    /* Inline styled elements - common patterns */
+    [style*="color: var(--text-primary)"] {
+        color: var(--text-primary) !important;
+    }
+
+    [style*="color: var(--text-secondary)"] {
+        color: var(--text-secondary) !important;
+    }
+
+    [style*="color: var(--text-heading)"] {
+        color: var(--text-heading) !important;
+    }
+
+    [style*="color: var(--mountain-charcoal)"] {
+        color: var(--text-heading) !important;
     }
 
     /* Adjust mobile menu toggle bars for dark mode */
@@ -136,6 +236,18 @@ html {
     /* Navbar border for dark mode */
     .navbar {
         border-bottom-color: var(--border-color);
+    }
+
+    /* Pathfinder rewards content */
+    .pathfinder-content h2,
+    .pathfinder-content p {
+        color: inherit !important;
+    }
+
+    /* CTA content */
+    .cta-content h2,
+    .cta-content p {
+        color: inherit !important;
     }
 }
 
