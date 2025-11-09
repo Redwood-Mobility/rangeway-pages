@@ -1,493 +1,243 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rangeway Energy | Where Charging Becomes Part of Your Journey</title>
-    <meta name="description" content="America's first premium EV charging network designed for scenic highway corridors and National Parks routes. Indoor climate-controlled comfort at every location.">
+---
+layout: default
+title: "Rangeway Energy | Where EV Charging Meets Hospitality"
+description: "Premium EV charging network built for scenic corridors. Climate-controlled indoor comfort at every location. Ultra-fast charging with hospitality-grade amenities starting with Baker Basecamp on the LA-Vegas corridor."
+keywords: "EV charging, electric vehicle charging, scenic route charging, Death Valley EV charging, Baker California charging station, premium EV amenities, indoor EV charging"
+og_image: "/images/waystation-exterior1-az.jpg"
+---
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
+<!-- Override default stylesheet with test stylesheet -->
+<link rel="stylesheet" href="{{ '/assets/css/style-test.css' | relative_url }}?v={{ site.asset_version }}">
 
-<!-- Branded Navigation Header -->
-<nav style="background: white; border-bottom: 1px solid #E6E6E6; padding: 20px 0; position: sticky; top: 0; z-index: 1000;">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center;">
-        <div class="logo">
-            <a href="/" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 34 34">
-                    <defs>
-                        <linearGradient id="headerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#F09060"/>
-                            <stop offset="100%" stop-color="#FFB366"/>
-                        </linearGradient>
-                        <clipPath id="headerLogoRounded">
-                            <rect width="34" height="34" rx="10" ry="10" />
-                        </clipPath>
-                    </defs>
-                    <rect width="34" height="34" rx="10" ry="10" fill="url(#headerLogoGrad)" />
-                    <g clip-path="url(#headerLogoRounded)">
-                        <path d="M 0 26 L 8 18 L 15 24 L 22 17 L 34 26 L 34 34 L 0 34 Z" fill="#2f2f2f" />
-                    </g>
-                    <circle cx="25" cy="7" r="4" fill="white" fill-opacity="0.6" />
-                </svg>
-                <span style="font-family: 'Montserrat', -apple-system, sans-serif; font-size: 20px; font-weight: 800; letter-spacing: 0.08em; color: #4A4A4A;">RANGEWAY</span>
-            </a>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <h1>Where EV Charging Meets Hospitality.</h1>
+                <p>Leave your car. Relax inside. Get back on the road refreshed.</p>
+            </div>
+            <div class="hero-image">
+                <img src="{{ '/images/waystation-exterior1-az.jpg' | relative_url }}" alt="Rangeway Energy Waystation">
+            </div>
         </div>
-        <div style="display: flex; gap: 32px; align-items: center;">
-            <a href="/why-rangeway.html" style="color: #4A4A4A; text-decoration: none; font-weight: 500;">Why Rangeway</a>
-            <a href="/network.html" style="color: #4A4A4A; text-decoration: none; font-weight: 500;">Network</a>
-            <a href="/for-travelers.html" style="color: #4A4A4A; text-decoration: none; font-weight: 500;">For Travelers</a>
-            <a href="/contact.html" style="color: #4A4A4A; text-decoration: none; font-weight: 500;">Contact</a>
-        </div>
-    </div>
-</nav>
-
-<style>
-    :root {
-        --sunset-coral: #F09060;
-        --golden-highway: #FFB366;
-        --mountain-charcoal: #4A4A4A;
-        --coastal-cream: #F5DEB3;
-        --ocean-deep: #2C5F7C;
-        --fog-gray: #B8B8B8;
-    }
-
-    /* Override default styles with brand colors */
-    body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Source Sans Pro', 'Open Sans', sans-serif;
-        color: #2C3E50;
-    }
-
-    h1, h2, h3 {
-        font-family: 'Montserrat', 'Raleway', -apple-system, sans-serif;
-        color: var(--mountain-charcoal);
-    }
-
-    .brand-hero {
-        min-height: 85vh;
-        background: linear-gradient(135deg, var(--sunset-coral) 0%, #e88050 50%, var(--golden-highway) 100%);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 80px 20px;
-        color: white;
-        text-align: center;
-    }
-
-    .brand-hero h1 {
-        font-size: 3.5rem;
-        font-weight: 300;
-        margin-bottom: 24px;
-        letter-spacing: -1px;
-        color: white;
-        max-width: 900px;
-    }
-
-    .brand-hero .tagline {
-        font-size: 1.5rem;
-        opacity: 0.95;
-        margin-bottom: 48px;
-        font-weight: 400;
-    }
-
-    .brand-logo-lockup {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        margin-bottom: 40px;
-    }
-
-    .brand-wordmark {
-        font-family: 'Montserrat', -apple-system, sans-serif;
-        font-size: 48px;
-        font-weight: 800;
-        letter-spacing: 0.08em;
-        color: white;
-    }
-
-    .promise-section {
-        background: white;
-        padding: 80px 20px;
-    }
-
-    .promise-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 40px;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .promise-card {
-        background: white;
-        border: 1px solid #E6E6E6;
-        border-radius: 8px;
-        padding: 40px;
-        transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .promise-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 24px rgba(240, 144, 96, 0.15);
-    }
-
-    .promise-card h3 {
-        color: var(--mountain-charcoal);
-        font-size: 1.5rem;
-        margin-bottom: 16px;
-        font-weight: 600;
-    }
-
-    .promise-card p {
-        color: #2C3E50;
-        line-height: 1.7;
-    }
-
-    .basecamp-spotlight {
-        background: var(--coastal-cream);
-        padding: 100px 20px;
-    }
-
-    .basecamp-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 60px;
-        align-items: center;
-    }
-
-    .basecamp-badge {
-        display: inline-block;
-        background: rgba(240, 144, 96, 0.2);
-        color: var(--sunset-coral);
-        padding: 8px 20px;
-        border-radius: 24px;
-        font-size: 0.95rem;
-        font-weight: 600;
-        margin-bottom: 24px;
-    }
-
-    .basecamp-content h2 {
-        font-size: 2.5rem;
-        margin-bottom: 16px;
-        color: var(--mountain-charcoal);
-    }
-
-    .basecamp-subtitle {
-        color: var(--sunset-coral);
-        font-weight: 600;
-        font-size: 1.2rem;
-        margin-bottom: 24px;
-    }
-
-    .basecamp-features {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-        margin-top: 32px;
-    }
-
-    .feature-item {
-        display: flex;
-        gap: 16px;
-        align-items: start;
-    }
-
-    .feature-icon {
-        color: var(--sunset-coral);
-        flex-shrink: 0;
-    }
-
-    .feature-text strong {
-        display: block;
-        color: var(--mountain-charcoal);
-        margin-bottom: 4px;
-    }
-
-    .feature-text span {
-        color: var(--fog-gray);
-        font-size: 0.95rem;
-    }
-
-    .cta-section {
-        background: linear-gradient(135deg, var(--ocean-deep) 0%, #1e4559 100%);
-        padding: 80px 20px;
-        text-align: center;
-        color: white;
-    }
-
-    .cta-section h2 {
-        font-size: 2.5rem;
-        margin-bottom: 16px;
-        color: white;
-    }
-
-    .cta-section p {
-        font-size: 1.2rem;
-        opacity: 0.9;
-        margin-bottom: 40px;
-    }
-
-    .btn-brand-primary {
-        display: inline-block;
-        background: var(--golden-highway);
-        color: var(--mountain-charcoal);
-        padding: 16px 40px;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 1.1rem;
-        text-decoration: none;
-        transition: all 0.2s;
-        border: none;
-        cursor: pointer;
-    }
-
-    .btn-brand-primary:hover {
-        background: var(--sunset-coral);
-        color: white;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 16px rgba(255, 179, 102, 0.3);
-    }
-
-    .btn-brand-secondary {
-        display: inline-block;
-        background: transparent;
-        color: white;
-        padding: 16px 40px;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 1.1rem;
-        text-decoration: none;
-        border: 2px solid white;
-        transition: all 0.2s;
-    }
-
-    .btn-brand-secondary:hover {
-        background: white;
-        color: var(--ocean-deep);
-    }
-
-    .section-header {
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto 60px;
-    }
-
-    .section-header h2 {
-        font-size: 2.5rem;
-        margin-bottom: 16px;
-        color: var(--mountain-charcoal);
-    }
-
-    .section-header p {
-        font-size: 1.2rem;
-        color: #2C3E50;
-    }
-
-    @media (max-width: 768px) {
-        .brand-hero h1 {
-            font-size: 2.5rem;
-        }
-
-        .brand-wordmark {
-            font-size: 32px;
-        }
-
-        .basecamp-content {
-            grid-template-columns: 1fr;
-        }
-
-        .basecamp-features {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
-
-<!-- Hero Section with Brand Gradient -->
-<section class="brand-hero">
-    <h1>Where Charging Becomes Part of Your Journey</h1>
-    <p class="tagline">Indoor comfort at every location. Clean restrooms, climate control, and a place to rest on America's most beautiful routes.</p>
-
-    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-top: 24px;">
-        <a href="#basecamps" class="btn-brand-primary">Explore Our Network</a>
-        <a href="https://fieldnotes.rangeway.energy" class="btn-brand-secondary">Subscribe to Field Notes</a>
     </div>
 </section>
 
-<!-- Our Promise Section -->
-<section class="promise-section">
+<!-- The Rangeway Difference -->
+<section class="services">
     <div class="container">
         <div class="section-header">
-            <h2>Our Promise</h2>
-            <p>We treat charging as hospitality, not utility. Every Rangeway location guarantees indoor climate-controlled comfort.</p>
+            <h2>Indoor Comfort. Every Stop.</h2>
+            <p>We're not just another charging network. We're building destinations.</p>
         </div>
 
-        <div class="promise-grid">
-            <div class="promise-card">
-                <h3>Hub-Satellite Excellence</h3>
-                <p>Basecamp hubs with 6-8 DCFC, café, and NOC support Waystations with 4 DCFC and automated retail. This model ensures 99% uptime and consistent experiences.</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                        <polyline points="17 6 23 6 23 12"/>
+                    </svg>
+                </div>
+                <h3>Ultra-Fast, Reliable EV Charging</h3>
+                <p>High-power DC fast charging infrastructure gets you back on the road quickly. Spend less time charging and more time exploring the open road.</p>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; text-align: center; font-size: 0.9rem;">
+                    <div>
+                        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">⚡</div>
+                        <span style="color: var(--text-secondary);">Ultra-Fast Speed</span>
+                    </div>
+                    <div>
+                        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🔌</div>
+                        <span style="color: var(--text-secondary);">All EVs Welcome</span>
+                    </div>
+                    <div>
+                        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">✓</div>
+                        <span style="color: var(--text-secondary);">Always Reliable</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="promise-card">
-                <h3>Scenic Corridor Focus</h3>
-                <p>We're building where the journey matters most: National Parks routes, coastal highways, and mountain corridors. Reliable charging for road-trippers and adventure travelers.</p>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
+                </div>
+                <h3>Premium Comfort & Amenities</h3>
+                <p>Climate-controlled lounges, comfortable seating, and workspaces at every location. Charging shouldn't mean waiting in your car.</p>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; text-align: center; font-size: 0.9rem;">
+                    <div>
+                        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">❄️</div>
+                        <span style="color: var(--text-secondary);">Climate Control</span>
+                    </div>
+                    <div>
+                        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🛋️</div>
+                        <span style="color: var(--text-secondary);">Lounge Areas</span>
+                    </div>
+                    <div>
+                        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">☕</div>
+                        <span style="color: var(--text-secondary);">Refreshments</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="promise-card">
-                <h3>Always Indoors</h3>
-                <p>Never wait in your car again. Every location features climate-controlled lounges, clean restrooms, Wi-Fi, and comfortable seating. Charging should be a break, not a burden.</p>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="12" y1="18" x2="12" y2="12"/>
+                        <line x1="9" y1="15" x2="15" y2="15"/>
+                    </svg>
+                </div>
+                <h3>Scenic Route Destinations</h3>
+                <p>Strategically located along America's most beautiful highways. We bring reliable charging to the routes that make the journey unforgettable.</p>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; text-align: center; font-size: 0.9rem;">
+                    <div>
+                        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🏔️</div>
+                        <span style="color: var(--text-secondary);">Mountain Routes</span>
+                    </div>
+                    <div>
+                        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🌊</div>
+                        <span style="color: var(--text-secondary);">Coastal Highways</span>
+                    </div>
+                    <div>
+                        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🌲</div>
+                        <span style="color: var(--text-secondary);">National Parks</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Baker Basecamp Spotlight -->
-<section class="basecamp-spotlight" id="basecamps">
-    <div class="basecamp-content">
-        <div>
-            <span class="basecamp-badge">🔨 Under Development</span>
-            <h2>Baker Basecamp</h2>
-            <p class="basecamp-subtitle">Gateway to Death Valley • LA-Vegas Corridor</p>
-            <p style="font-size: 1.1rem; line-height: 1.7;">Our flagship location on I-15 at CA-127. Positioned perfectly for travelers exploring Death Valley National Park and the Mojave Desert. Opening 2026.</p>
+<section class="network-map">
+    <div class="container">
+        <div class="network-map-grid">
+            <div class="network-map-content">
+                <span style="display: inline-block; background: rgba(240, 144, 96, 0.2); color: var(--accent-color); padding: 6px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; margin-bottom: 1.5rem;">🔨 Under Development</span>
+                <h2>Baker Basecamp</h2>
+                <p style="color: var(--accent-color); font-weight: 600; font-size: 1.1rem; margin-bottom: 1rem;">Gateway to Death Valley • LA-Vegas Corridor</p>
+                <p style="font-size: 1.1rem;">Our flagship location on I-15 at CA-127. Positioned perfectly for travelers exploring Death Valley National Park and the Mojave Desert.</p>
 
-            <div class="basecamp-features">
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 18H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.19M15 6h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3.19"/>
-                            <line x1="23" y1="13" x2="23" y2="11"/>
-                        </svg>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2rem;">
+                    <div style="display: flex; gap: 1rem;">
+                        <div style="color: var(--accent-color);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 18H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.19M15 6h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3.19"/>
+                                <line x1="23" y1="13" x2="23" y2="11"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <strong style="display: block; color: var(--text-heading);">6 Ultra-Fast Chargers</strong>
+                            <span style="color: var(--text-secondary); font-size: 0.95rem;">350kW DC fast charging</span>
+                        </div>
                     </div>
-                    <div class="feature-text">
-                        <strong>6 Ultra-Fast Chargers</strong>
-                        <span>350kW DC fast charging</span>
+
+                    <div style="display: flex; gap: 1rem;">
+                        <div style="color: var(--accent-color);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <strong style="display: block; color: var(--text-heading);">3,000 sq ft Lounge</strong>
+                            <span style="color: var(--text-secondary); font-size: 0.95rem;">Climate-controlled comfort</span>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem;">
+                        <div style="color: var(--accent-color);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                                <line x1="6" y1="1" x2="6" y2="4"/>
+                                <line x1="10" y1="1" x2="10" y2="4"/>
+                                <line x1="14" y1="1" x2="14" y2="4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <strong style="display: block; color: var(--text-heading);">Premium Café</strong>
+                            <span style="color: var(--text-secondary); font-size: 0.95rem;">Local partners & quality food</span>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem;">
+                        <div style="color: var(--accent-color);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <strong style="display: block; color: var(--text-heading);">Staffed 24/7</strong>
+                            <span style="color: var(--text-secondary); font-size: 0.95rem;">Trailkeepers ready to help</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                        </svg>
-                    </div>
-                    <div class="feature-text">
-                        <strong>3,000 sq ft Lounge</strong>
-                        <span>Climate-controlled comfort</span>
-                    </div>
-                </div>
+                <a href="{{ '/network.html' | relative_url }}" class="btn-primary btn-large" style="margin-top: 4rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+                    Explore Baker Basecamp
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                        <polyline points="12 5 19 12 12 19"/>
+                    </svg>
+                </a>
+            </div>
 
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
-                            <line x1="6" y1="1" x2="6" y2="4"/>
-                            <line x1="10" y1="1" x2="10" y2="4"/>
-                            <line x1="14" y1="1" x2="14" y2="4"/>
-                        </svg>
-                    </div>
-                    <div class="feature-text">
-                        <strong>Premium Café</strong>
-                        <span>Local partners & quality food</span>
-                    </div>
-                </div>
-
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                        </svg>
-                    </div>
-                    <div class="feature-text">
-                        <strong>Staffed 24/7</strong>
-                        <span>Trailkeepers ready to help</span>
+            <div class="network-map-image">
+                <div>
+                    <img src="{{ '/images/baker-exterior2.jpg' | relative_url }}" alt="Baker Basecamp architectural rendering">
+                    <div style="text-align: center; margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem; font-style: italic;">
+                        Architectural rendering - Opening 2026
                     </div>
                 </div>
             </div>
-
-            <a href="{{ '/network.html' | relative_url }}" class="btn-brand-primary" style="margin-top: 40px;">
-                Explore Baker Basecamp →
-            </a>
         </div>
+    </div>
+</section>
 
-        <div>
-            <img src="{{ '/images/baker-exterior2.jpg' | relative_url }}" alt="Baker Basecamp architectural rendering" style="width: 100%; border-radius: 12px; box-shadow: 0 12px 40px rgba(0,0,0,0.15);">
-            <p style="text-align: center; margin-top: 16px; color: var(--fog-gray); font-size: 0.9rem; font-style: italic;">
-                Architectural rendering - Opening 2026
-            </p>
+<!-- Statistics Section -->
+<section class="stats">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>55%</h3>
+                <p>of EV drivers avoid scenic routes due to charging anxiety</p>
+                <div style="font-size: 0.85rem; color: #888; margin-top: 0.5rem;">Source: AAA EV Survey 2024</div>
+            </div>
+            <div class="stat-item">
+                <h3>$3-9B</h3>
+                <p>Scenic corridor charging market by 2030</p>
+                <div style="font-size: 0.85rem; color: #888; margin-top: 0.5rem;">Growing 40% annually</div>
+            </div>
+            <div class="stat-item">
+                <h3>1.9M</h3>
+                <p>California EV owners ready for road trips</p>
+                <div style="font-size: 0.85rem; color: #888; margin-top: 0.5rem;">And growing fast</div>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- CTA Section -->
-<section class="cta-section">
+<section class="pathfinder-cta">
     <div class="container">
-        <h2>Join the Journey</h2>
-        <p>Be part of building America's premier scenic-route charging network</p>
-        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-            <a href="{{ '/investors.html' | relative_url }}" class="btn-brand-primary">
-                Invest in the Journey
-            </a>
-            <a href="{{ '/for-travelers.html' | relative_url }}" class="btn-brand-secondary">
-                For Travelers
-            </a>
+        <div class="cta-content">
+            <h2>Join the Journey</h2>
+            <p>Be part of building America's premier scenic-route charging network</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                <a href="{{ '/investors.html' | relative_url }}" class="btn-primary btn-large">
+                    Invest in the Journey
+                </a>
+                <a href="https://fieldnotes.rangeway.energy" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-large">
+                    Subscribe to Field Notes
+                </a>
+            </div>
         </div>
     </div>
 </section>
-
-<!-- Footer with Brand Colors -->
-<footer style="background: var(--mountain-charcoal); color: white; padding: 60px 20px 40px;">
-    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
-        <div>
-            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 34 34">
-                    <defs>
-                        <clipPath id="footerRounded">
-                            <rect width="34" height="34" rx="10" ry="10" />
-                        </clipPath>
-                    </defs>
-                    <rect width="34" height="34" rx="10" ry="10" fill="white" />
-                    <g clip-path="url(#footerRounded)">
-                        <path d="M 0 26 L 8 18 L 15 24 L 22 17 L 34 26 L 34 34 L 0 34 Z" fill="#4A4A4A" />
-                    </g>
-                    <circle cx="25" cy="7" r="4" fill="white" fill-opacity="0.8" />
-                </svg>
-                <span style="font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 800; letter-spacing: 0.08em;">RANGEWAY</span>
-            </div>
-            <p style="color: var(--coastal-cream); line-height: 1.6; font-size: 0.95rem;">Where charging becomes part of your journey.</p>
-        </div>
-
-        <div>
-            <h4 style="margin-bottom: 16px; font-size: 1rem; font-weight: 600;">Quick Links</h4>
-            <div style="display: flex; flex-direction: column; gap: 8px;">
-                <a href="/why-rangeway.html" style="color: var(--coastal-cream); text-decoration: none; transition: color 0.2s;">Why Rangeway</a>
-                <a href="/network.html" style="color: var(--coastal-cream); text-decoration: none; transition: color 0.2s;">Network</a>
-                <a href="/for-travelers.html" style="color: var(--coastal-cream); text-decoration: none; transition: color 0.2s;">For Travelers</a>
-                <a href="/contact.html" style="color: var(--coastal-cream); text-decoration: none; transition: color 0.2s;">Contact</a>
-            </div>
-        </div>
-
-        <div>
-            <h4 style="margin-bottom: 16px; font-size: 1rem; font-weight: 600;">Connect</h4>
-            <div style="display: flex; flex-direction: column; gap: 8px;">
-                <a href="https://fieldnotes.rangeway.energy" style="color: var(--coastal-cream); text-decoration: none; transition: color 0.2s;">Field Notes</a>
-                <a href="mailto:hello@rangeway.energy" style="color: var(--coastal-cream); text-decoration: none; transition: color 0.2s;">hello@rangeway.energy</a>
-            </div>
-        </div>
-    </div>
-
-    <div style="max-width: 1200px; margin: 40px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; color: var(--fog-gray); font-size: 0.9rem;">
-        <p>&copy; 2025 Rangeway Energy. All rights reserved.</p>
-    </div>
-</footer>
-
-</body>
-</html>
