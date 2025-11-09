@@ -249,6 +249,47 @@ html {
     .cta-content p {
         color: inherit !important;
     }
+
+    /* Footer - keep Coastal Cream text in dark mode */
+    .footer-section a {
+        color: var(--coastal-cream) !important;
+    }
+
+    .footer-section a:hover {
+        color: var(--golden-highway) !important;
+    }
+
+    .footer-section h4 {
+        color: white !important;
+    }
+
+    .footer-section p {
+        color: var(--coastal-cream) !important;
+    }
+
+    .footer-bottom p {
+        color: var(--fog-gray) !important;
+    }
+
+    .footer-social-icons a {
+        color: var(--coastal-cream) !important;
+    }
+
+    .footer-social-icons a:hover {
+        color: var(--golden-highway) !important;
+    }
+
+    .support-hours {
+        color: var(--coastal-cream) !important;
+    }
+
+    .support-hours strong {
+        color: var(--sunset-coral) !important;
+    }
+
+    .contact-phone {
+        color: var(--coastal-cream) !important;
+    }
 }
 
 body {
