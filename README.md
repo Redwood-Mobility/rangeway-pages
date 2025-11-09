@@ -4,7 +4,7 @@ Official website for Rangeway Energy - America's premium scenic highway EV charg
 
 ## Brand Guidelines Implementation
 
-This site implements the official Rangeway brand guidelines with:
+This site implements the official Rangeway brand guidelines (see `brand.html` for full documentation) with:
 
 ### Brand Colors
 - **Sunset Coral** (#F09060) - Primary brand color
@@ -77,6 +77,7 @@ rangeway-pages/
 ├── for-travelers.html
 ├── investors.html
 ├── contact.html
+├── brand.html (Brand Guidelines v1.0)
 ├── _layouts/
 │   └── default.html
 ├── _includes/
@@ -193,6 +194,17 @@ Production URL: https://rangeway.energy
 - 6 main pages with complete content
 - Basic responsive design
 - Dark theme throughout
+
+## Brand Guidelines
+
+The complete brand guidelines document is available at `brand.html`. This self-contained HTML file includes:
+- Official brand colors with hex codes and usage examples
+- Typography specifications (Montserrat, Source Sans Pro)
+- Logo usage guidelines and variations
+- Brand voice and messaging principles
+- Visual examples and design patterns
+
+To view: Open `brand.html` in any web browser.
 
 ## Archive
 
