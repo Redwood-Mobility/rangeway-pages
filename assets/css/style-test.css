@@ -221,7 +221,7 @@ html {
 
     /* Adjust mobile menu toggle bars for dark mode */
     .mobile-menu-toggle span {
-        background: var(--text-primary);
+        background: var(--text-primary) !important;
     }
 
     /* Footer logo stays full color in dark mode too */
