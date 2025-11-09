@@ -42,9 +42,9 @@
             <!-- Contact -->
             <div class="footer-section">
                 <h4>Contact</h4>
-                <p style="color: var(--coastal-cream); line-height: 1.6; margin-bottom: 0.5rem;">
+                <p style="color: var(--coastal-cream); line-height: 1.6; margin-bottom: 0.5rem; white-space: nowrap;">
                     {{ site.organization.address.street }}<br>
-                    {{ site.organization.address.city }}, {{ site.organization.address.state }} {{ site.organization.address.zip }}
+                    <span style="white-space: normal;">{{ site.organization.address.city }}, {{ site.organization.address.state }} {{ site.organization.address.zip }}</span>
                 </p>
                 <a href="tel:{{ site.organization.phone }}">{{ site.organization.phone }}</a>
                 <a href="mailto:{{ site.organization.email }}">{{ site.organization.email }}</a>
