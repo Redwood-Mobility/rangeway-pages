@@ -603,6 +603,19 @@ p {
     margin-bottom: 2.5rem;
 }
 
+/* Override secondary button styling in CTA section for better contrast */
+.pathfinder-cta .btn-secondary {
+    background: white;
+    color: var(--ocean-deep);
+    border: 2px solid white;
+}
+
+.pathfinder-cta .btn-secondary:hover {
+    background: var(--golden-highway);
+    color: var(--mountain-charcoal);
+    border-color: var(--golden-highway);
+}
+
 /* Footer - Mountain Charcoal background */
 .footer {
     padding: 60px 0 30px;
