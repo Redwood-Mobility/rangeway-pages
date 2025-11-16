@@ -7,6 +7,15 @@
 
   <title>{{ page.title | default: site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
+  {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+  <meta name="author" content="{{ site.organization.name }}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
   <!-- SEO -->
   {% seo %}
@@ -24,6 +33,7 @@
   <meta name="theme-color" content="#F09060">
 
   <!-- Open Graph -->
+  <meta property="og:site_name" content="{{ site.organization.name }}">
   <meta property="og:title" content="{{ page.title | default: site.title }}">
   <meta property="og:description" content="{{ page.description | default: site.description }}">
   <meta property="og:type" content="website">
@@ -34,8 +44,45 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@rangewayev">
   <meta name="twitter:title" content="{{ page.title | default: site.title }}">
   <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+  {% if page.og_image %}
+  <meta name="twitter:image" content="{{ page.og_image | absolute_url }}">
+  {% endif %}
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{ site.organization.name }}",
+    "url": "{{ site.url }}",
+    "logo": "{{ site.url }}/images/rangeway-banner.svg",
+    "description": "{{ site.description }}",
+    "slogan": "{{ site.organization.tagline }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ site.organization.address.street }}",
+      "addressLocality": "{{ site.organization.address.city }}",
+      "addressRegion": "{{ site.organization.address.state }}",
+      "postalCode": "{{ site.organization.address.zip }}",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "{{ site.organization.phone }}",
+      "email": "{{ site.organization.email }}",
+      "contactType": "customer service"
+    },
+    "sameAs": [
+      "{{ site.social.twitter }}",
+      "{{ site.social.instagram }}",
+      "{{ site.social.linkedin }}",
+      "{{ site.social.youtube }}"
+    ]
+  }
+  </script>
 </head>
 <body>
   {% include header.html %}
