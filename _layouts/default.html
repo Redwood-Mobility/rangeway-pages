@@ -83,6 +83,11 @@
     ]
   }
   </script>
+
+  <!-- Analytics -->
+  {% if site.analytics.enabled and site.analytics.tinylytics_id %}
+  <script src="https://tinylytics.app/embed/{{ site.analytics.tinylytics_id }}.js" defer></script>
+  {% endif %}
 </head>
 <body>
   {% include header.html %}
@@ -95,10 +100,5 @@
 
   <!-- Scripts -->
   <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.asset_version }}"></script>
-
-  <!-- Analytics -->
-  {% if site.analytics.enabled and site.analytics.tinylytics_id %}
-  <script src="https://tinylytics.app/embed/{{ site.analytics.tinylytics_id }}.js" defer></script>
-  {% endif %}
 </body>
 </html>
