@@ -3,1099 +3,1035 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rangeway Energy Marketing & Brand Playbook v4.0</title>
+    <title>Rangeway — Brand Guidelines v1.0</title>
     <style>
+        :root {
+            --sunset-coral: #F09060;
+            --golden-highway: #FFB366;
+            --mountain-charcoal: #4A4A4A;
+            --coastal-cream: #F5DEB3;
+            --ocean-deep: #2C5F7C;
+            --fog-gray: #B8B8B8;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.7;
-            color: #4A4A4A;
-            background: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #2C3E50;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 40px;
+        
+        .cover {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--sunset-coral) 0%, #e88050 50%, var(--golden-highway) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            color: white;
         }
-
-        /* Typography */
-        h1 {
+        
+        .cover-logo {
+            margin-bottom: 40px;
+        }
+        
+        .cover h1 {
             font-size: 3.5rem;
             font-weight: 300;
-            color: #4A4A4A;
             margin-bottom: 16px;
             letter-spacing: -1px;
         }
-
+        
+        .cover .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 8px;
+        }
+        
+        .cover .version {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+        
+        .page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+            page-break-after: always;
+        }
+        
         h2 {
             font-size: 2.2rem;
             font-weight: 600;
-            color: #4A4A4A;
-            margin: 60px 0 32px;
-            padding-bottom: 16px;
-            border-bottom: 3px solid #F09060;
+            margin-bottom: 40px;
+            color: var(--mountain-charcoal);
         }
-
+        
         h3 {
             font-size: 1.5rem;
             font-weight: 600;
-            color: #4A4A4A;
-            margin: 40px 0 20px;
+            margin: 40px 0 20px 0;
+            color: var(--mountain-charcoal);
         }
-
-        h4 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #4A4A4A;
-            margin: 24px 0 16px;
-        }
-
+        
         p {
             margin-bottom: 16px;
             font-size: 1.05rem;
+            color: #2C3E50;
         }
-
-        .subtitle {
-            font-size: 1.3rem;
-            color: #666;
-            margin-bottom: 40px;
-        }
-
-        /* Cover Section */
-        .cover {
-            text-align: center;
-            padding: 120px 40px;
-            background: linear-gradient(135deg, #F09060 0%, #E88050 50%, #FFB366 100%);
-            color: white;
-            margin: -80px -40px 60px;
-        }
-
-        .cover h1 {
-            color: white;
-            font-size: 4rem;
-            margin-bottom: 24px;
-        }
-
-        .cover .version {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        /* Brand Colors */
-        .color-grid {
+        
+        .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-            margin: 24px 0;
+            gap: 32px;
+            margin: 32px 0;
         }
-
-        .color-card {
-            background: white;
-            border: 1px solid #E6E6E6;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .color-swatch {
-            height: 120px;
-            display: flex;
-            align-items: flex-end;
-            padding: 16px;
-        }
-
-        .color-info {
-            padding: 20px;
-        }
-
-        .color-name {
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-        }
-
-        .color-values {
-            font-family: 'SF Mono', Monaco, Consolas, monospace;
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 8px;
-        }
-
-        .color-usage {
-            font-size: 0.95rem;
-            color: #555;
-        }
-
-        /* Tables */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 24px 0;
-            font-size: 0.95rem;
-        }
-
-        th {
-            background: #FAFAFA;
-            padding: 16px;
-            text-align: left;
-            font-weight: 600;
-            border-bottom: 2px solid #E6E6E6;
-        }
-
-        td {
-            padding: 16px;
-            border-bottom: 1px solid #E6E6E6;
-            vertical-align: top;
-        }
-
-        code {
-            background: #F5F5F5;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-family: 'SF Mono', Monaco, Consolas, monospace;
-            font-size: 0.85em;
-        }
-
-        /* Lists */
-        ul, ol {
-            margin: 16px 0 16px 24px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        /* Cards */
+        
         .card {
             background: white;
             border: 1px solid #E6E6E6;
             border-radius: 8px;
             padding: 32px;
-            margin: 24px 0;
         }
-
-        /* Note boxes */
-        .note {
-            background: #FFF9E6;
-            border-left: 4px solid #FFB366;
-            padding: 24px;
-            border-radius: 4px;
-            margin: 24px 0;
+        
+        .card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            color: var(--mountain-charcoal);
         }
-
-        .note-title {
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #D4941C;
-        }
-
-        /* Important/Warning boxes */
-        .warning {
-            background: #FFF0F0;
-            border-left: 4px solid #E05050;
-            padding: 24px;
-            border-radius: 4px;
-            margin: 24px 0;
-        }
-
-        .warning-title {
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #C03030;
-        }
-
-        .success {
-            background: #F0FFF0;
-            border-left: 4px solid #50B050;
-            padding: 24px;
-            border-radius: 4px;
-            margin: 24px 0;
-        }
-
-        .success-title {
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #308030;
-        }
-
-        /* Do/Don't Examples */
-        .example-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin: 24px 0;
-        }
-
-        .example-do {
-            background: #F0FFF0;
-            border: 2px solid #50B050;
+        
+        .logo-showcase {
+            background: #FAFAFA;
             border-radius: 8px;
-            padding: 24px;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+            margin: 20px 0;
         }
-
-        .example-dont {
-            background: #FFF0F0;
-            border: 2px solid #E05050;
-            border-radius: 8px;
-            padding: 24px;
+        
+        .logo-showcase.dark {
+            background: var(--mountain-charcoal);
         }
-
-        .example-label {
-            font-weight: 700;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 12px;
+        
+        .logo-showcase.color {
+            background: linear-gradient(135deg, var(--sunset-coral) 0%, var(--golden-highway) 100%);
         }
-
-        .example-do .example-label {
-            color: #308030;
-        }
-
-        .example-dont .example-label {
-            color: #C03030;
-        }
-
-        .example-text {
-            font-style: italic;
-            line-height: 1.6;
-        }
-
-        /* Key metrics */
-        .metric-grid {
+        
+        .color-swatch {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 24px;
+            margin: 32px 0;
+        }
+        
+        .swatch {
+            min-height: 140px;
+            border-radius: 8px;
+            padding: 24px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        
+        .swatch-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+        
+        .swatch-values {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .do-dont {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin: 32px 0;
+        }
+        
+        .example {
+            border: 1px solid #E6E6E6;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .example-header {
+            padding: 12px 20px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .example-header.do {
+            background: #E8F5E9;
+            color: #2E7D32;
+        }
+        
+        .example-header.dont {
+            background: #FFEBEE;
+            color: #C62828;
+        }
+        
+        .example-content {
+            padding: 40px;
+            background: #FAFAFA;
+            min-height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
             margin: 24px 0;
         }
-
-        .metric-card {
-            background: linear-gradient(135deg, #F09060 0%, #FFB366 100%);
-            color: white;
-            padding: 24px;
-            border-radius: 8px;
-            text-align: center;
+        
+        .specs-table th,
+        .specs-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid #E6E6E6;
         }
-
-        .metric-value {
-            font-size: 2.5rem;
-            font-weight: 700;
+        
+        .specs-table th {
+            background: #FAFAFA;
+            font-weight: 600;
+            color: var(--mountain-charcoal);
+        }
+        
+        .specs-table code {
+            background: #F5F5F5;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        .note {
+            background: #FFF9E6;
+            border-left: 4px solid var(--golden-highway);
+            padding: 24px;
+            border-radius: 4px;
+            margin: 24px 0;
+        }
+        
+        .note-title {
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--mountain-charcoal);
+        }
+        
+        ul {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+        
+        li {
             margin-bottom: 8px;
         }
 
-        .metric-label {
-            font-size: 0.95rem;
-            opacity: 0.9;
-        }
-
-        /* TOC */
-        .toc {
-            background: #FAFAFA;
-            padding: 32px;
-            border-radius: 8px;
-            margin: 40px 0;
-        }
-
-        .toc h3 {
-            margin-top: 0;
-        }
-
-        .toc ol {
-            columns: 2;
-            column-gap: 40px;
-        }
-
-        .toc a {
-            color: #2C5F7C;
-            text-decoration: none;
-        }
-
-        .toc a:hover {
-            text-decoration: underline;
-        }
-
-        /* Strong emphasis */
-        strong {
-            color: #333;
-        }
-
-        /* Blockquotes */
-        blockquote {
-            border-left: 4px solid #F09060;
-            padding-left: 24px;
-            margin: 24px 0;
-            font-style: italic;
-            color: #555;
-        }
-
-        /* Print styles */
-        @media print {
-            .cover {
-                break-after: page;
-            }
-
-            h2 {
-                break-before: page;
-            }
-
-            .card, .note, .warning {
-                break-inside: avoid;
-            }
-        }
-
-        /* Mobile responsive */
+        /* Mobile Responsive Styles */
         @media (max-width: 768px) {
-            .container {
+            .cover h1 {
+                font-size: 2rem;
+            }
+
+            .cover .subtitle {
+                font-size: 1rem;
+            }
+
+            .cover {
                 padding: 40px 16px;
             }
 
-            h1 {
-                font-size: 2.5rem;
+            .page {
+                padding: 40px 16px;
             }
 
             h2 {
                 font-size: 1.8rem;
+                margin-bottom: 24px;
             }
 
-            .cover {
-                padding: 80px 20px;
-                margin: -40px -16px 40px;
+            h3 {
+                font-size: 1.25rem;
+                margin: 32px 0 16px 0;
             }
 
-            .cover h1 {
-                font-size: 2.8rem;
-            }
-
-            .example-grid {
+            .grid {
                 grid-template-columns: 1fr;
+                gap: 16px;
             }
 
-            .toc ol {
-                columns: 1;
+            .do-dont {
+                grid-template-columns: 1fr;
+                gap: 16px;
             }
 
-            table {
+            .color-swatch {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .logo-showcase {
+                padding: 24px;
+                min-height: 150px;
+            }
+
+            .specs-table {
                 font-size: 0.85rem;
             }
 
-            th, td {
+            .specs-table th,
+            .specs-table td {
                 padding: 12px 8px;
+            }
+
+            .cover-logo svg {
+                width: 100px;
+                height: 100px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="cover">
-            <h1>RANGEWAY ENERGY</h1>
-            <p style="font-size: 1.8rem; margin-bottom: 32px;">Marketing & Brand Playbook</p>
-            <p class="version">Version 4.0 | November 2025</p>
+    <!-- COVER -->
+    <div class="cover">
+        <div class="cover-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 34 34">
+                <defs>
+                    <linearGradient id="coverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#F09060"/>
+                        <stop offset="100%" stop-color="#FFB366"/>
+                    </linearGradient>
+                    <clipPath id="coverRounded">
+                        <rect width="34" height="34" rx="10" ry="10" />
+                    </clipPath>
+                </defs>
+                <rect width="34" height="34" rx="10" ry="10" fill="url(#coverGrad)" />
+                <g clip-path="url(#coverRounded)">
+                    <path d="M 0 26 L 8 18 L 15 24 L 22 17 L 34 26 L 34 34 L 0 34 Z" fill="#2f2f2f" />
+                </g>
+                <circle cx="25" cy="7" r="4" fill="white" fill-opacity="0.6" />
+            </svg>
+        </div>
+        <h1>Rangeway</h1>
+        <div class="subtitle">Where charging becomes part of your journey</div>
+        <div class="version">Brand Guidelines v1.0 — November 2025</div>
+    </div>
+
+    <!-- BRAND ESSENCE -->
+    <div class="page">
+        <h2>Brand Essence</h2>
+        
+        <p style="font-size: 1.2rem; font-weight: 500; margin-bottom: 32px; color: var(--mountain-charcoal);">
+            Rangeway is America's first premium EV charging network designed for scenic highway corridors and National Parks routes. We treat charging as hospitality, not utility, guaranteeing indoor climate-controlled comfort at every location.
+        </p>
+        
+        <div class="grid">
+            <div class="card">
+                <h4>Our Promise</h4>
+                <p>Indoor comfort at every location. Clean restrooms, climate control, Wi-Fi, and a place to rest while you charge on America's most beautiful routes.</p>
+            </div>
+            
+            <div class="card">
+                <h4>Network Model</h4>
+                <p>Hub-satellite operations: Basecamp hubs (6-8 DCFC, café, NOC) support Waystations (4 DCFC, lounge, automated retail) for 99% uptime.</p>
+            </div>
+            
+            <div class="card">
+                <h4>Our Travelers</h4>
+                <p>EV road-trippers exploring scenic corridors, adventure travelers visiting National Parks, and locals who value predictable charging experiences.</p>
+            </div>
         </div>
 
-        <div class="toc">
-            <h3>Table of Contents</h3>
-            <ol>
-                <li><a href="#brand-foundation">Brand Foundation</a></li>
-                <li><a href="#visual-identity">Visual Identity System</a></li>
-                <li><a href="#strategic-positioning">Strategic Positioning</a></li>
-                <li><a href="#marketing-strategy">Marketing Strategy Framework</a></li>
-                <li><a href="#messaging">Messaging Framework</a></li>
-                <li><a href="#customer-journey">Customer Journey Marketing</a></li>
-                <li><a href="#channel-strategy">Channel Strategy</a></li>
-                <li><a href="#b2b">B2B Marketing Strategy</a></li>
-                <li><a href="#campaigns">Campaign Frameworks</a></li>
-                <li><a href="#content">Content Guidelines</a></li>
-                <li><a href="#vocabulary">Brand Vocabulary</a></li>
-                <li><a href="#metrics">Metrics & Analytics</a></li>
-                <li><a href="#crisis">Crisis Communication</a></li>
-                <li><a href="#budget">Budget & Resources</a></li>
-                <li><a href="#technology">Technology Stack</a></li>
-                <li><a href="#roadmap">Implementation Roadmap</a></li>
-                <li><a href="#competitive">Competitive Intelligence</a></li>
-            </ol>
-        </div>
-
-        <!-- SECTION 1: BRAND FOUNDATION -->
-        <h2 id="brand-foundation">1. Brand Foundation</h2>
-
-        <h3>Brand Essence</h3>
-        <div class="card">
-            <h4>Tagline</h4>
-            <p style="font-size: 1.5rem; font-weight: 600; color: #F09060;">"Where charging becomes part of your journey"</p>
-
-            <h4>Core Purpose</h4>
-            <p>Transform necessary charging stops into memorable moments on America's most memorable routes. We treat charging like hospitality, not utility.</p>
-
-            <h4>Mission</h4>
-            <p>Enable electric tourism through premium charging destinations, creating experiences competitors can't replicate with commodity infrastructure.</p>
-
-            <h4>Vision</h4>
-            <p>Become the definitive premium charging network for America's most memorable routes.</p>
-
-            <h4>Brand Promise</h4>
-            <p><strong>Climate-controlled indoor comfort at every location</strong>—an industry first.</p>
-        </div>
-
-        <h3>Core Values</h3>
-        <ol>
-            <li><strong>Hospitality DNA</strong> - Think like hoteliers, not utility companies</li>
-            <li><strong>Journey Excellence</strong> - Locations chosen for the journey, not just the destination</li>
-            <li><strong>Operational Reliability</strong> - 98-99% uptime backed by predictive maintenance</li>
-            <li><strong>Community Connection</strong> - Partner with local businesses and regional tourism</li>
-        </ol>
-
-        <h3>Brand Personality</h3>
-
-        <h4>We Are:</h4>
-        <ul>
-            <li><strong>Elevated and premium</strong> - We speak to discerning travelers who expect quality</li>
-            <li><strong>Warm and welcoming</strong> - Approachable luxury, not cold exclusivity</li>
-            <li><strong>Confident but not arrogant</strong> - We know our worth without boasting</li>
-            <li><strong>Knowledgeable but not condescending</strong> - Expert without jargon</li>
-            <li><strong>Conversational yet professional</strong> - Refined casual, like a boutique hotel concierge</li>
-            <li><strong>Optimistic about electric travel</strong> - Inspiring confidence in the future</li>
-            <li><strong>Thoughtful and intentional</strong> - Every detail considered</li>
-            <li><strong>Connected to place and community</strong> - Local character, regional pride</li>
-            <li><strong>Adventure-enabling</strong> - Empowering journeys, not just facilitating logistics</li>
-        </ul>
-
-        <h4>We Are NOT:</h4>
-        <ul>
-            <li>Transactional or utilitarian</li>
-            <li>Tech-forward at expense of humanity</li>
-            <li>Overly technical or jargon-heavy</li>
-            <li>Standardized without local character</li>
-            <li>Mass-market or budget-focused</li>
-            <li>Elitist or inaccessible</li>
-        </ul>
-
-        <h3>Brand Voice: Elevated & Accessible</h3>
-
+        <h3>Brand Voice</h3>
+        <p>Warm and welcoming, not corporate. Confident but not arrogant. Knowledgeable but not condescending. We celebrate the journey and the places that make it memorable.</p>
+        
         <div class="note">
-            <div class="note-title">Key Insight</div>
-            <p>Our voice strikes the balance between <strong>premium positioning</strong> and <strong>genuine warmth</strong>. Think: boutique hotel meets outdoor adventure brand. We're luxury without pretension.</p>
+            <div class="note-title">Writing Principles</div>
+            <p>Benefits before features, always. Active voice preferred. Short sentences for clarity. Tell stories, don't just list facts. Include calls-to-action naturally.</p>
+        </div>
+    </div>
+
+    <!-- LOGO SYSTEM -->
+    <div class="page">
+        <h2>Logo System</h2>
+        
+        <h3>Primary Logo</h3>
+        <p>The Rangeway icon captures the essence of scenic journey experiences through mountain silhouettes, winding paths, and golden-hour sun in a modern rounded square format.</p>
+        
+        <div class="logo-showcase">
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 34 34">
+                <defs>
+                    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#F09060"/>
+                        <stop offset="100%" stop-color="#FFB366"/>
+                    </linearGradient>
+                    <clipPath id="primaryRounded">
+                        <rect width="34" height="34" rx="10" ry="10" />
+                    </clipPath>
+                </defs>
+                <rect width="34" height="34" rx="10" ry="10" fill="url(#primaryGrad)" />
+                <g clip-path="url(#primaryRounded)">
+                    <path d="M 0 26 L 8 18 L 15 24 L 22 17 L 34 26 L 34 34 L 0 34 Z" fill="#2f2f2f" />
+                </g>
+                <circle cx="25" cy="7" r="4" fill="white" fill-opacity="0.6" />
+            </svg>
         </div>
 
-        <h4>Tone Markers:</h4>
-        <ul>
-            <li><strong>Sophisticated simplicity</strong> - Clear, elegant language without complexity</li>
-            <li><strong>Confident restraint</strong> - We don't oversell; quality speaks for itself</li>
-            <li><strong>Inclusive premium</strong> - Elevated experience accessible to all EV drivers</li>
-            <li><strong>Human-first</strong> - Technology enables the experience, it's not the story</li>
-        </ul>
+        <h3>Icon Usage</h3>
+        <p>Use the full-color icon for all applications including app icons, social media profiles, and wayfinding markers.</p>
+        <div style="background: #FAFAFA; padding: 40px; border-radius: 8px; display: flex; justify-content: center; margin: 20px 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 34 34">
+                <defs>
+                    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#F09060"/>
+                        <stop offset="100%" stop-color="#FFB366"/>
+                    </linearGradient>
+                    <clipPath id="iconRounded">
+                        <rect width="34" height="34" rx="10" ry="10" />
+                    </clipPath>
+                </defs>
+                <rect width="34" height="34" rx="10" ry="10" fill="url(#iconGrad)" />
+                <g clip-path="url(#iconRounded)">
+                    <path d="M 0 26 L 8 18 L 15 24 L 22 17 L 34 26 L 34 34 L 0 34 Z" fill="#2f2f2f" />
+                </g>
+                <circle cx="25" cy="7" r="4" fill="white" fill-opacity="0.6" />
+            </svg>
+        </div>
 
-        <div class="example-grid">
-            <div class="example-do">
-                <div class="example-label">✓ Premium & Warm</div>
-                <div class="example-text">"Relax in our climate-controlled lounge with locally-roasted coffee while your vehicle charges."</div>
-            </div>
-            <div class="example-dont">
-                <div class="example-label">✗ Too Technical</div>
-                <div class="example-text">"Our 350kW DCFC units with NACS and CCS compatibility operate at 99% uptime through our NOC."</div>
+        <h3>Logo with Wordmark</h3>
+        <p>For most applications, use the icon with the RANGEWAY wordmark in the horizontal lockup.</p>
+        <div class="logo-showcase">
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 34 34">
+                    <defs>
+                        <linearGradient id="wordmarkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#F09060"/>
+                            <stop offset="100%" stop-color="#FFB366"/>
+                        </linearGradient>
+                        <clipPath id="wordmarkRounded">
+                            <rect width="34" height="34" rx="10" ry="10" />
+                        </clipPath>
+                    </defs>
+                    <rect width="34" height="34" rx="10" ry="10" fill="url(#wordmarkGrad)" />
+                    <g clip-path="url(#wordmarkRounded)">
+                        <path d="M 0 26 L 8 18 L 15 24 L 22 17 L 34 26 L 34 34 L 0 34 Z" fill="#2f2f2f" />
+                    </g>
+                    <circle cx="25" cy="7" r="4" fill="white" fill-opacity="0.6" />
+                </svg>
+                <div style="font-family: 'Montserrat', -apple-system, sans-serif; font-size: 36px; font-weight: 800; letter-spacing: 0.1em; color: var(--mountain-charcoal);">RANGEWAY</div>
             </div>
         </div>
 
-        <div class="example-grid">
-            <div class="example-do">
-                <div class="example-label">✓ Elevated & Clear</div>
-                <div class="example-text">"Add 200 miles to your journey in the time it takes to enjoy a coffee."</div>
-            </div>
-            <div class="example-dont">
-                <div class="example-label">✗ Overused Phrases</div>
-                <div class="example-text">"Fast charging available at our scenic highway National Park gateway locations."</div>
-            </div>
+        <h3>Horizontal Banner</h3>
+        <p>The horizontal banner combines the icon and wordmark in a single image file, perfect for headers, social media, and presentations.</p>
+        <div class="logo-showcase">
+            <img src="images/rangeway-banner.svg" alt="Rangeway Banner" style="max-width: 600px; height: auto;">
         </div>
+    </div>
 
-        <!-- SECTION 2: VISUAL IDENTITY -->
-        <h2 id="visual-identity">2. Visual Identity System</h2>
-
+    <!-- COLOR PALETTE -->
+    <div class="page">
+        <h2>Color Palette</h2>
+        
         <h3>Primary Colors</h3>
-        <div class="color-grid">
-            <div class="color-card">
-                <div class="color-swatch" style="background: #F09060;">
-                    <span style="color: white; font-weight: 600;">Sunset Coral</span>
-                </div>
-                <div class="color-info">
-                    <div class="color-values">
-                        Hex: #F09060<br>
-                        RGB: 240, 144, 96
-                    </div>
-                    <div class="color-usage">Primary brand color, backgrounds, warmth. Represents golden hour and American landscapes.</div>
+        <p>Our primary palette evokes golden hour on America's scenic highways, with warm sunset tones grounded by mountain charcoal.</p>
+        
+        <div class="color-swatch">
+            <div class="swatch" style="background: var(--sunset-coral);">
+                <div class="swatch-name">Sunset Coral</div>
+                <div class="swatch-values">
+                    HEX: #F09060<br>
+                    RGB: 240, 144, 96
                 </div>
             </div>
-
-            <div class="color-card">
-                <div class="color-swatch" style="background: #FFB366;">
-                    <span style="color: white; font-weight: 600;">Golden Highway</span>
-                </div>
-                <div class="color-info">
-                    <div class="color-values">
-                        Hex: #FFB366<br>
-                        RGB: 255, 179, 102
-                    </div>
-                    <div class="color-usage">Accent, sun icon, path elements, CTAs. Represents optimism, energy, and the journey.</div>
+            
+            <div class="swatch" style="background: var(--golden-highway);">
+                <div class="swatch-name">Golden Highway</div>
+                <div class="swatch-values">
+                    HEX: #FFB366<br>
+                    RGB: 255, 179, 102
                 </div>
             </div>
-
-            <div class="color-card">
-                <div class="color-swatch" style="background: #4A4A4A;">
-                    <span style="color: white; font-weight: 600;">Mountain Charcoal</span>
-                </div>
-                <div class="color-info">
-                    <div class="color-values">
-                        Hex: #4A4A4A<br>
-                        RGB: 74, 74, 74
-                    </div>
-                    <div class="color-usage">Typography, mountain icon, grounding element. Represents strength and reliability.</div>
+            
+            <div class="swatch" style="background: var(--mountain-charcoal);">
+                <div class="swatch-name">Mountain Charcoal</div>
+                <div class="swatch-values">
+                    HEX: #4A4A4A<br>
+                    RGB: 74, 74, 74
                 </div>
             </div>
         </div>
 
         <h3>Supporting Colors</h3>
-        <div class="color-grid">
-            <div class="color-card">
-                <div class="color-swatch" style="background: #F5DEB3;">
-                    <span style="color: #4A4A4A; font-weight: 600;">Coastal Cream</span>
-                </div>
-                <div class="color-info">
-                    <div class="color-values">
-                        Hex: #F5DEB3<br>
-                        RGB: 245, 222, 179
-                    </div>
-                    <div class="color-usage">Light backgrounds, alternate layouts. Provides warmth and accessibility.</div>
+        <p>Secondary palette for backgrounds, accents, and wayfinding elements.</p>
+        
+        <div class="color-swatch">
+            <div class="swatch" style="background: var(--coastal-cream); color: var(--mountain-charcoal);">
+                <div class="swatch-name">Coastal Cream</div>
+                <div class="swatch-values">
+                    HEX: #F5DEB3<br>
+                    RGB: 245, 222, 179
                 </div>
             </div>
-
-            <div class="color-card">
-                <div class="color-swatch" style="background: #2C5F7C;">
-                    <span style="color: white; font-weight: 600;">Ocean Deep</span>
-                </div>
-                <div class="color-info">
-                    <div class="color-values">
-                        Hex: #2C5F7C<br>
-                        RGB: 44, 95, 124
-                    </div>
-                    <div class="color-usage">Secondary accent, hyperlinks, wayfinding. Conveys depth and trust.</div>
+            
+            <div class="swatch" style="background: var(--ocean-deep);">
+                <div class="swatch-name">Ocean Deep</div>
+                <div class="swatch-values">
+                    HEX: #2C5F7C<br>
+                    RGB: 44, 95, 124
                 </div>
             </div>
-
-            <div class="color-card">
-                <div class="color-swatch" style="background: #B8B8B8;">
-                    <span style="color: white; font-weight: 600;">Fog Gray</span>
-                </div>
-                <div class="color-info">
-                    <div class="color-values">
-                        Hex: #B8B8B8<br>
-                        RGB: 184, 184, 184
-                    </div>
-                    <div class="color-usage">Secondary text, dividers, subtle elements. Adds sophistication.</div>
+            
+            <div class="swatch" style="background: var(--fog-gray);">
+                <div class="swatch-name">Fog Gray</div>
+                <div class="swatch-values">
+                    HEX: #B8B8B8<br>
+                    RGB: 184, 184, 184
                 </div>
             </div>
         </div>
 
-        <h3>Typography</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Use Case</th>
-                    <th>Typeface</th>
-                    <th>Notes</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Wordmark</td>
-                    <td>Montserrat Bold or Raleway Bold</td>
-                    <td>Weight 700-800, All caps, 0.08em letter spacing</td>
-                </tr>
-                <tr>
-                    <td>Headlines</td>
-                    <td>Montserrat or Raleway</td>
-                    <td>Various weights for hierarchy</td>
-                </tr>
-                <tr>
-                    <td>Body Copy</td>
-                    <td>Source Sans Pro, Open Sans</td>
-                    <td>Clean, readable sans-serif</td>
-                </tr>
-                <tr>
-                    <td>Wayfinding</td>
-                    <td>Fira Sans, Roboto</td>
-                    <td>High-legibility for signage</td>
-                </tr>
-                <tr>
-                    <td>Digital</td>
-                    <td>System fonts</td>
-                    <td><code>-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif</code></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h3>Logo Usage</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Variant</th>
-                    <th>Minimum Size (Digital)</th>
-                    <th>Minimum Size (Print)</th>
-                    <th>Best Use</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Icon Only</td>
-                    <td>32px</td>
-                    <td>0.5"</td>
-                    <td>Apps, profiles, small spaces</td>
-                </tr>
-                <tr>
-                    <td>Icon + Wordmark</td>
-                    <td>120px</td>
-                    <td>1.5"</td>
-                    <td>Primary use, marketing materials</td>
-                </tr>
-                <tr>
-                    <td>Wordmark Only</td>
-                    <td>80px</td>
-                    <td>1"</td>
-                    <td>Space-constrained layouts</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <!-- SECTION 3: STRATEGIC POSITIONING -->
-        <h2 id="strategic-positioning">3. Strategic Positioning</h2>
-
-        <h3>Market Opportunity</h3>
-        <div class="metric-grid">
-            <div class="metric-card">
-                <div class="metric-value">$8.1B</div>
-                <div class="metric-label">Addressable Market</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-value">12M</div>
-                <div class="metric-label">Prospects</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-value">73%</div>
-                <div class="metric-label">Rate current charging "poor"</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-value">55%</div>
-                <div class="metric-label">Avoid long-distance routes</div>
-            </div>
-        </div>
-
-        <h3>Category Creation</h3>
-        <div class="card">
-            <h4>Category: Premium Destination Charging</h4>
-            <p>We're not competing in existing categories—we're creating a new one that combines:</p>
-            <ul>
-                <li>Locations chosen for the journey itself</li>
-                <li>Hospitality-first experience (like boutique hotels, not gas stations)</li>
-                <li>Guaranteed indoor comfort at every location</li>
-                <li>Elevated service that matches the quality of your vehicle</li>
-            </ul>
-        </div>
-
-        <h3>Four Pillar Advantage Framework</h3>
-        <div class="card">
-            <h4>1. Hospitality DNA</h4>
-            <p>Think like hoteliers, not utility companies. Create experiences competitors can't replicate. Purpose-built for the human experience.</p>
-
-            <h4>2. Network Coverage</h4>
-            <p>Strategic regional coverage across America's best routes. Connected experiences on roads worth traveling. Consistent premium service wherever journey takes you.</p>
-
-            <h4>3. Experience Guarantee</h4>
-            <p>Climate-controlled indoor comfort at 100% of locations (industry first). Premium restroom facilities. While competitors leave drivers in parking lots, we provide premium hospitality.</p>
-
-            <h4>4. Predictable Pricing</h4>
-            <p>Pathfinder Rewards flat rates eliminate time-of-use volatility. Members pay same price at sunrise or sunset. No peak pricing surprises.</p>
-        </div>
-
-        <!-- SECTION 5: MESSAGING FRAMEWORK -->
-        <h2 id="messaging">5. Messaging Framework</h2>
-
-        <div class="warning">
-            <div class="warning-title">CRITICAL RULE</div>
-            <p><strong>Never Lead with Technology. Never Use Technical Jargon.</strong></p>
-            <p>Our messaging should feel like advice from a well-traveled friend, not a spec sheet. We speak to the <em>experience</em>, not the infrastructure.</p>
-        </div>
-
-        <h3>Messaging Hierarchy</h3>
-
-        <h4>Tier 1: Emotional Benefits (Lead With These)</h4>
+        <h3>Color Usage</h3>
         <ul>
-            <li>"Breaks worth taking on roads worth traveling"</li>
-            <li>"Coffee with a view while your car charges"</li>
-            <li>"The stop other drivers recommend to their friends"</li>
-            <li>"Where your journey becomes the destination"</li>
-            <li>"Relax inside. Leave refreshed."</li>
+            <li><strong>Sunset Coral:</strong> Primary brand color, backgrounds, warmth. Represents golden hour and American landscapes.</li>
+            <li><strong>Golden Highway:</strong> Accent, sun icon, path elements, CTAs. Represents optimism, energy, and the journey.</li>
+            <li><strong>Mountain Charcoal:</strong> Typography, mountain icon, grounding element. Represents strength and reliability.</li>
+            <li><strong>Coastal Cream:</strong> Light backgrounds, alternate layouts. Provides warmth and accessibility.</li>
+            <li><strong>Ocean Deep:</strong> Secondary accent, hyperlinks, wayfinding. Conveys depth and trust.</li>
+            <li><strong>Fog Gray:</strong> Secondary text, dividers, subtle elements. Adds sophistication.</li>
         </ul>
+    </div>
 
-        <h4>Tier 2: Functional Benefits (Support With These)</h4>
-        <ul>
-            <li>"Add 200 miles in the time it takes for a coffee"</li>
-            <li>"Works every time, guaranteed—or your session is free"</li>
-            <li>"Real food, clean facilities, comfortable seating"</li>
-            <li>"Indoor comfort on every route"</li>
-            <li>"Flat-rate pricing that never surprises you"</li>
-        </ul>
-
-        <h4>Tier 3: Technical Details (Only When Specifically Asked)</h4>
-        <table>
-            <thead>
-                <tr>
-                    <th>If Asked About</th>
-                    <th>Respond With</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Charging speed</td>
-                    <td>"You'll add about 200 miles in 20 minutes—enough time for a coffee and a stretch"</td>
-                </tr>
-                <tr>
-                    <td>Reliability</td>
-                    <td>"It works every time—guaranteed. If not, your session is free."</td>
-                </tr>
-                <tr>
-                    <td>Compatibility</td>
-                    <td>"Works with all major EVs" or name specific brands</td>
-                </tr>
-                <tr>
-                    <td>Monitoring</td>
-                    <td>"Our team monitors everything 24/7 so it's ready when you arrive"</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="example-grid">
-            <div class="example-dont">
-                <div class="example-label">✗ NEVER SAY</div>
-                <div class="example-text">"350kW DCFC with 99% uptime monitored by our NOC"</div>
+    <!-- TYPOGRAPHY -->
+    <div class="page">
+        <h2>Typography</h2>
+        
+        <h3>Wordmark Typography</h3>
+        <div style="background: #FAFAFA; padding: 40px; border-radius: 8px; margin: 24px 0;">
+            <div style="font-family: 'Montserrat', -apple-system, sans-serif; font-size: 48px; font-weight: 800; letter-spacing: 0.08em; color: var(--mountain-charcoal); text-align: center;">
+                RANGEWAY
             </div>
-            <div class="example-do">
-                <div class="example-label">✓ INSTEAD SAY</div>
-                <div class="example-text">"Reliable fast charging that works every time you pull in"</div>
-            </div>
+            <p style="text-align: center; margin-top: 16px; color: #666; font-size: 0.95rem;">
+                Montserrat Bold or Raleway Bold • Weight 700-800 • Generous tracking (0.08em) • All capitals
+            </p>
         </div>
 
-        <!-- SECTION 10: CONTENT GUIDELINES -->
-        <h2 id="content">10. Content Guidelines</h2>
-
-        <h3>Writing Principles</h3>
-        <ul>
-            <li><strong>Benefits before features, always</strong> - Lead with experience, not specs</li>
-            <li><strong>Elevated but accessible</strong> - Premium without pretension</li>
-            <li><strong>Active voice preferred</strong> - Direct and confident</li>
-            <li><strong>Short sentences for clarity</strong> - Sophisticated simplicity</li>
-            <li><strong>Tell stories, don't just list facts</strong> - Narrative over bullet points</li>
-            <li><strong>Include calls-to-action naturally</strong> - Invite, don't push</li>
-            <li><strong>Warm and conversational tone</strong> - Like a knowledgeable friend</li>
-            <li><strong>Avoid technical jargon</strong> - Human language over industry terms</li>
-        </ul>
-
-        <h3>Language to Avoid</h3>
-        <div class="warning">
-            <div class="warning-title">Never use these terms in customer-facing content:</div>
-        </div>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Technical Term</th>
-                    <th>Why to Avoid</th>
-                    <th>Use Instead</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><code>350kW</code> or power ratings</td>
-                    <td>Too technical, meaningless to most drivers</td>
-                    <td>"Add 200 miles in 20 minutes" or "ultra-fast charging"</td>
-                </tr>
-                <tr>
-                    <td><code>Hub and satellite</code></td>
-                    <td>Industry jargon</td>
-                    <td>"Basecamps and Waystations" (our brand terms)</td>
-                </tr>
-                <tr>
-                    <td><code>NOC</code> (Network Operations Center)</td>
-                    <td>Overly technical</td>
-                    <td>"24/7 monitoring team" or "our operations team"</td>
-                </tr>
-                <tr>
-                    <td><code>DCFC</code> or "DC fast charging"</td>
-                    <td>Acronym soup</td>
-                    <td>"Fast charging" or "rapid charging"</td>
-                </tr>
-                <tr>
-                    <td><code>NACS/CCS compatible</code></td>
-                    <td>Confusing standards</td>
-                    <td>"Works with all major EVs" or specific brand compatibility</td>
-                </tr>
-                <tr>
-                    <td><code>OCPI integration</code></td>
-                    <td>Backend technical term</td>
-                    <td>"Shows up in your favorite charging apps"</td>
-                </tr>
-                <tr>
-                    <td><code>kWh pricing</code></td>
-                    <td>Requires math</td>
-                    <td>"Flat rates" or actual dollar amounts</td>
-                </tr>
-                <tr>
-                    <td><code>Uptime percentage</code></td>
-                    <td>Operations metric</td>
-                    <td>"Reliable" or "works every time"</td>
-                </tr>
-            </tbody>
+        <h3>Type System</h3>
+        <table class="specs-table">
+            <tr>
+                <th>Use Case</th>
+                <th>Typeface</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td>Headlines</td>
+                <td>Montserrat or Raleway</td>
+                <td>Various weights for hierarchy</td>
+            </tr>
+            <tr>
+                <td>Body Copy</td>
+                <td>Source Sans Pro, Open Sans</td>
+                <td>Clean, readable sans-serif</td>
+            </tr>
+            <tr>
+                <td>Wayfinding</td>
+                <td>Fira Sans, Roboto</td>
+                <td>High-legibility for signage</td>
+            </tr>
+            <tr>
+                <td>Digital</td>
+                <td>System fonts</td>
+                <td>Fast loading, branded fonts for key moments</td>
+            </tr>
         </table>
 
-        <h3>Phrases to Use Sparingly</h3>
         <div class="note">
-            <div class="note-title">Avoid Overusing:</div>
-            <ul>
-                <li><strong>"Scenic highway"</strong> → Vary with: "beautiful routes," "America's open roads," "memorable drives," "stunning corridors"</li>
-                <li><strong>"National Park gateway"</strong> → Vary with: "near [specific park]," "on your way to adventure," "along iconic routes"</li>
-                <li><strong>"Premium"</strong> → Show it through details rather than stating it repeatedly</li>
-            </ul>
+            <div class="note-title">Digital Performance Note</div>
+            <p>Use system fonts (-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif) for body text on web and apps to ensure fast loading. Reserve Montserrat/Raleway for headlines and key branded moments.</p>
+        </div>
+    </div>
+
+    <!-- LOGO USAGE GUIDELINES -->
+    <div class="page">
+        <h2>Logo Usage Guidelines</h2>
+        
+        <h3>Clear Space</h3>
+        <p>Maintain clear space around the logo equal to the height of the "R" in RANGEWAY. For the icon, maintain clear space equal to 25% of its width on all sides.</p>
+        
+        <div style="background: #FAFAFA; padding: 40px; border-radius: 8px; margin: 24px 0; text-align: center;">
+            <div style="display: inline-block; position: relative; padding: 40px;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: 2px dashed var(--ocean-deep); opacity: 0.3;"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 34 34">
+                    <defs>
+                        <linearGradient id="clearGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#F09060"/>
+                            <stop offset="100%" stop-color="#FFB366"/>
+                        </linearGradient>
+                        <clipPath id="clearRounded">
+                            <rect width="34" height="34" rx="10" ry="10" />
+                        </clipPath>
+                    </defs>
+                    <rect width="34" height="34" rx="10" ry="10" fill="url(#clearGrad)" />
+                    <g clip-path="url(#clearRounded)">
+                        <path d="M 0 26 L 8 18 L 15 24 L 22 17 L 34 26 L 34 34 L 0 34 Z" fill="#2f2f2f" />
+                    </g>
+                    <circle cx="25" cy="7" r="4" fill="white" fill-opacity="0.6" />
+                </svg>
+            </div>
+            <p style="margin-top: 16px; font-size: 0.9rem; color: #666;">Dashed line shows minimum clear space</p>
         </div>
 
-        <h4>Fresher Alternatives:</h4>
-        <ul>
-            <li>"Where the road takes you somewhere worth going"</li>
-            <li>"On America's most memorable routes"</li>
-            <li>"Along roads worth traveling"</li>
-            <li>"Where your journey deserves to be"</li>
+        <h3>Minimum Sizes</h3>
+        <table class="specs-table">
+            <tr>
+                <th>Logo Variant</th>
+                <th>Digital (pixels)</th>
+                <th>Print (inches)</th>
+            </tr>
+            <tr>
+                <td>Icon Only</td>
+                <td>32px</td>
+                <td>0.5"</td>
+            </tr>
+            <tr>
+                <td>Full Logo (Icon + Wordmark)</td>
+                <td>120px</td>
+                <td>1.5"</td>
+            </tr>
+            <tr>
+                <td>Wordmark Only</td>
+                <td>80px</td>
+                <td>1"</td>
+            </tr>
+        </table>
+
+        <h3>Do's and Don'ts</h3>
+        <div class="do-dont">
+            <div class="example">
+                <div class="example-header do">✓ DO: Use approved color variations</div>
+                <div class="example-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 34 34">
+                        <defs>
+                            <linearGradient id="do1Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#F09060"/>
+                                <stop offset="100%" stop-color="#FFB366"/>
+                            </linearGradient>
+                            <clipPath id="do1Rounded">
+                                <rect width="34" height="34" rx="10" ry="10" />
+                            </clipPath>
+                        </defs>
+                        <rect width="34" height="34" rx="10" ry="10" fill="url(#do1Grad)" />
+                        <g clip-path="url(#do1Rounded)">
+                            <path d="M 0 26 L 8 18 L 15 24 L 22 17 L 34 26 L 34 34 L 0 34 Z" fill="#2f2f2f" />
+                        </g>
+                        <circle cx="25" cy="7" r="4" fill="white" fill-opacity="0.6" />
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="example">
+                <div class="example-header dont">✗ DON'T: Change colors outside brand palette</div>
+                <div class="example-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 34 34" style="opacity: 0.5;">
+                        <defs>
+                            <clipPath id="dont1Rounded">
+                                <rect width="34" height="34" rx="10" ry="10" />
+                            </clipPath>
+                        </defs>
+                        <rect width="34" height="34" rx="10" ry="10" fill="#00FF00" />
+                        <g clip-path="url(#dont1Rounded)">
+                            <path d="M 0 26 L 8 18 L 15 24 L 22 17 L 34 26 L 34 34 L 0 34 Z" fill="#0000FF" />
+                        </g>
+                        <circle cx="25" cy="7" r="4" fill="#FFFF00" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="do-dont">
+            <div class="example">
+                <div class="example-header do">✓ DO: Maintain proper proportions</div>
+                <div class="example-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 34 34">
+                        <defs>
+                            <linearGradient id="do2Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#F09060"/>
+                                <stop offset="100%" stop-color="#FFB366"/>
+                            </linearGradient>
+                            <clipPath id="do2Rounded">
+                                <rect width="34" height="34" rx="10" ry="10" />
+                            </clipPath>
+                        </defs>
+                        <rect width="34" height="34" rx="10" ry="10" fill="url(#do2Grad)" />
+                        <g clip-path="url(#do2Rounded)">
+                            <path d="M 0 26 L 8 18 L 15 24 L 22 17 L 34 26 L 34 34 L 0 34 Z" fill="#2f2f2f" />
+                        </g>
+                        <circle cx="25" cy="7" r="4" fill="white" fill-opacity="0.6" />
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="example">
+                <div class="example-header dont">✗ DON'T: Stretch or distort</div>
+                <div class="example-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="120" height="60" viewBox="0 0 34 34" preserveAspectRatio="none" style="opacity: 0.5;">
+                        <defs>
+                            <linearGradient id="dont2Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#F09060"/>
+                                <stop offset="100%" stop-color="#FFB366"/>
+                            </linearGradient>
+                            <clipPath id="dont2Rounded">
+                                <rect width="34" height="34" rx="10" ry="10" />
+                            </clipPath>
+                        </defs>
+                        <rect width="34" height="34" rx="10" ry="10" fill="url(#dont2Grad)" />
+                        <g clip-path="url(#dont2Rounded)">
+                            <path d="M 0 26 L 8 18 L 15 24 L 22 17 L 34 26 L 34 34 L 0 34 Z" fill="#2f2f2f" />
+                        </g>
+                        <circle cx="25" cy="7" r="4" fill="white" fill-opacity="0.6" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="do-dont">
+            <div class="example">
+                <div class="example-header do">✓ DO: Use on appropriate backgrounds</div>
+                <div class="example-content" style="background: white;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 34 34">
+                        <defs>
+                            <linearGradient id="do3Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#F09060"/>
+                                <stop offset="100%" stop-color="#FFB366"/>
+                            </linearGradient>
+                            <clipPath id="do3Rounded">
+                                <rect width="34" height="34" rx="10" ry="10" />
+                            </clipPath>
+                        </defs>
+                        <rect width="34" height="34" rx="10" ry="10" fill="url(#do3Grad)" />
+                        <g clip-path="url(#do3Rounded)">
+                            <path d="M 0 26 L 8 18 L 15 24 L 22 17 L 34 26 L 34 34 L 0 34 Z" fill="#2f2f2f" />
+                        </g>
+                        <circle cx="25" cy="7" r="4" fill="white" fill-opacity="0.6" />
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="example">
+                <div class="example-header dont">✗ DON'T: Place on busy backgrounds</div>
+                <div class="example-content" style="background: repeating-linear-gradient(45deg, #FF6B4A, #FF6B4A 10px, #0A4B6E 10px, #0A4B6E 20px);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 34 34" style="opacity: 0.5;">
+                        <defs>
+                            <linearGradient id="dont3Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#F09060"/>
+                                <stop offset="100%" stop-color="#FFB366"/>
+                            </linearGradient>
+                            <clipPath id="dont3Rounded">
+                                <rect width="34" height="34" rx="10" ry="10" />
+                            </clipPath>
+                        </defs>
+                        <rect width="34" height="34" rx="10" ry="10" fill="url(#dont3Grad)" />
+                        <g clip-path="url(#dont3Rounded)">
+                            <path d="M 0 26 L 8 18 L 15 24 L 22 17 L 34 26 L 34 34 L 0 34 Z" fill="#2f2f2f" />
+                        </g>
+                        <circle cx="25" cy="7" r="4" fill="white" fill-opacity="0.6" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <h3>Additional Don'ts</h3>
+        <ul style="margin-left: 24px; line-height: 2;">
+            <li>Don't recreate or redraw the logo</li>
+            <li>Don't rotate or skew the logo</li>
+            <li>Don't separate the path from the mountain</li>
+            <li>Don't add effects (shadows, gradients, outlines)</li>
+            <li>Don't change the typeface</li>
+            <li>Don't alter proportions or spacing</li>
+            <li>Don't use below minimum sizes</li>
+            <li>Don't animate without brand team approval</li>
+        </ul>
+    </div>
+
+    <!-- APPLICATIONS -->
+    <div class="page">
+        <h2>Application Examples</h2>
+        
+        <h3>Digital Applications</h3>
+        <div class="grid">
+            <div class="card">
+                <h4>Website Header</h4>
+                <p style="font-size: 0.95rem; margin-bottom: 16px;">Use horizontal lockup at 180-240px width</p>
+                <div style="background: white; border: 1px solid #E6E6E6; padding: 20px; border-radius: 4px;">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 34 34">
+                            <defs>
+                                <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#F09060"/>
+                                    <stop offset="100%" stop-color="#FFB366"/>
+                                </linearGradient>
+                                <clipPath id="headerRounded">
+                                    <rect width="34" height="34" rx="10" ry="10" />
+                                </clipPath>
+                            </defs>
+                            <rect width="34" height="34" rx="10" ry="10" fill="url(#headerGrad)" />
+                            <g clip-path="url(#headerRounded)">
+                                <path d="M 0 26 L 8 18 L 15 24 L 22 17 L 34 26 L 34 34 L 0 34 Z" fill="#2f2f2f" />
+                            </g>
+                            <circle cx="25" cy="7" r="4" fill="white" fill-opacity="0.6" />
+                        </svg>
+                        <span style="font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 800; letter-spacing: 0.08em; color: var(--mountain-charcoal);">RANGEWAY</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h4>Social Media Profile</h4>
+                <p style="font-size: 0.95rem; margin-bottom: 16px;">Icon only, minimum 180×180px</p>
+                <div style="background: #FAFAFA; padding: 20px; border-radius: 50%; width: 120px; height: 120px; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 34 34">
+                        <defs>
+                            <linearGradient id="socialGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#F09060"/>
+                                <stop offset="100%" stop-color="#FFB366"/>
+                            </linearGradient>
+                            <clipPath id="socialRounded">
+                                <rect width="34" height="34" rx="10" ry="10" />
+                            </clipPath>
+                        </defs>
+                        <rect width="34" height="34" rx="10" ry="10" fill="url(#socialGrad)" />
+                        <g clip-path="url(#socialRounded)">
+                            <path d="M 0 26 L 8 18 L 15 24 L 22 17 L 34 26 L 34 34 L 0 34 Z" fill="#2f2f2f" />
+                        </g>
+                        <circle cx="25" cy="7" r="4" fill="white" fill-opacity="0.6" />
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h4>App Icon</h4>
+                <p style="font-size: 0.95rem; margin-bottom: 16px;">Full-color logo in rounded square format matches native iOS/Android styles</p>
+                <div style="background: #FAFAFA; padding: 24px; border-radius: 8px; width: 120px; height: 120px; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 34 34">
+                        <defs>
+                            <linearGradient id="appGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#F09060"/>
+                                <stop offset="100%" stop-color="#FFB366"/>
+                            </linearGradient>
+                            <clipPath id="appRounded">
+                                <rect width="34" height="34" rx="10" ry="10" />
+                            </clipPath>
+                        </defs>
+                        <rect width="34" height="34" rx="10" ry="10" fill="url(#appGrad)" />
+                        <g clip-path="url(#appRounded)">
+                            <path d="M 0 26 L 8 18 L 15 24 L 22 17 L 34 26 L 34 34 L 0 34 Z" fill="#2f2f2f" />
+                        </g>
+                        <circle cx="25" cy="7" r="4" fill="white" fill-opacity="0.6" />
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h4>Email Signature</h4>
+                <p style="font-size: 0.95rem; margin-bottom: 16px;">Icon only, 40-60px height</p>
+                <div style="background: white; border: 1px solid #E6E6E6; padding: 16px; border-radius: 4px; font-size: 14px;">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 34 34">
+                            <defs>
+                                <linearGradient id="emailGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#F09060"/>
+                                    <stop offset="100%" stop-color="#FFB366"/>
+                                </linearGradient>
+                                <clipPath id="emailRounded">
+                                    <rect width="34" height="34" rx="10" ry="10" />
+                                </clipPath>
+                            </defs>
+                            <rect width="34" height="34" rx="10" ry="10" fill="url(#emailGrad)" />
+                            <g clip-path="url(#emailRounded)">
+                                <path d="M 0 26 L 8 18 L 15 24 L 22 17 L 34 26 L 34 34 L 0 34 Z" fill="#2f2f2f" />
+                            </g>
+                            <circle cx="25" cy="7" r="4" fill="white" fill-opacity="0.6" />
+                        </svg>
+                        <div>
+                            <div style="font-weight: 600; color: var(--mountain-charcoal);">Your Name</div>
+                            <div style="color: #666;">Rangeway</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h3>Physical Applications</h3>
+        <div class="grid">
+            <div class="card">
+                <h4>Signage</h4>
+                <p>For wayfinding markers on highways and at locations, use monochrome version for maximum legibility at distance.</p>
+            </div>
+            
+            <div class="card">
+                <h4>Charging Stations</h4>
+                <p>Icon appears on all charging equipment. Use full-color on white or light backgrounds, white on dark equipment.</p>
+            </div>
+            
+            <div class="card">
+                <h4>Uniforms & Merchandise</h4>
+                <p>For embroidery and screen printing, use monochrome Mountain Charcoal version. Minimum 1.5" for embroidery.</p>
+            </div>
+        </div>
+
+        <div class="note">
+            <div class="note-title">Print Production Note</div>
+            <p>For print materials, always provide vector files (SVG or PDF) to ensure crisp reproduction at any size. When printing in single color, use the monochrome Mountain Charcoal variant.</p>
+        </div>
+    </div>
+
+    <!-- BRAND VOCABULARY -->
+    <div class="page">
+        <h2>Brand Vocabulary</h2>
+        
+        <h3>Use These Terms</h3>
+        <table class="specs-table">
+            <tr>
+                <th>Term</th>
+                <th>Definition</th>
+                <th>Usage Example</th>
+            </tr>
+            <tr>
+                <td><strong>Basecamps</strong></td>
+                <td>Full-service hub locations with 6-8 DCFC, café, clean restrooms, indoor lounge</td>
+                <td>"Visit our Baker Basecamp for charging and hospitality"</td>
+            </tr>
+            <tr>
+                <td><strong>Waystations</strong></td>
+                <td>Satellite locations with 4 DCFC, indoor lounge, automated retail</td>
+                <td>"Find our Waystation network along the scenic corridor"</td>
+            </tr>
+            <tr>
+                <td><strong>Trailkeepers</strong></td>
+                <td>Our staff members at Basecamp locations</td>
+                <td>"Our Trailkeepers are here to help with route planning"</td>
+            </tr>
+            <tr>
+                <td><strong>Pathfinders</strong></td>
+                <td>Members of our Pathfinder Rewards loyalty program</td>
+                <td>"Pathfinders enjoy flat rates with no time-of-use surprises"</td>
+            </tr>
+            <tr>
+                <td><strong>Scenic corridors</strong></td>
+                <td>The highway routes we serve connecting National Parks and attractions</td>
+                <td>"We're building America's charging network for scenic corridors"</td>
+            </tr>
+        </table>
+
+        <h3>Avoid These Terms</h3>
+        <ul style="margin-left: 24px; line-height: 2;">
+            <li>"Gas station" (we're not replicating that model)</li>
+            <li>"Charging station" alone (use "Basecamp" or "Waystation")</li>
+            <li>"Customers" (prefer "travelers," "members," or "Pathfinders")</li>
+            <li>"Urban network" (we focus on scenic corridors, not cities)</li>
+            <li>"Fast food" (we partner with quality regional providers)</li>
         </ul>
 
-        <h3>Good vs. Poor Examples</h3>
-
-        <div class="example-grid">
-            <div class="example-do">
-                <div class="example-label">✓ Elevated & Clear</div>
-                <div class="example-text">"Charge where the journey matters. Our Baker Basecamp offers indoor comfort while you explore Death Valley, with flat rates that never surprise you."</div>
+        <h3>Writing Style</h3>
+        <div class="grid">
+            <div class="card">
+                <h4>✓ Good Example</h4>
+                <p style="font-style: italic; color: #666;">"Charge where the journey matters. Our Baker Basecamp offers indoor comfort while you explore Death Valley, with Pathfinder flat rates that never surprise you."</p>
             </div>
-            <div class="example-dont">
-                <div class="example-label">✗ Generic & Technical</div>
-                <div class="example-text">"Visit our charging station for fast DC charging. Customers can access amenities. Standard rates apply with time-of-use pricing."</div>
-            </div>
-        </div>
-
-        <div class="example-grid">
-            <div class="example-do">
-                <div class="example-label">✓ Premium & Human</div>
-                <div class="example-text">"Add 200 miles while enjoying locally-roasted coffee and sweeping desert views."</div>
-            </div>
-            <div class="example-dont">
-                <div class="example-label">✗ Technical & Cold</div>
-                <div class="example-text">"Our 350kW chargers provide fast charging speeds for your electric vehicle."</div>
+            
+            <div class="card">
+                <h4>✗ Poor Example</h4>
+                <p style="font-style: italic; color: #666;">"Visit our charging station for fast DC charging. Customers can access amenities. Standard rates apply with time-of-use pricing."</p>
             </div>
         </div>
+    </div>
 
-        <div class="example-grid">
-            <div class="example-do">
-                <div class="example-label">✓ Specific & Inviting</div>
-                <div class="example-text">"Relax in our climate-controlled lounge while your Rivian charges—you'll be back on the road in about 20 minutes."</div>
-            </div>
-            <div class="example-dont">
-                <div class="example-label">✗ Overused Phrases</div>
-                <div class="example-text">"Our scenic highway National Park gateway location offers premium charging."</div>
-            </div>
-        </div>
-
-        <div class="example-grid">
-            <div class="example-do">
-                <div class="example-label">✓ Fresh & Descriptive</div>
-                <div class="example-text">"Our Baker location sits where the Mojave meets the mountains—charge while taking in views that remind you why you're out here."</div>
-            </div>
-            <div class="example-dont">
-                <div class="example-label">✗ Jargon-Heavy</div>
-                <div class="example-text">"This hub location features 8 DCFC units with NACS and CCS compatibility, monitored 24/7 by our NOC."</div>
-            </div>
-        </div>
-
-        <!-- SECTION 11: BRAND VOCABULARY -->
-        <h2 id="vocabulary">11. Brand Vocabulary</h2>
-
-        <h3>Approved Terminology</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Term</th>
-                    <th>Definition</th>
-                    <th>Usage</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Basecamps</strong></td>
-                    <td>Full-service hub locations with 6-8 fast chargers, café, clean restrooms, indoor lounge</td>
-                    <td>"Visit our Baker Basecamp"</td>
-                </tr>
-                <tr>
-                    <td><strong>Waystations</strong></td>
-                    <td>Satellite locations with 4 fast chargers, indoor lounge, automated retail</td>
-                    <td>"Our Kingman Waystation"</td>
-                </tr>
-                <tr>
-                    <td><strong>Trailkeepers</strong></td>
-                    <td>Staff members at Basecamp locations</td>
-                    <td>"Our Trailkeepers are ready to help"</td>
-                </tr>
-                <tr>
-                    <td><strong>Pathfinders</strong></td>
-                    <td>Members of Pathfinder Rewards loyalty program</td>
-                    <td>"Join our community of Pathfinders"</td>
-                </tr>
-                <tr>
-                    <td><strong>Routes</strong> or <strong>Corridors</strong></td>
-                    <td>The roads we serve—vary your language, avoid overusing "scenic highway"</td>
-                    <td>"Along America's best routes" or "on memorable drives"</td>
-                </tr>
-                <tr>
-                    <td><strong>Travelers</strong> or <strong>Members</strong></td>
-                    <td>Our customers</td>
-                    <td>"Every traveler deserves comfort"</td>
-                </tr>
-            </tbody>
+    <!-- FILE REFERENCE -->
+    <div class="page">
+        <h2>File Reference</h2>
+        
+        <h3>Logo Files Available</h3>
+        <table class="specs-table">
+            <tr>
+                <th>Filename</th>
+                <th>Description</th>
+                <th>Best Use</th>
+            </tr>
+            <tr>
+                <td><code>rangeway-logo-standard.svg</code></td>
+                <td>Full color icon (Sunset Coral, Golden Highway, Mountain Charcoal)</td>
+                <td>Primary use on light backgrounds, marketing materials, website</td>
+            </tr>
+            <tr>
+                <td><code>rangeway-banner.svg</code></td>
+                <td>Horizontal banner with icon and RANGEWAY wordmark (vector)</td>
+                <td>Headers, social media banners, presentations, email signatures</td>
+            </tr>
+            <tr>
+                <td><code>rangeway-banner.png</code></td>
+                <td>Horizontal banner with icon and RANGEWAY wordmark (raster)</td>
+                <td>When vector format is not supported, quick sharing</td>
+            </tr>
         </table>
-
-        <h3>Terms to Avoid</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Avoid</th>
-                    <th>Reason</th>
-                    <th>Use Instead</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>"Gas station"</td>
-                    <td>Not replicating that model</td>
-                    <td>"Basecamp" or "Waystation"</td>
-                </tr>
-                <tr>
-                    <td>"Charging station" alone</td>
-                    <td>Too generic</td>
-                    <td>"Basecamp" or "Waystation"</td>
-                </tr>
-                <tr>
-                    <td>"Customers"</td>
-                    <td>Too transactional</td>
-                    <td>"Travelers," "Members," or "Pathfinders"</td>
-                </tr>
-                <tr>
-                    <td>"Urban network"</td>
-                    <td>Focus is memorable routes, not cities</td>
-                    <td>"Route network" or specific corridor names</td>
-                </tr>
-                <tr>
-                    <td>"Fast food"</td>
-                    <td>We partner with quality regional providers</td>
-                    <td>"Local café," "Regional food partners"</td>
-                </tr>
-                <tr>
-                    <td>"Attendants"</td>
-                    <td>Doesn't reflect hospitality focus</td>
-                    <td>"Trailkeepers"</td>
-                </tr>
-                <tr>
-                    <td>"Users"</td>
-                    <td>Impersonal</td>
-                    <td>"Drivers," "Members," "Travelers"</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <!-- SECTION 12: METRICS -->
-        <h2 id="metrics">12. Metrics & Analytics</h2>
-
-        <h3>Year 1 Targets</h3>
-        <div class="metric-grid">
-            <div class="metric-card">
-                <div class="metric-value">10K</div>
-                <div class="metric-label">Charging Sessions</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-value">80+</div>
-                <div class="metric-label">NPS Score</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-value">98%+</div>
-                <div class="metric-label">Network Uptime</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-value">5K+</div>
-                <div class="metric-label">Pathfinder Members</div>
-            </div>
+        
+        <div class="note">
+            <div class="note-title">File Format Notes</div>
+            <p><strong>SVG (Scalable Vector Graphics)</strong> is the preferred format for all applications. SVG files scale infinitely without loss of quality and work across web, print, and digital applications.</p>
+            <p>If you need other formats (PNG, PDF, EPS), export from the SVG files at your required resolution. For print, always use vector formats when possible.</p>
         </div>
-
-        <h3>5-Year Financial Projections</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Year</th>
-                    <th>Sites</th>
-                    <th>Revenue</th>
-                    <th>EBITDA Margin</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>2026</td>
-                    <td>6</td>
-                    <td>$3.7M</td>
-                    <td>-24%</td>
-                </tr>
-                <tr>
-                    <td>2027</td>
-                    <td>12</td>
-                    <td>$11.4M</td>
-                    <td>18%</td>
-                </tr>
-                <tr>
-                    <td>2028</td>
-                    <td>18</td>
-                    <td>$22.7M</td>
-                    <td>31%</td>
-                </tr>
-                <tr>
-                    <td>2029</td>
-                    <td>24</td>
-                    <td>$35.2M</td>
-                    <td>35%</td>
-                </tr>
-                <tr>
-                    <td>2030</td>
-                    <td>30</td>
-                    <td>$52.2M</td>
-                    <td>39%</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <!-- Footer -->
-        <div class="card" style="margin-top: 80px; text-align: center;">
-            <h3 style="margin-top: 0;">Rangeway Energy</h3>
-            <p><strong>Zak Winnick</strong><br>Founder & CEO</p>
-            <p>
-                Email: hello@rangewayev.com<br>
-                Website: rangewayev.com
-            </p>
-            <p style="margin-bottom: 0; color: #888; font-size: 0.9rem;">
-                Document Version 4.0 | November 2025<br>
-                Next Review: Q2 2026
-            </p>
+        
+        <h3>Questions or Special Requests?</h3>
+        <p>For questions about logo usage, requests for additional file formats, custom applications, or brand guidelines clarification, contact:</p>
+        <p style="margin-top: 16px; line-height: 1.8;">
+            <strong>Zak Winnick</strong><br>
+            Founder & CEO, Rangeway Energy, Inc.<br>
+            hello@rangewayev.com<br>
+            rangewayev.com
+        </p>
+    </div>
+    
+    <!-- BACK COVER -->
+    <div class="cover">
+        <div style="margin-bottom: 40px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 34 34">
+                <defs>
+                    <linearGradient id="backGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#F09060"/>
+                        <stop offset="100%" stop-color="#FFB366"/>
+                    </linearGradient>
+                    <clipPath id="backRounded">
+                        <rect width="34" height="34" rx="10" ry="10" />
+                    </clipPath>
+                </defs>
+                <rect width="34" height="34" rx="10" ry="10" fill="url(#backGrad)" />
+                <g clip-path="url(#backRounded)">
+                    <path d="M 0 26 L 8 18 L 15 24 L 22 17 L 34 26 L 34 34 L 0 34 Z" fill="#2f2f2f" />
+                </g>
+                <circle cx="25" cy="7" r="4" fill="white" fill-opacity="0.6" />
+            </svg>
         </div>
+        <div style="font-size: 1.8rem; margin-bottom: 12px; font-weight: 300;">Rangeway</div>
+        <div style="opacity: 0.9; font-size: 1.1rem; margin-bottom: 40px;">Where charging becomes part of your journey</div>
+        <div style="opacity: 0.7; font-size: 0.9rem;">Brand Guidelines v1.0 — November 2025</div>
     </div>
 </body>
 </html>
