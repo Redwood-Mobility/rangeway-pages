@@ -30,7 +30,7 @@ This is a single-page website with sections for:
 
 1. **Hero Section** - Main brand messaging and call-to-action
 2. **The Rangeway Difference** - Indoor comfort, charging, and amenities
-3. **Network** - Baker Basecamp spotlight and expansion plans
+3. **Network** - Regional expansion plans across CA, CO, NV, UT, and HI
 4. **Why Rangeway** - Market opportunity and company mission
 5. **Investors** - Investment information and opportunities
 6. **Contact** - Get in touch with the team
