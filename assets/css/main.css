@@ -365,7 +365,7 @@ a:hover {
   transform: rotate(90deg);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .menu-toggle {
     display: flex;
   }
