@@ -1,61 +1,75 @@
 # Rangeway Website
 
-Official website for Rangeway - America's premium scenic highway EV charging network.
+Official website for Rangeway - America's premier scenic highway EV charging network.
 
 ## Brand Guidelines Implementation
 
 This site implements the official Rangeway brand guidelines with:
 
 ### Brand Colors
-- **Sunset Coral** (#F09060) - Primary brand color
-- **Golden Highway** (#FFB366) - Accent and highlights
-- **Mountain Charcoal** (#4A4A4A) - Typography and grounding
-- **Coastal Cream** (#F5DEB3) - Supporting color
-- **Ocean Deep** (#2C5F7C) - CTA sections
-- **Fog Gray** (#B8B8B8) - Secondary text
+- **Warm** (#f4a855) - Primary brand color
+- **Charcoal** (#2d2d2d) - Typography and grounding
+- **Cream** (#f5f1eb) - Background and supporting color
+- **Sage** (#4a5d52) - Accent color
 
 ### Typography
-- **Montserrat** - Headlines (h1-h4), bold, generous letter-spacing
-- **Source Sans Pro / Open Sans** - Body copy and UI elements
-- **RANGEWAY** wordmark - All caps with 0.08em letter-spacing
+- **Raleway** - Headlines and wordmark (Bold 700, SemiBold 600)
+- **Montserrat / Source Sans Pro** - Body copy and UI elements
 
 ### Logo
-- Full-color gradient logo (Sunset Coral to Golden Highway)
-- Used consistently in header and footer
-- Proper clear space and sizing maintained
+- Path Mark logo with Raleway wordmark
+- Charcoal version for light backgrounds
+- White version for dark backgrounds
+- New logo assets in `logo2/` folder (launching January 2025)
 
 ## Site Structure
 
 This is a single-page website with sections for:
 
-1. **Hero Section** - Main brand messaging and call-to-action
-2. **The Rangeway Difference** - Indoor comfort, charging, and amenities
-3. **Network** - Regional expansion plans across CA, CO, NV, UT, and HI
-4. **Why Rangeway** - Market opportunity and company mission
-5. **Investors** - Investment information and opportunities
-6. **Contact** - Get in touch with the team
-7. **Newsroom** - Latest updates from newsroom.rangeway.energy
+1. **Hero Section** - "Adventure in your EV, recharge in luxury"
+2. **Problem Statement** - EV drivers deserve better
+3. **The Experience** - Arrive. Recharge. Rejuvenate. (3-step process)
+4. **The Rangeway Difference** - Premium amenities and features
+5. **Our Network** - Regional expansion (CA, CO, HI, NV, UT)
+6. **Curated Journeys** - Popular routes and destinations
+7. **Pathfinder Rewards** - Customer loyalty program
+8. **FAQ** - Common questions
+9. **Investors** - Investment information and opportunities
+10. **Contact** - Get in touch with the team
+11. **Newsroom** - Latest updates
 
 ## Site Architecture
 
 ```
 rangeway-pages/
-├── index.html (single-page site)
+├── index.html (production site)
+├── index-test.html (test site with new logo)
+├── investors.html (dedicated investor page)
+├── pathfinder.html (rewards program details)
 ├── _config.yml
 ├── _layouts/
-│   └── default.html
+│   ├── default.html (production layout)
+│   └── default-test.html (test layout with new logo)
 ├── _includes/
-│   ├── header.html
+│   ├── header.html (production header)
+│   ├── header-test.html (test header with new logo)
 │   ├── footer.html
 │   └── newsroom.html
 ├── assets/
 │   ├── css/
 │   │   ├── style.css
-│   │   └── main.css
+│   │   ├── main.css
+│   │   └── brand-test.css (new brand color overrides)
 │   └── js/
 │       └── main.js
 ├── images/
 │   └── (brand imagery)
+├── logo2/
+│   ├── rangeway-logo-assets/
+│   │   ├── lockup/ (logo + wordmark)
+│   │   ├── mark/ (logo only)
+│   │   └── app-icons/
+│   └── rangeway-brand-final.html (brand guidelines)
 ├── CNAME
 ├── Gemfile
 └── _archive/
@@ -67,22 +81,27 @@ rangeway-pages/
 ### Design System
 - **Light/Dark Mode** - Automatic switching based on system preferences
 - **Responsive Design** - Mobile-first approach with optimized layouts
-- **Brand Typography** - Montserrat for headlines, Source Sans Pro for body
-- **Consistent Footer** - Always dark with Coastal Cream text
-- **Branded Header** - Full-color logo with RANGEWAY wordmark
-- **Single-Page Navigation** - Smooth scrolling to sections
+- **Tablet Hamburger Menu** - Mobile menu shows at 1024px breakpoint
+- **Brand Typography** - Raleway for headlines, system fonts for body
+- **Hospitality-Focused Copy** - Luxury language throughout
 
 ### Navigation
-- Sticky navigation bar with brand colors
-- Mobile-responsive hamburger menu
+- Sticky navigation bar
+- Mobile/tablet-responsive hamburger menu (≤1024px)
 - Smooth scroll to sections
 - Social media links in header
 - Footer navigation with quick links
 
+### Test Site
+- Available at `/index-test.html`
+- Features new logo/wordmark from `logo2/` folder
+- Uses `default-test` layout with `header-test.html`
+- Includes new brand colors via `brand-test.css`
+- Set to `noindex, nofollow` for search engines
+
 ### Accessibility
 - Semantic HTML structure
 - ARIA labels on interactive elements
-- Skip to main content link
 - Keyboard navigation support
 - Sufficient color contrast ratios
 
@@ -126,18 +145,36 @@ Production URL: https://rangewayev.com
 ## Brand Voice & Terminology
 
 ### Key Terms
-- **Basecamps** - Full-service flagship locations (6+ chargers, cafe, 24/7 staff)
-- **Waystations** - Automated satellite locations (4 chargers, climate-controlled lounge)
-- **Trailkeepers** - Customer service staff at Basecamps
-- **Pathfinder Rewards** - Customer loyalty program
+- **Waystations** - Charging locations with climate-controlled lounges
+- **Pathfinder Rewards** - Customer loyalty program with four tiers
+- **Trailblazer** - Top tier of Pathfinder Rewards (invitation-only)
 
 ### Messaging Pillars
-1. **Indoor Comfort** - Climate-controlled spaces at every location
-2. **Reliability** - 99% uptime, 24/7 monitoring
-3. **Hospitality** - Charging as destination, not obligation
-4. **Scenic Routes** - National Parks and beautiful highways
+1. **Luxury Hospitality** - Premium, refined experience
+2. **Indoor Comfort** - Climate-controlled sanctuary at every location
+3. **Reliability** - Chargers that work when you need them
+4. **Scenic Routes** - Breathtaking destinations, curated journeys
+
+### Hospitality Language
+- Sanctuary, respite, retreat
+- Artisan, curated, thoughtfully selected
+- Refined, elevated, exceptional
+- Seamless, effortless, complimentary
+- Impeccable, pristine, meticulously maintained
 
 ## Version History
+
+### Version 4.0 - December 2025
+- Redesigned with YC landing page principles
+- Hospitality-focused luxury copy throughout
+- New brand colors (Warm, Charcoal, Cream, Sage)
+- Raleway typography for headings
+- Added "How It Works" 3-step section
+- Added FAQ section
+- Streamlined page structure
+- Test site with new logo (`index-test.html`)
+- Dedicated investor page (`investors.html`)
+- Tablet hamburger menu (1024px breakpoint)
 
 ### Version 3.0 - November 15, 2025
 - Migrated to single-page architecture
@@ -164,9 +201,10 @@ Previous production versions are archived in `_archive/production-backup-YYYYMMD
 
 For questions or issues, contact:
 - **General**: hello@rangewayev.com
-- **Technical**: (650) 420-6300
+- **Partnerships**: partnerships@rangewayev.com
+- **Investors**: investors@rangewayev.com
 
 ---
 
-Last Updated: November 15, 2025
-Version: 3.0 - Single-Page Architecture
+Last Updated: December 2025
+Version: 4.0 - Hospitality-Focused Redesign
