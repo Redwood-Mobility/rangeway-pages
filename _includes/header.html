@@ -1,24 +1,13 @@
 <nav class="navbar" id="navbar">
   <div class="container">
     <a href="{{ '/' | relative_url }}" class="navbar-brand">
-      <!-- Brand Logo SVG -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 34 34">
-        <defs>
-          <linearGradient id="navLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#F09060"/>
-            <stop offset="100%" stop-color="#FFB366"/>
-          </linearGradient>
-          <clipPath id="navLogoRounded">
-            <rect width="34" height="34" rx="10" ry="10" />
-          </clipPath>
-        </defs>
-        <rect width="34" height="34" rx="10" ry="10" fill="url(#navLogoGrad)" />
-        <g clip-path="url(#navLogoRounded)">
-          <path d="M 0 26 L 8 18 L 15 24 L 22 17 L 34 26 L 34 34 L 0 34 Z" fill="#2f2f2f" />
-        </g>
-        <circle cx="25" cy="7" r="4" fill="white" fill-opacity="0.6" />
+      <!-- Brand Logo SVG - New R Mark -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 96 112">
+        <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100"
+              stroke="var(--text-heading, #2d2d2d)" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="58" cy="32" r="10" fill="#f4a855"/>
       </svg>
-      <span>RANGEWAY</span>
+      <span>Rangeway</span>
     </a>
 
     <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">

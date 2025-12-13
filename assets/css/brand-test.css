@@ -80,6 +80,24 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
+/* Navbar brand - Raleway Bold for wordmark */
+.navbar-brand {
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
+/* Buttons - Raleway for consistency */
+.btn {
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Section badge - Raleway */
+.section-badge {
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
 /* Button color updates */
 .btn-primary {
   background: linear-gradient(135deg, #f4a855 0%, #e8923a 100%);
