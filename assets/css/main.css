@@ -35,6 +35,7 @@
   --footer-bg: #4A4A4A;
   --footer-text: #F5DEB3;
   --stats-bg: #FAFAFA;
+  --logo-color: #2d2d2d;
 
   /* Effects */
   --blur: blur(30px);
@@ -62,6 +63,7 @@
   --footer-text: #F5DEB3;
   --stats-bg: #0f0f0f;
   --coastal-cream: #2a2a2a;
+  --logo-color: #ffffff;
 }
 
 /* Auto dark mode based on system preference */
@@ -84,6 +86,7 @@
     --footer-text: #F5DEB3;
     --stats-bg: #0f0f0f;
     --coastal-cream: #2a2a2a;
+    --logo-color: #ffffff;
   }
 }
 
@@ -219,9 +222,9 @@ a:hover {
     font-size: 18px;
   }
 
-  .navbar-brand svg {
-    width: 32px;
-    height: 32px;
+  .navbar-brand svg.brand-lockup {
+    width: 140px;
+    height: auto;
   }
 }
 
