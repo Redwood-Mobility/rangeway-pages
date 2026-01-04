@@ -834,6 +834,10 @@ section {
   gap: 2rem;
 }
 
+.steps-grid-2x2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .step-card {
   position: relative;
   padding: 2.5rem 2rem;
@@ -887,7 +891,8 @@ section {
 }
 
 @media (max-width: 768px) {
-  .steps-grid {
+  .steps-grid,
+  .steps-grid-2x2 {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
