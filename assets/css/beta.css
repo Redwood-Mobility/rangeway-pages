@@ -525,16 +525,17 @@ a:hover {
   overflow: hidden;
 }
 
-/* Hero background gradient */
+/* Hero background gradient - soft ambient glow */
 .hero::before {
   content: '';
   position: absolute;
-  top: 0;
-  right: -20%;
-  width: 80%;
-  height: 100%;
-  background: radial-gradient(ellipse at 70% 30%, var(--warm-glow) 0%, transparent 60%);
+  top: -20%;
+  right: -10%;
+  width: 70%;
+  height: 70%;
+  background: radial-gradient(ellipse at center, rgba(244, 168, 85, 0.08) 0%, rgba(244, 168, 85, 0.02) 40%, transparent 70%);
   pointer-events: none;
+  filter: blur(60px);
 }
 
 /* Decorative line - infrastructure element */
@@ -1292,19 +1293,28 @@ footer::before {
 
 /* Scroll-triggered animations */
 .animate-on-scroll {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
-}
-
-.animate-on-scroll.animate-init {
   opacity: 0;
   transform: translateY(24px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
 }
 
 .animate-on-scroll.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Fallback: if JS fails, show content after 2s */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-on-scroll {
+    animation: fallbackReveal 0.01s 2s forwards paused;
+  }
+}
+
+@keyframes fallbackReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Stagger children */

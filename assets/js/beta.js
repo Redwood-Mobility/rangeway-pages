@@ -142,14 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Find all elements to animate
   const animatedElements = document.querySelectorAll('.animate-on-scroll');
 
-  animatedElements.forEach((el, index) => {
-    // Add init class for animation start state
-    el.classList.add('animate-init');
-
-    // Observe the element
-    observer.observe(el);
-  });
-
   // Add stagger delays for elements within .stagger containers
   const staggerContainers = document.querySelectorAll('.stagger');
   staggerContainers.forEach(container => {
@@ -159,15 +151,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Trigger check for elements already in viewport
-  setTimeout(() => {
+  // Observe all elements
+  animatedElements.forEach(el => {
+    observer.observe(el);
+  });
+
+  // Immediately check for elements already in viewport
+  requestAnimationFrame(() => {
     animatedElements.forEach(el => {
       const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
+      if (rect.top < window.innerHeight * 0.9 && rect.bottom > 0) {
         el.classList.add('visible');
       }
     });
-  }, 100);
+  });
 });
 
 // ============================================
