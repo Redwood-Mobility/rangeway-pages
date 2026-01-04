@@ -31,11 +31,11 @@
   --border-color: rgba(45, 45, 45, 0.1);
   --border-accent: rgba(244, 168, 85, 0.3);
 
-  /* Shadows - Warm Tinted */
-  --shadow-sm: 0 2px 8px rgba(45, 45, 45, 0.06);
-  --shadow-md: 0 8px 32px rgba(45, 45, 45, 0.1);
-  --shadow-lg: 0 20px 60px rgba(45, 45, 45, 0.12);
-  --shadow-xl: 0 30px 80px rgba(45, 45, 45, 0.15);
+  /* Shadows - Soft and Natural */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.03), 0 6px 16px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.04), 0 12px 32px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 6px 12px rgba(0, 0, 0, 0.04), 0 16px 40px rgba(0, 0, 0, 0.1);
 
   /* Accent */
   --accent-color: var(--warm);
@@ -76,10 +76,10 @@
   --card-bg: #252525;
   --border-color: rgba(255, 255, 255, 0.08);
   --border-accent: rgba(244, 168, 85, 0.25);
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.4);
-  --shadow-xl: 0 30px 80px rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.1), 0 6px 16px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.12), 0 12px 32px rgba(0, 0, 0, 0.18);
+  --shadow-xl: 0 6px 12px rgba(0, 0, 0, 0.12), 0 16px 40px rgba(0, 0, 0, 0.2);
   --accent-hover: var(--warm-light);
   --nav-bg: rgba(26, 26, 26, 0.92);
   --nav-scrolled: rgba(26, 26, 26, 0.98);
@@ -99,10 +99,10 @@
     --card-bg: #252525;
     --border-color: rgba(255, 255, 255, 0.08);
     --border-accent: rgba(244, 168, 85, 0.25);
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
-    --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.3);
-    --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.4);
-    --shadow-xl: 0 30px 80px rgba(0, 0, 0, 0.5);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.1), 0 6px 16px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.12), 0 12px 32px rgba(0, 0, 0, 0.18);
+    --shadow-xl: 0 6px 12px rgba(0, 0, 0, 0.12), 0 16px 40px rgba(0, 0, 0, 0.2);
     --accent-hover: var(--warm-light);
     --nav-bg: rgba(26, 26, 26, 0.92);
     --nav-scrolled: rgba(26, 26, 26, 0.98);
@@ -501,34 +501,17 @@ a:hover {
   animation: fadeIn 1s ease 0.3s both;
 }
 
-/* Decorative frame behind hero image using brand warm color */
-.hero-image::before {
-  content: '';
-  position: absolute;
-  inset: -12px;
-  background: linear-gradient(135deg, var(--warm), var(--warm-light));
-  border-radius: 24px;
-  opacity: 0.15;
-  transform: rotate(1.5deg);
-  z-index: -1;
-  transition: transform var(--transition-slow), opacity var(--transition-slow);
-}
-
-.hero-image:hover::before {
-  transform: rotate(2.5deg);
-  opacity: 0.2;
-}
-
 .hero-image img {
   width: 100%;
   height: auto;
-  border-radius: 20px;
-  box-shadow: var(--shadow-xl);
-  transition: transform var(--transition-slow);
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+  transition: transform var(--transition-slow), box-shadow var(--transition-slow);
 }
 
 .hero-image:hover img {
-  transform: scale(1.015) translateY(-4px);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
 }
 
 @media (max-width: 968px) {
@@ -545,10 +528,6 @@ a:hover {
 
   .hero-content {
     text-align: center;
-  }
-
-  .hero-image::before {
-    display: none;
   }
 }
 
@@ -784,42 +763,16 @@ section {
   direction: ltr;
 }
 
-.feature-image {
-  position: relative;
-}
-
-/* Decorative border frame with brand accent */
-.feature-image::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 10px;
-  right: -10px;
-  top: 10px;
-  border: 2px solid var(--border-accent);
-  border-radius: 20px;
-  z-index: -1;
-  opacity: 0.6;
-  transition: all var(--transition-normal);
-}
-
-.feature-image:hover::after {
-  opacity: 1;
-  bottom: -14px;
-  left: 14px;
-  right: -14px;
-  top: 14px;
-}
-
 .feature-image img {
   width: 100%;
-  border-radius: 20px;
-  box-shadow: var(--shadow-lg);
-  transition: transform var(--transition-slow);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-slow), box-shadow var(--transition-slow);
 }
 
 .feature-image:hover img {
-  transform: scale(1.01);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
 }
 
 @media (max-width: 968px) {
@@ -830,10 +783,6 @@ section {
 
   .feature-grid:nth-child(even) {
     direction: ltr;
-  }
-
-  .feature-image::after {
-    display: none;
   }
 
   /* Route sections - image on top on mobile */
