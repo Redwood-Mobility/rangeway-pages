@@ -1080,6 +1080,77 @@ section {
 }
 
 /* ============================================
+   Contact Section
+   ============================================ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.contact-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.contact-card:hover {
+  border-color: var(--border-warm);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.contact-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--warm-glow);
+  border-radius: var(--radius-md);
+}
+
+.contact-icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--warm);
+}
+
+.contact-card h4 {
+  margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+  font-size: 0.9375rem;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.contact-link {
+  display: block;
+  color: var(--warm);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  margin-top: 0.5rem;
+  transition: color var(--transition-fast);
+}
+
+.contact-link:hover {
+  color: var(--warm-dark);
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* ============================================
    CTA Section
    ============================================ */
 .cta-section {
