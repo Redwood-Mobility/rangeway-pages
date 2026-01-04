@@ -1,6 +1,9 @@
-// Rangeway - Main JavaScript
+// Rangeway Beta - JavaScript
+// Modern rustic hospitality experience
 
-// Automatic Theme Detection (follows system preference)
+// ============================================
+// Theme Detection (follows system preference)
+// ============================================
 const html = document.documentElement;
 const prefersDarkQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
@@ -11,42 +14,50 @@ function applyTheme(theme) {
 // Initialize theme based on system preference
 applyTheme(prefersDarkQuery.matches ? 'dark' : 'light');
 
-// Listen for system theme changes (e.g., macOS auto dark mode at sunset)
+// Listen for system theme changes
 prefersDarkQuery.addEventListener('change', (e) => {
   applyTheme(e.matches ? 'dark' : 'light');
 });
 
-// Navbar scroll effect
+// ============================================
+// Navbar Scroll Effect
+// ============================================
+const navbar = document.getElementById('navbar');
+let lastScrollY = window.scrollY;
+
 window.addEventListener('scroll', () => {
-  const navbar = document.getElementById('navbar');
-  if (window.scrollY > 100) {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > 100) {
     navbar.classList.add('scrolled');
   } else {
     navbar.classList.remove('scrolled');
   }
-});
 
-// Mobile menu toggle
+  lastScrollY = currentScrollY;
+}, { passive: true });
+
+// ============================================
+// Mobile Menu - Slide Over
+// ============================================
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.getElementById('navMenu');
-const mobileMenuClose = document.getElementById('mobileMenuClose');
 const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
 
 function openMobileMenu() {
   navMenu.classList.add('active');
   menuToggle.classList.add('active');
   mobileMenuOverlay.classList.add('active');
-  document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+  document.body.style.overflow = 'hidden';
 }
 
 function closeMobileMenu() {
   navMenu.classList.remove('active');
   menuToggle.classList.remove('active');
   mobileMenuOverlay.classList.remove('active');
-  document.body.style.overflow = ''; // Restore scrolling
+  document.body.style.overflow = '';
 }
 
-// Open menu with hamburger button
 if (menuToggle) {
   menuToggle.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -58,15 +69,6 @@ if (menuToggle) {
   });
 }
 
-// Close menu with X button
-if (mobileMenuClose) {
-  mobileMenuClose.addEventListener('click', (e) => {
-    e.stopPropagation();
-    closeMobileMenu();
-  });
-}
-
-// Close menu when clicking overlay
 if (mobileMenuOverlay) {
   mobileMenuOverlay.addEventListener('click', () => {
     closeMobileMenu();
@@ -81,84 +83,119 @@ navLinks.forEach(link => {
   });
 });
 
-// Smooth scroll for anchor links (only for same-page anchors)
-document.querySelectorAll('a[href^="#"], a[href*="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
+// Close menu on escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+    closeMobileMenu();
+  }
+});
+
+// ============================================
+// Smooth Scroll for Anchor Links
+// ============================================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
     const href = this.getAttribute('href');
 
-    // Check if this is a same-page anchor link
-    // Skip if it's a link to another page (contains path before #)
-    if (href.startsWith('#')) {
-      // Pure anchor link like #section
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        const offsetTop = target.offsetTop - 80; // Account for fixed navbar
-        window.scrollTo({
-          top: offsetTop,
-          behavior: 'smooth'
-        });
-      }
-    } else if (href.includes('#')) {
-      // Link like /page#section or /#section
-      const hashIndex = href.indexOf('#');
-      const path = href.substring(0, hashIndex);
-      const hash = href.substring(hashIndex);
+    if (href === '#') return;
 
-      // Check if we're on the same page
-      const currentPath = window.location.pathname;
-      const isHomePage = currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/');
-      const linkToHome = path === '/' || path === '' || path === '/index.html';
-
-      if ((isHomePage && linkToHome) || path === currentPath) {
-        // Same page - smooth scroll
-        const target = document.querySelector(hash);
-        if (target) {
-          e.preventDefault();
-          const offsetTop = target.offsetTop - 80;
-          window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
-          });
-        }
-      }
-      // Otherwise, let the browser handle navigation to the other page
+    const target = document.querySelector(href);
+    if (target) {
+      e.preventDefault();
+      const offsetTop = target.offsetTop - 80;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
     }
   });
 });
 
-// Intersection Observer for scroll animations
+// ============================================
+// Scroll Animations - Intersection Observer
+// ============================================
 const observerOptions = {
   threshold: 0.1,
-  rootMargin: '0px 0px -80px 0px'
+  rootMargin: '0px 0px -60px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
+      // Optional: unobserve after animation
+      // observer.unobserve(entry.target);
     }
   });
 }, observerOptions);
 
-// Observe all cards and sections for animations
+// Initialize scroll animations on DOM load
 document.addEventListener('DOMContentLoaded', () => {
-  // Elements to animate on scroll
-  const animatedElements = document.querySelectorAll('.card, .feature-grid, .stat-item, .section-header, [style*="border-left: 4px"]');
+  // Find all elements to animate
+  const animatedElements = document.querySelectorAll('.animate-on-scroll');
 
-  animatedElements.forEach((el, index) => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(24px)';
-    el.style.transition = `opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)`;
-    el.style.transitionDelay = `${(index % 4) * 0.1}s`; // Stagger effect
+  // Add stagger delays for elements within .stagger containers
+  const staggerContainers = document.querySelectorAll('.stagger');
+  staggerContainers.forEach(container => {
+    const children = container.querySelectorAll('.animate-on-scroll');
+    children.forEach((child, index) => {
+      child.style.transitionDelay = `${index * 0.1}s`;
+    });
+  });
+
+  // Observe all elements
+  animatedElements.forEach(el => {
     observer.observe(el);
   });
 
-  // Add stagger class to grid containers for children
-  const grids = document.querySelectorAll('.grid-3, .grid-2');
-  grids.forEach(grid => {
-    grid.classList.add('stagger-children');
+  // Immediately check for elements already in viewport
+  requestAnimationFrame(() => {
+    animatedElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.9 && rect.bottom > 0) {
+        el.classList.add('visible');
+      }
+    });
   });
+});
+
+// ============================================
+// Parallax Effect for Hero (subtle)
+// ============================================
+const heroImage = document.querySelector('.hero-image img');
+
+if (heroImage) {
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const rate = scrolled * 0.15;
+
+    if (scrolled < window.innerHeight) {
+      heroImage.style.transform = `translateY(${rate}px) scale(${1 + scrolled * 0.0001})`;
+    }
+  }, { passive: true });
+}
+
+// ============================================
+// Button Hover Effects Enhancement
+// ============================================
+const buttons = document.querySelectorAll('.btn');
+
+buttons.forEach(btn => {
+  btn.addEventListener('mouseenter', function(e) {
+    const x = e.offsetX;
+    const y = e.offsetY;
+
+    this.style.setProperty('--x', `${x}px`);
+    this.style.setProperty('--y', `${y}px`);
+  });
+});
+
+// ============================================
+// Preload Critical Images
+// ============================================
+document.addEventListener('DOMContentLoaded', () => {
+  const heroImg = document.querySelector('.hero-image img');
+  if (heroImg) {
+    heroImg.loading = 'eager';
+  }
 });
