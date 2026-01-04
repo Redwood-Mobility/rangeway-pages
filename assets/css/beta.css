@@ -433,34 +433,10 @@ a:hover {
   opacity: 1;
 }
 
-/* Mobile Close Button */
-.mobile-menu-close {
-  display: none;
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: var(--text-primary);
-  cursor: pointer;
-  padding: 0.5rem;
-  transition: all var(--transition-fast);
-}
-
-.mobile-menu-close:hover {
-  color: var(--warm);
-  transform: rotate(90deg);
-}
-
 /* Mobile Slide-over Menu */
 @media (max-width: 1024px) {
   .menu-toggle {
     display: flex;
-  }
-
-  .mobile-menu-close {
-    display: block;
   }
 
   .navbar-nav {

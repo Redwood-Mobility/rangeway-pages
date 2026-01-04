@@ -42,7 +42,6 @@ window.addEventListener('scroll', () => {
 // ============================================
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.getElementById('navMenu');
-const mobileMenuClose = document.getElementById('mobileMenuClose');
 const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
 
 function openMobileMenu() {
@@ -67,13 +66,6 @@ if (menuToggle) {
     } else {
       openMobileMenu();
     }
-  });
-}
-
-if (mobileMenuClose) {
-  mobileMenuClose.addEventListener('click', (e) => {
-    e.stopPropagation();
-    closeMobileMenu();
   });
 }
 
