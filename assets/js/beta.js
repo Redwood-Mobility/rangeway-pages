@@ -143,9 +143,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const animatedElements = document.querySelectorAll('.animate-on-scroll');
 
   animatedElements.forEach((el, index) => {
-    // Set initial state
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(24px)';
+    // Add init class for animation start state
+    el.classList.add('animate-init');
 
     // Observe the element
     observer.observe(el);
@@ -159,6 +158,16 @@ document.addEventListener('DOMContentLoaded', () => {
       child.style.transitionDelay = `${index * 0.1}s`;
     });
   });
+
+  // Trigger check for elements already in viewport
+  setTimeout(() => {
+    animatedElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('visible');
+      }
+    });
+  }, 100);
 });
 
 // ============================================
