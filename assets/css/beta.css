@@ -635,21 +635,31 @@ a:hover {
   }
 
   .hero-content {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
   }
 
   .hero-text {
-    text-align: center;
-    order: 1;
+    display: contents;
   }
 
   .hero-text::before {
     display: none;
   }
 
+  .hero-headline {
+    order: 1;
+    text-align: center;
+  }
+
   .hero-visual {
     order: 2;
+  }
+
+  .hero-body {
+    order: 3;
+    text-align: center;
   }
 
   .hero-cta {
