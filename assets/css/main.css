@@ -1293,6 +1293,16 @@ footer::before {
   color: var(--footer-text);
 }
 
+.footer-col .social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.25rem;
+}
+
+.footer-col .social-icons a {
+  font-size: 1.25rem;
+}
+
 .footer-bottom {
   padding-top: 2rem;
   border-top: 1px solid rgba(245, 241, 235, 0.1);
