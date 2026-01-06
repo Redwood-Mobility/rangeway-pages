@@ -1317,6 +1317,10 @@ footer::before {
 .footer-bottom p {
   color: rgba(245, 241, 235, 0.5);
   font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-bottom p:last-child {
   margin-bottom: 0;
 }
 
