@@ -1338,6 +1338,12 @@ footer::before {
   .footer-grid {
     grid-template-columns: 1fr;
   }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
 }
 
 /* ============================================
