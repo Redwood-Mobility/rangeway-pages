@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+  <meta name="author" content="{{ site.organization.name }}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <!-- SEO -->
+  {% seo %}
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.asset_version }}">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="{{ '/logo2/rangeway-logo-assets/app-icons/rangeway-favicon.svg' | relative_url }}">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#f4a855">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="{{ site.organization.name }}">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  {% if page.og_image %}
+  <meta property="og:image" content="{{ page.og_image | absolute_url }}">
+  {% endif %}
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@rangewayev">
+  <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+  <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+  {% if page.og_image %}
+  <meta name="twitter:image" content="{{ page.og_image | absolute_url }}">
+  {% endif %}
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{ site.organization.name }}",
+    "url": "{{ site.url }}",
+    "logo": "{{ site.url }}/logo2/rangeway-logo-assets/lockup/rangeway-lockup-charcoal.svg",
+    "description": "{{ site.description }}",
+    "slogan": "{{ site.organization.tagline }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ site.organization.address.street }}",
+      "addressLocality": "{{ site.organization.address.city }}",
+      "addressRegion": "{{ site.organization.address.state }}",
+      "postalCode": "{{ site.organization.address.zip }}",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "{{ site.organization.phone }}",
+      "email": "{{ site.organization.email }}",
+      "contactType": "customer service"
+    },
+    "sameAs": [
+      "{{ site.social.twitter }}",
+      "{{ site.social.instagram }}",
+      "{{ site.social.linkedin }}",
+      "{{ site.social.youtube }}"
+    ]
+  }
+  </script>
+
+  <!-- Analytics -->
+  {% if site.analytics.enabled and site.analytics.tinylytics_id %}
+  <script src="https://tinylytics.app/embed/{{ site.analytics.tinylytics_id }}.js" defer></script>
+  {% endif %}
+</head>
+<body>
+  {% include header.html %}
+
+  <main>
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <!-- Scripts -->
+  <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.asset_version }}"></script>
+</body>
+</html>

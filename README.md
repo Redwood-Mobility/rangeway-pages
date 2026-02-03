@@ -1,210 +1,110 @@
 # Rangeway Website
 
-Official website for Rangeway - America's premier scenic highway EV charging network.
+Official website for Rangeway, America's premier scenic highway EV charging network.
 
-## Brand Guidelines Implementation
+**Production:** https://rangewayev.com
 
-This site implements the official Rangeway brand guidelines with:
-
-### Brand Colors
-- **Warm** (#f4a855) - Primary brand color
-- **Charcoal** (#2d2d2d) - Typography and grounding
-- **Cream** (#f5f1eb) - Background and supporting color
-- **Sage** (#4a5d52) - Accent color
-
-### Typography
-- **Raleway** - Headlines and wordmark (Bold 700, SemiBold 600)
-- **Montserrat / Source Sans Pro** - Body copy and UI elements
-
-### Logo
-- Path Mark logo with Raleway wordmark
-- Charcoal version for light backgrounds
-- White version for dark backgrounds
-- New logo assets in `logo2/` folder (launching January 2025)
-
-## Site Structure
-
-This is a single-page website with sections for:
-
-1. **Hero Section** - "Adventure in your EV, recharge in luxury"
-2. **Problem Statement** - EV drivers deserve better
-3. **The Experience** - Arrive. Recharge. Rejuvenate. (3-step process)
-4. **The Rangeway Difference** - Premium amenities and features
-5. **Our Network** - Regional expansion (CA, CO, HI, NV, UT)
-6. **Curated Journeys** - Popular routes and destinations
-7. **Pathfinder Rewards** - Customer loyalty program
-8. **FAQ** - Common questions
-9. **Investors** - Investment information and opportunities
-10. **Contact** - Get in touch with the team
-11. **Newsroom** - Latest updates
-
-## Site Architecture
-
-```
-rangeway-pages/
-├── index.html (production site)
-├── index-test.html (test site with new logo)
-├── investors.html (dedicated investor page)
-├── pathfinder.html (rewards program details)
-├── _config.yml
-├── _layouts/
-│   ├── default.html (production layout)
-│   └── default-test.html (test layout with new logo)
-├── _includes/
-│   ├── header.html (production header)
-│   ├── header-test.html (test header with new logo)
-│   ├── footer.html
-│   └── newsroom.html
-├── assets/
-│   ├── css/
-│   │   ├── style.css
-│   │   ├── main.css
-│   │   └── brand-test.css (new brand color overrides)
-│   └── js/
-│       └── main.js
-├── images/
-│   └── (brand imagery)
-├── logo2/
-│   ├── rangeway-logo-assets/
-│   │   ├── lockup/ (logo + wordmark)
-│   │   ├── mark/ (logo only)
-│   │   └── app-icons/
-│   └── rangeway-brand-final.html (brand guidelines)
-├── CNAME
-├── Gemfile
-└── _archive/
-    └── production-backup-YYYYMMDD/
-```
-
-## Features
-
-### Design System
-- **Light/Dark Mode** - Automatic switching based on system preferences
-- **Responsive Design** - Mobile-first approach with optimized layouts
-- **Tablet Hamburger Menu** - Mobile menu shows at 1024px breakpoint
-- **Brand Typography** - Raleway for headlines, system fonts for body
-- **Hospitality-Focused Copy** - Luxury language throughout
-
-### Navigation
-- Sticky navigation bar
-- Mobile/tablet-responsive hamburger menu (≤1024px)
-- Smooth scroll to sections
-- Social media links in header
-- Footer navigation with quick links
-
-### Test Site
-- Available at `/index-test.html`
-- Features new logo/wordmark from `logo2/` folder
-- Uses `default-test` layout with `header-test.html`
-- Includes new brand colors via `brand-test.css`
-- Set to `noindex, nofollow` for search engines
-
-### Accessibility
-- Semantic HTML structure
-- ARIA labels on interactive elements
-- Keyboard navigation support
-- Sufficient color contrast ratios
-
-### Performance
-- Optimized CSS with CSS variables
-- Minimal JavaScript footprint
-- Responsive images
-- Smooth scrolling behavior
-- Single-page load optimization
-
-## Browser Support
-
-Tested and working on:
-- Chrome/Edge (latest)
-- Firefox (latest)
-- Safari (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## Local Development
-
-This is a Jekyll-based static site. To run locally:
+## Quick Start
 
 ```bash
+# Install dependencies
+bundle install
+
+# Run local development server
 bundle exec jekyll serve
-```
 
-Then visit: http://localhost:4000
-
-For building the site:
-
-```bash
+# Build for production
 bundle exec jekyll build
 ```
 
+Visit http://localhost:4000 to view locally.
+
+## Site Structure
+
+```
+rangeway-pages/
+├── index.html              # Main single-page site
+├── investors.html          # Investor relations page
+├── pathfinder.html         # Pathfinder Rewards details
+├── brand.html              # Brand guidelines
+├── _config.yml             # Jekyll configuration
+├── _layouts/
+│   └── default.html        # Base layout (SEO, structured data)
+├── _includes/
+│   ├── header.html         # Navigation with mobile menu
+│   └── footer.html         # Site footer
+├── assets/
+│   ├── css/main.css        # All styles
+│   └── js/main.js          # Interactive features
+├── images/                 # Site imagery
+├── logo2/                  # Logo assets and brand guidelines
+├── CNAME                   # Custom domain (rangewayev.com)
+├── _archive/               # Previous production versions
+└── Gemfile                 # Ruby dependencies
+```
+
+## Page Sections
+
+1. **Hero** - Badge, headline, dual CTAs, scroll indicator
+2. **Problem Statement** - Pain point messaging
+3. **The Experience** - 3-step process (Arrive, Recharge, Rejuvenate)
+4. **A Glimpse Inside** - Visual gallery (3 images)
+5. **The Rangeway Difference** - Features list with icons
+6. **Our Network** - Regional expansion grid
+7. **Pathfinder Rewards** - Loyalty program preview with tier cards
+8. **FAQ** - Common questions
+9. **CTA** - Newsletter signup
+10. **Contact** - Email links for inquiries, media, investors
+
+## Brand Guidelines
+
+### Colors
+
+| Color | Hex | Usage |
+|-------|-----|-------|
+| Warm | `#f4a855` | Primary brand, CTAs, accents |
+| Charcoal | `#2d2d2d` | Text, dark backgrounds |
+| Cream | `#f5f1eb` | Light backgrounds |
+| Sage | `#4a5d52` | Secondary accent |
+
+### Typography
+
+- **Raleway** (700, 600) - Headlines, wordmark
+- **Source Sans Pro** (300, 400, 600) - Body copy
+
+### Voice
+
+**Use:** "Driver's Lounge", "destination experiences", "thoughtful amenities", "premium hospitality", "locations"
+
+**Avoid:** Technical jargon (kW ratings), utility language, "stations", em dashes
+
+## Features
+
+- **Responsive Design** - Mobile-first, tablet breakpoint at 1024px
+- **Light/Dark Mode** - Automatic based on system preference
+- **Accessibility** - Skip links, focus states, ARIA labels, reduced motion support
+- **Performance** - Lazy loading images, minimal JavaScript
+- **Animations** - Scroll-triggered fade-ins with stagger effects
+
 ## Deployment
 
-The site is configured for GitHub Pages deployment. Files are generated to `_site/` directory.
+The site deploys automatically via GitHub Pages when changes are pushed to the `master` branch.
 
-Production URL: https://rangewayev.com
+### Custom Domain
 
-## Brand Voice & Terminology
+DNS: CNAME record for `rangewayev.com` pointing to `redwood-mobility.github.io`
 
-### Key Terms
-- **Waystations** - Charging locations with climate-controlled lounges
-- **Pathfinder Rewards** - Customer loyalty program with four tiers
-- **Trailblazer** - Top tier of Pathfinder Rewards (invitation-only)
+## Related Links
 
-### Messaging Pillars
-1. **Luxury Hospitality** - Premium, refined experience
-2. **Indoor Comfort** - Climate-controlled sanctuary at every location
-3. **Reliability** - Chargers that work when you need them
-4. **Scenic Routes** - Breathtaking destinations, curated journeys
-
-### Hospitality Language
-- Sanctuary, respite, retreat
-- Artisan, curated, thoughtfully selected
-- Refined, elevated, exceptional
-- Seamless, effortless, complimentary
-- Impeccable, pristine, meticulously maintained
+- [Pathfinder Rewards](https://pathfinderrewards.com)
+- [Field Notes Newsletter](https://fieldnotes.rangewayev.com)
+- [Newsroom](https://newsroom.rangeway.energy)
 
 ## Version History
 
-### Version 4.0 - December 2025
-- Redesigned with YC landing page principles
-- Hospitality-focused luxury copy throughout
-- New brand colors (Warm, Charcoal, Cream, Sage)
-- Raleway typography for headings
-- Added "How It Works" 3-step section
-- Added FAQ section
-- Streamlined page structure
-- Test site with new logo (`index-test.html`)
-- Dedicated investor page (`investors.html`)
-- Tablet hamburger menu (1024px breakpoint)
+- **v2.0** (February 2026) - Full site refresh with new hero, gallery, Pathfinder preview
+- **v1.0** (December 2025) - Initial hospitality-focused redesign
 
-### Version 3.0 - November 15, 2025
-- Migrated to single-page architecture
-- Consolidated all content into streamlined sections
-- Improved user flow and navigation
-- Dynamic newsroom integration from newsroom.rangeway.energy
+## License
 
-### Version 2.0 - November 8, 2025
-- Implemented official brand guidelines
-- Added automatic light/dark mode
-- Updated typography to Montserrat/Source Sans Pro
-- Redesigned header with full-color logo + wordmark
-
-### Version 1.0 - November 2, 2025
-- Initial site launch
-- 6 main pages with complete content
-- Basic responsive design
-
-## Archive
-
-Previous production versions are archived in `_archive/production-backup-YYYYMMDD/` directories for rollback purposes if needed.
-
-## Support
-
-For questions or issues, contact:
-- **General**: hello@rangewayev.com
-- **Partnerships**: partnerships@rangewayev.com
-- **Investors**: investors@rangewayev.com
-
----
-
-Last Updated: December 2025
-Version: 4.0 - Hospitality-Focused Redesign
+Proprietary - Rangeway Energy, Inc.

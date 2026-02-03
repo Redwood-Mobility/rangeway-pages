@@ -3,102 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#f4a855">
 
   <title>{{ page.title | default: site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
   {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
-  <meta name="author" content="{{ site.organization.name }}">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="{{ page.url | absolute_url }}">
-
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-
-  <!-- SEO -->
-  {% seo %}
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.asset_version }}">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="{{ '/logo2/rangeway-logo-assets/app-icons/rangeway-favicon.svg' | relative_url }}">
-
-  <!-- Theme Color -->
-  <meta name="theme-color" content="#f4a855">
 
   <!-- Open Graph -->
-  <meta property="og:site_name" content="{{ site.organization.name }}">
+  <meta property="og:type" content="website">
   <meta property="og:title" content="{{ page.title | default: site.title }}">
   <meta property="og:description" content="{{ page.description | default: site.description }}">
-  <meta property="og:type" content="website">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
-  {% if page.og_image %}
-  <meta property="og:image" content="{{ page.og_image | absolute_url }}">
-  {% endif %}
+  <meta property="og:image" content="{{ page.og_image | default: '/images/waystation-exterior1-az.jpg' | absolute_url }}">
+  <meta property="og:site_name" content="Rangeway">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@rangewayev">
   <meta name="twitter:title" content="{{ page.title | default: site.title }}">
   <meta name="twitter:description" content="{{ page.description | default: site.description }}">
-  {% if page.og_image %}
-  <meta name="twitter:image" content="{{ page.og_image | absolute_url }}">
-  {% endif %}
+  <meta name="twitter:image" content="{{ page.og_image | default: '/images/waystation-exterior1-az.jpg' | absolute_url }}">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="{{ '/logo2/rangeway-logo-assets/app-icons/rangeway-icon-512.svg' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/logo2/rangeway-logo-assets/app-icons/rangeway-icon-512.svg' | relative_url }}">
+
+  <!-- Preload Critical Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Source+Sans+Pro:wght@300;400;600&display=swap" as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.asset_version }}">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "{{ site.organization.name }}",
-    "url": "{{ site.url }}",
-    "logo": "{{ site.url }}/logo2/rangeway-logo-assets/lockup/rangeway-lockup-charcoal.svg",
+    "name": "Rangeway",
     "description": "{{ site.description }}",
-    "slogan": "{{ site.organization.tagline }}",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "{{ site.organization.address.street }}",
-      "addressLocality": "{{ site.organization.address.city }}",
-      "addressRegion": "{{ site.organization.address.state }}",
-      "postalCode": "{{ site.organization.address.zip }}",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "{{ site.organization.phone }}",
-      "email": "{{ site.organization.email }}",
-      "contactType": "customer service"
-    },
+    "url": "{{ site.url }}",
+    "logo": "{{ '/logo2/rangeway-logo-assets/lockup/rangeway-lockup-charcoal.svg' | absolute_url }}",
     "sameAs": [
       "{{ site.social.twitter }}",
       "{{ site.social.instagram }}",
-      "{{ site.social.linkedin }}",
-      "{{ site.social.youtube }}"
+      "{{ site.social.linkedin }}"
     ]
   }
   </script>
 
-  <!-- Analytics -->
-  {% if site.analytics.enabled and site.analytics.tinylytics_id %}
-  <script src="https://tinylytics.app/embed/{{ site.analytics.tinylytics_id }}.js" defer></script>
+  {% if page.faq_schema %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": {{ page.faq_schema | jsonify }}
+  }
+  </script>
   {% endif %}
+
+  <!-- Analytics -->
+  <script src="https://tinylytics.app/embed/{{ site.analytics.tinylytics }}.js" defer></script>
 </head>
 <body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   {% include header.html %}
 
-  <main>
+  <main id="main-content" role="main">
     {{ content }}
   </main>
 
   {% include footer.html %}
 
   <!-- Scripts -->
-  <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.asset_version }}"></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.asset_version }}" defer></script>
 </body>
 </html>

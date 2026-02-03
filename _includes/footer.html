@@ -2,19 +2,26 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <svg width="160" height="37" viewBox="0 0 240 56" xmlns="http://www.w3.org/2000/svg">
-          <g transform="translate(0, 0)">
-            <path d="M10 50 L10 8 C10 5 12 3 15 3 L28 3 C36 3 40 8 40 16 C40 23 36 27 29 28 L41 50"
-                  stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="29" cy="16" r="5" fill="#f4a855"/>
-          </g>
-          <text x="60" y="38" font-family="'Raleway', sans-serif" font-weight="700" font-size="28" fill="#ffffff" letter-spacing="-0.01em">Rangeway</text>
+        <svg viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer-logo">
+          <path d="M10 42 L10 8 C10 5 12 3 15 3 L28 3 C36 3 40 8 40 16 C40 23 36 27 29 28 L41 42"
+                stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="29" cy="16" r="5" fill="#f4a855"/>
+          <text x="52" y="32" font-family="Raleway, sans-serif" font-size="24" font-weight="700" fill="#ffffff">Rangeway</text>
         </svg>
-        <p>Premium EV charging meets luxury hospitality. Travel farther, stop better.</p>
+        <p>Where charging becomes part of your journey. Premium hospitality at every location.</p>
         <div class="social-icons">
-          <a href="https://twitter.com/rangewayev" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="https://instagram.com/rangewayev" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://linkedin.com/company/rangeway-energy" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="{{ site.social.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <i class="fab fa-x-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+          <a href="{{ site.social.threads }}" target="_blank" rel="noopener noreferrer" aria-label="Threads">
+            <i class="fab fa-threads" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
 
@@ -23,6 +30,7 @@
         <ul>
           <li><a href="#experience">The Experience</a></li>
           <li><a href="#network">Our Network</a></li>
+          <li><a href="#pathfinder">Pathfinder Rewards</a></li>
           <li><a href="https://newsroom.rangeway.energy" target="_blank" rel="noopener">Newsroom</a></li>
         </ul>
       </div>
@@ -30,17 +38,17 @@
       <div class="footer-col">
         <h4>Resources</h4>
         <ul>
-          <li><a href="{{ '/investors.html' | relative_url }}">Investors</a></li>
-          <li><a href="https://pathfinderrewards.com" target="_blank" rel="noopener">Pathfinder Rewards</a></li>
           <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://fieldnotes.rangewayev.com" target="_blank" rel="noopener">Field Notes</a></li>
+          <li><a href="mailto:investors@rangewayev.com">Investors</a></li>
         </ul>
       </div>
-
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; {{ 'now' | date: "%Y" }} Rangeway Energy, Inc. All rights reserved.</p>
-      <p>Operated by <a href="https://altaraenergy.com" target="_blank" rel="noopener">Altara Energy</a> | Part of the <a href="https://pathfinderrewards.com" target="_blank" rel="noopener">Pathfinder Rewards</a> network.</p>
+      <p>&copy; {{ site.time | date: '%Y' }} Rangeway. All rights reserved.</p>
+      <p>Operated by Rangeway Energy, Inc.</p>
     </div>
   </div>
 </footer>
