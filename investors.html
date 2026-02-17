@@ -27,7 +27,10 @@
         /* Investors page-specific styles */
         .investor-hero {
             position: relative;
-            padding: 160px 0 100px;
+            min-height: 82svh;
+            padding: 130px 0 70px;
+            display: flex;
+            align-items: center;
             text-align: center;
             overflow: hidden;
         }
@@ -43,14 +46,16 @@
             height: 100%;
             object-fit: cover;
             object-position: center 50%;
-            opacity: 0.25;
+            opacity: 0.34;
         }
 
         .investor-hero-bg::after {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(to bottom, rgba(15, 15, 15, 0.5) 0%, rgba(15, 15, 15, 0.3) 50%, rgba(15, 15, 15, 0.8) 100%);
+            background:
+                linear-gradient(to bottom, rgba(15, 15, 15, 0.5) 0%, rgba(15, 15, 15, 0.4) 45%, rgba(15, 15, 15, 0.8) 100%),
+                radial-gradient(circle at 15% 40%, rgba(244, 168, 85, 0.18), transparent 48%);
             z-index: 1;
         }
 
@@ -66,32 +71,57 @@
 
         .investor-hero h1 {
             font-family: var(--font-heading);
-            font-size: clamp(40px, 6vw, 64px);
-            font-weight: 700;
+            font-size: clamp(48px, 8vw, 92px);
+            font-weight: 800;
             color: var(--white);
-            line-height: 1.1;
-            letter-spacing: -0.02em;
+            line-height: 0.98;
+            letter-spacing: -0.03em;
             margin-bottom: 20px;
+            max-width: 10ch;
+            margin-left: auto;
+            margin-right: auto;
+            text-wrap: balance;
         }
 
         .investor-hero p {
-            font-size: clamp(17px, 2vw, 20px);
-            color: rgba(255, 255, 255, 0.65);
-            max-width: 600px;
+            font-size: clamp(17px, 1.9vw, 23px);
+            color: rgba(255, 255, 255, 0.72);
+            max-width: 650px;
             margin: 0 auto;
             line-height: 1.7;
         }
 
+        .investor-opportunity {
+            background: var(--cream);
+        }
+
+        .investor-opportunity-intro {
+            max-width: 760px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .investor-opportunity-intro .section-title {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .investor-opportunity-text {
+            font-size: 18px;
+            color: var(--gray-600);
+            line-height: 1.85;
+        }
+
         /* Hub card */
         .hub-card {
-            max-width: 560px;
+            max-width: 640px;
             margin: 0 auto;
             background: var(--white);
-            border-radius: 16px;
-            padding: 48px 40px;
+            border-radius: 14px;
+            padding: 56px 42px;
             text-align: center;
-            border: 1px solid var(--gray-200);
-            box-shadow: 0 4px 24px rgba(45, 45, 45, 0.06);
+            border: 1px solid rgba(45, 45, 45, 0.12);
+            box-shadow: 0 24px 64px rgba(45, 45, 45, 0.12);
         }
 
         .hub-card-icon {
@@ -108,16 +138,17 @@
 
         .hub-card h3 {
             font-family: var(--font-heading);
-            font-size: 22px;
-            font-weight: 700;
+            font-size: 30px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
             margin-bottom: 10px;
         }
 
         .hub-card p {
-            font-size: 15px;
+            font-size: 16px;
             color: var(--gray-600);
             line-height: 1.7;
-            margin-bottom: 24px;
+            margin-bottom: 28px;
         }
 
         .hub-card .note {
@@ -140,14 +171,14 @@
         .thesis-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
+            gap: 26px;
         }
 
         .thesis-card {
             background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            padding: 36px 28px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 8px;
+            padding: 38px 30px;
             transition: all 0.3s ease;
         }
 
@@ -158,8 +189,8 @@
 
         .thesis-number {
             font-family: var(--font-heading);
-            font-size: 32px;
-            font-weight: 700;
+            font-size: 40px;
+            font-weight: 800;
             color: var(--warm);
             opacity: 0.5;
             line-height: 1;
@@ -168,43 +199,52 @@
 
         .thesis-card h3 {
             font-family: var(--font-heading);
-            font-size: 18px;
+            font-size: 24px;
             font-weight: 700;
             color: var(--white);
             margin-bottom: 10px;
         }
 
         .thesis-card p {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.55);
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.62);
             line-height: 1.7;
         }
 
         /* Expansion */
         .expansion-layout {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
+            grid-template-columns: 1fr 1.05fr;
+            gap: 72px;
             align-items: center;
         }
 
         .expansion-image {
-            border-radius: 16px;
+            border-radius: 14px;
+            border: 1px solid rgba(45, 45, 45, 0.1);
             overflow: hidden;
+            box-shadow: 0 24px 64px rgba(45, 45, 45, 0.12);
         }
 
         .expansion-image img {
             width: 100%;
-            height: 100%;
+            height: 520px;
             object-fit: cover;
         }
 
+        .expansion-intro {
+            font-size: 16px;
+            color: var(--gray-600);
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
         .phase-card {
-            padding: 20px 24px;
-            background: var(--gray-100);
-            border-radius: 10px;
-            border-left: 3px solid var(--warm);
-            margin-bottom: 12px;
+            padding: 22px 26px;
+            background: linear-gradient(160deg, var(--gray-100), #fdfcf9);
+            border-radius: 8px;
+            border: 1px solid rgba(244, 168, 85, 0.3);
+            margin-bottom: 14px;
         }
 
         .phase-card:last-child {
@@ -213,13 +253,13 @@
 
         .phase-card h4 {
             font-family: var(--font-heading);
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 700;
             margin-bottom: 4px;
         }
 
         .phase-card p {
-            font-size: 14px;
+            font-size: 15px;
             color: var(--gray-600);
             line-height: 1.6;
             margin: 0;
@@ -245,14 +285,15 @@
 
         .investor-cta h2 {
             font-family: var(--font-heading);
-            font-size: clamp(28px, 4vw, 40px);
-            font-weight: 700;
+            font-size: clamp(34px, 5vw, 52px);
+            font-weight: 800;
             color: var(--charcoal);
             margin-bottom: 16px;
+            letter-spacing: -0.02em;
         }
 
         .investor-cta p {
-            font-size: 17px;
+            font-size: 18px;
             color: rgba(45, 45, 45, 0.7);
             max-width: 500px;
             margin: 0 auto 32px;
@@ -292,9 +333,10 @@
             max-width: 480px;
             margin: 0 auto;
             background: var(--charcoal);
-            border-radius: 16px;
+            border-radius: 14px;
             padding: 40px;
             text-align: center;
+            box-shadow: 0 24px 64px rgba(45, 45, 45, 0.18);
         }
 
         .investor-contact-card h3 {
@@ -320,6 +362,14 @@
 
         .investor-contact-card a:hover {
             color: var(--warm-dark);
+        }
+
+        .investor-thesis {
+            background: var(--charcoal);
+        }
+
+        .investor-contact-section {
+            background: var(--cream);
         }
 
         /* Back link */
@@ -350,10 +400,14 @@
 
         @media (max-width: 768px) {
             .investor-hero {
-                padding: 120px 0 64px;
+                min-height: auto;
+                padding: 118px 0 64px;
             }
             .hub-card {
                 padding: 32px 24px;
+            }
+            .expansion-image img {
+                height: 320px;
             }
         }
     </style>
@@ -382,6 +436,7 @@
                 <li><a href="index.html#experience" class="nav-link">The Experience</a></li>
                 <li><a href="index.html#pathfinder" class="nav-link">Pathfinder Rewards</a></li>
                 <li><a href="index.html#locations" class="nav-link">Locations</a></li>
+                <li><a href="investors.html" class="nav-link">Investors</a></li>
                 <li><a href="index.html#contact" class="nav-link nav-link--cta">Get in Touch</a></li>
             </ul>
         </div>
@@ -404,12 +459,12 @@
     </header>
 
     <!-- Redefining EV Infrastructure -->
-    <section class="section" style="background: var(--cream);">
+    <section class="section investor-opportunity">
         <div class="container">
-            <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+            <div class="investor-opportunity-intro">
                 <p class="section-eyebrow">The Opportunity</p>
                 <h2 class="section-title">Redefining EV Infrastructure</h2>
-                <p style="font-size: 17px; color: var(--gray-600); line-height: 1.8;">Rangeway is pioneering premium destinations along America's most traveled corridors. We're not simply installing chargers. We're creating destination experiences where travelers recharge themselves as their vehicles charge.</p>
+                <p class="investor-opportunity-text">Rangeway is pioneering premium destinations along America's most traveled corridors. We're not simply installing chargers. We're creating destination experiences where travelers recharge themselves as their vehicles charge.</p>
             </div>
         </div>
     </section>
@@ -426,14 +481,14 @@
                 </div>
                 <h3>Investor Hub</h3>
                 <p>Access detailed financial projections, expansion plans, and partnership opportunities.</p>
-                <a href="https://investors.rangewayev.com" class="btn btn--primary btn--large">Access Investor Hub</a>
+                <a href="investors.html" class="btn btn--primary btn--large">Access Investor Hub</a>
                 <p class="note">Password protected. Contact <a href="mailto:investors@rangewayev.com">investors@rangewayev.com</a> for access.</p>
             </div>
         </div>
     </section>
 
     <!-- Investment Thesis -->
-    <section class="section" style="background: var(--charcoal);">
+    <section class="section investor-thesis">
         <div class="container">
             <div class="section-header">
                 <p class="section-eyebrow section-eyebrow--light">Investment Thesis</p>
@@ -474,7 +529,7 @@
                 <div>
                     <p class="section-eyebrow">Growth Roadmap</p>
                     <h2 class="section-title">Our Expansion Plan</h2>
-                    <p style="font-size: 16px; color: var(--gray-600); line-height: 1.7; margin-bottom: 24px;">Launching our first locations in 2026, building a network across America's most traveled corridors.</p>
+                    <p class="expansion-intro">Launching our first locations in 2026, building a network across America's most traveled corridors.</p>
                     <div class="phase-card">
                         <h4>Phase 1: Inaugural Locations (2026)</h4>
                         <p>Our first destinations, setting the standard for the Rangeway experience.</p>
@@ -499,14 +554,14 @@
             <h2>Ready to Learn More?</h2>
             <p>Connect with our investor relations team to explore partnership opportunities.</p>
             <div class="btn-group">
-                <a href="https://investors.rangewayev.com" class="btn btn--dark btn--large">Access Investor Hub</a>
+                <a href="investors.html" class="btn btn--dark btn--large">Access Investor Hub</a>
                 <a href="mailto:investors@rangewayev.com" class="btn btn--outline-dark btn--large">Contact Us</a>
             </div>
         </div>
     </section>
 
     <!-- Contact Card -->
-    <section class="section" style="background: var(--cream);">
+    <section class="section investor-contact-section">
         <div class="container">
             <div class="investor-contact-card">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--warm); margin-bottom: 16px;">
@@ -542,6 +597,7 @@
                         <li><a href="index.html#network">The Network</a></li>
                         <li><a href="index.html#pathfinder">Pathfinder Rewards</a></li>
                         <li><a href="index.html#locations">Locations</a></li>
+                        <li><a href="investors.html">Investors</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
