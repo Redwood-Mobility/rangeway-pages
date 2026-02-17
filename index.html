@@ -1,411 +1,529 @@
----
-layout: default
-title: "Rangeway | The Premier EV Charging Experience"
-description: "Premium EV charging network built for scenic corridors. Climate-controlled indoor comfort at every location. Ultra-fast charging with hospitality-grade amenities across the American West."
-keywords: "EV charging, electric vehicle charging, scenic route charging, premium EV amenities, indoor EV charging"
-og_image: "/images/waystation-exterior1-az.jpg"
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rangeway | Premium EV Charging Meets Luxury Hospitality</title>
+    <meta name="description" content="Rangeway is building America's first hospitality-driven premium EV charging network. Climate-controlled comfort at every location. Travel farther, stop better.">
+    <meta name="keywords" content="EV charging, electric vehicle, premium charging, hospitality, Driver's Lounge, Pathfinder Rewards">
 
-<!-- Hero Section -->
-<section class="hero" id="home">
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1 class="hero-headline animate-title">Adventure in your EV,<br><span class="text-warm">recharge in luxury.</span></h1>
-        <div class="hero-body">
-          <p class="lead hero-subhead animate-fade-in-delay">Ultra-fast charging at breathtaking destinations. Unwind in refined comfort while your vehicle charges. Return to the road refreshed.</p>
-          <div class="hero-cta animate-fade-in-delay-2">
-            <a href="https://fieldnotes.rangewayev.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large btn-glow">
-              Get Launch Updates
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Rangeway | Travel Farther, Stop Better">
+    <meta property="og:description" content="America's first hospitality-driven premium EV charging network. Climate-controlled comfort guaranteed at every location.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rangewayev.com">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 112'%3E%3Cpath d='M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100' stroke='%232d2d2d' stroke-width='14' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='58' cy='32' r='12' fill='%23f4a855'/%3E%3C/svg%3E">
+
+    <!-- Fonts: Raleway (headlines/wordmark) + Source Sans 3 (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" aria-label="Rangeway Home">
+                <svg class="nav-logo-mark" width="28" height="32" viewBox="0 0 96 112" aria-hidden="true">
+                    <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100"
+                          stroke="currentColor" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="58" cy="32" r="10" fill="#f4a855"/>
+                </svg>
+                <span class="nav-logo-wordmark">Rangeway</span>
             </a>
-            <a href="#experience" class="btn btn-ghost btn-large">
-              Explore the Experience
-            </a>
-          </div>
-          <div class="hero-meta animate-fade-in-delay-3">
-            <p>Expanding across the American West.</p>
-          </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#network" class="nav-link">The Network</a></li>
+                <li><a href="#experience" class="nav-link">The Experience</a></li>
+                <li><a href="#pathfinder" class="nav-link">Pathfinder Rewards</a></li>
+                <li><a href="#locations" class="nav-link">Locations</a></li>
+                <li><a href="investors.html" class="nav-link">Investors</a></li>
+                <li><a href="#contact" class="nav-link nav-link--cta">Get in Touch</a></li>
+            </ul>
         </div>
-      </div>
-      <div class="hero-visual">
-        <div class="hero-image">
-          <img src="{{ '/images/waystation-exterior1-az.jpg' | relative_url }}" alt="Rangeway location exterior with charging stations" loading="eager" width="800" height="533">
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="images/baker-exterior3.jpg" alt="Rangeway Basecamp location at golden hour" class="hero-bg-image">
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="hero-scroll-indicator">
-    <span>Scroll to explore</span>
-    <div class="scroll-arrow"></div>
-  </div>
-</section>
-
-<!-- Problem Statement -->
-<section class="problem-section">
-  <div class="container">
-    <div class="problem-content">
-      <h2>EV drivers deserve better than waiting in parking lots.</h2>
-      <p>Unreliable chargers. No amenities. Extreme temperatures. The journey should be as exceptional as the destination.</p>
-    </div>
-  </div>
-</section>
-
-<!-- The Experience -->
-<section id="experience">
-  <div class="container">
-    <div class="section-header centered">
-      <span class="section-label">The Experience</span>
-      <h2>Arrive. Recharge. Rejuvenate.</h2>
-    </div>
-
-    <div class="steps-grid stagger">
-      <div class="step-card animate-on-scroll">
-        <div class="step-number">1</div>
-        <h3>Seamless Arrival</h3>
-        <p>Pull into any Rangeway location. Our ultra-fast charging accommodates every electric vehicle with effortless ease.</p>
-      </div>
-
-      <div class="step-card animate-on-scroll">
-        <div class="step-number">2</div>
-        <h3>Retreat Inside</h3>
-        <p>Step into our climate-controlled sanctuary. Savor artisan coffee, connect to complimentary WiFi, or simply unwind.</p>
-      </div>
-
-      <div class="step-card animate-on-scroll">
-        <div class="step-number">3</div>
-        <h3>Depart Refreshed</h3>
-        <p>Receive a gentle notification when your charge is complete. Continue your journey feeling restored and energized.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Three Formats -->
-<section class="network-section" id="formats">
-  <div class="container">
-    <div class="section-header centered">
-      <span class="section-label">Our Locations</span>
-      <h2>Three Formats, One Standard</h2>
-      <p>Every Rangeway location is designed for a specific need, all unified by the same commitment to quality.</p>
-    </div>
-
-    <div class="steps-grid stagger">
-      <div class="step-card format-card animate-on-scroll">
-        <div class="format-card-image">
-          <img src="{{ '/images/basecamp.jpg' | relative_url }}" alt="Rangeway Basecamp full-service destination" loading="lazy">
-        </div>
-        <div class="format-card-content">
-          <h3>Basecamp</h3>
-          <p>Our flagship, full-service destination. A staffed Driver's Lounge with curated cafe, premium amenities, and hospitality-trained team members ready to welcome you.</p>
-        </div>
-      </div>
-
-      <div class="step-card format-card animate-on-scroll">
-        <div class="format-card-image">
-          <img src="{{ '/images/waystation.jpg' | relative_url }}" alt="Rangeway Waystation streamlined comfort location" loading="lazy">
-        </div>
-        <div class="format-card-content">
-          <h3>Waystation</h3>
-          <p>Streamlined comfort with the same indoor comfort guarantee. A climate-controlled Driver's Lounge, automated amenities, and everything you need to recharge in peace.</p>
-        </div>
-      </div>
-
-      <div class="step-card format-card animate-on-scroll">
-        <div class="format-card-image">
-          <img src="{{ '/images/trailhead.jpg' | relative_url }}" alt="Rangeway Trailhead compact charging location" loading="lazy">
-        </div>
-        <div class="format-card-content">
-          <h3>Trailhead</h3>
-          <p>A compact entry point with covered canopy, essential comfort amenities, and ultra-fast charging. Purpose-built for emerging corridors and growing communities.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Gallery Section -->
-<section class="gallery-section" id="gallery">
-  <div class="container">
-    <div class="section-header centered">
-      <span class="section-label">A Glimpse Inside</span>
-      <h2>Where Technology Meets Tranquility</h2>
-    </div>
-
-    <div class="gallery-grid gallery-grid--centered">
-      <div class="gallery-item gallery-item--large animate-on-scroll">
-        <img src="{{ '/images/trailhead-interior1.jpg' | relative_url }}" alt="Climate-controlled Driver's Lounge interior" loading="lazy">
-        <div class="gallery-caption">
-          <h4>The Driver's Lounge</h4>
-          <p>Climate-controlled sanctuary at every location</p>
-        </div>
-      </div>
-      <div class="gallery-item animate-on-scroll">
-        <img src="{{ '/images/waystation-exterior-alamo2.jpg' | relative_url }}" alt="Rangeway exterior at sunset" loading="lazy">
-        <div class="gallery-caption">
-          <h4>Scenic Destinations</h4>
-        </div>
-      </div>
-      <div class="gallery-item animate-on-scroll">
-        <img src="{{ '/images/waystation-exterior1-az.jpg' | relative_url }}" alt="Desert highway location" loading="lazy">
-        <div class="gallery-caption">
-          <h4>Desert Escapes</h4>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Features -->
-<section>
-  <div class="container">
-    <div class="features-layout">
-      <div class="features-image animate-on-scroll">
-        <img src="{{ '/images/trailhead-interior1.jpg' | relative_url }}" alt="Climate-controlled lounge interior" loading="lazy">
-      </div>
-      <div class="features-content">
-        <div class="section-header">
-          <span class="section-label">The Rangeway Difference</span>
-          <h2>Not merely a charging stop. A destination.</h2>
-          <p>Every detail has been thoughtfully curated to elevate your journey.</p>
-        </div>
-        <div class="features-list stagger">
-          <div class="feature-item animate-on-scroll">
-            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-            </svg>
-            <div>
-              <h4>Ultra-Fast Charging</h4>
-              <p>State-of-the-art DC fast charging. Most vehicles reach 80% in 20-30 minutes.</p>
+        <div class="hero-content">
+            <p class="hero-eyebrow">America's First Hospitality-Driven EV Charging Network</p>
+            <h1 class="hero-title">Travel Farther,<br>Stop Better.</h1>
+            <p class="hero-subtitle">Premium EV charging meets luxury hospitality. Climate-controlled comfort guaranteed at every location.</p>
+            <div class="hero-actions">
+                <a href="#network" class="btn btn--primary">Discover the Network</a>
+                <a href="#pathfinder" class="btn btn--outline">Join Pathfinder Rewards</a>
             </div>
-          </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll to explore</span>
+            <div class="hero-scroll-line"></div>
+        </div>
+    </header>
 
-          <div class="feature-item animate-on-scroll">
-            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-              <polyline points="9 22 9 12 15 12 15 22"/>
-            </svg>
-            <div>
-              <h4>Climate-Controlled Sanctuary</h4>
-              <p>Escape into perfect comfort regardless of the elements outside.</p>
+    <!-- About / Problem-Solution Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-image-banner" data-animate>
+                <img src="images/waystation-exterior4-pch.jpg" alt="Rangeway Waystation along the Pacific Coast Highway at sunset" loading="lazy">
             </div>
-          </div>
-
-          <div class="feature-item animate-on-scroll">
-            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
-              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
-              <line x1="6" y1="1" x2="6" y2="4"/>
-              <line x1="10" y1="1" x2="10" y2="4"/>
-              <line x1="14" y1="1" x2="14" y2="4"/>
-            </svg>
-            <div>
-              <h4>Artisan Cafe</h4>
-              <p>Locally sourced coffee and thoughtfully prepared fare.</p>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="section-eyebrow">Why Rangeway</p>
+                    <h2 class="section-title">Charging is a hospitality problem. We're the hospitality solution.</h2>
+                    <p class="about-text">The EV charging industry has treated charging as a utility problem. But drivers spend 20 to 40 minutes at a charging location. That's not a transaction. It's an experience. And right now, that experience is broken.</p>
+                    <p class="about-text">Rangeway is building something different: a premium charging network where every stop is designed around <em>you</em>, not just your vehicle. We think like hotel operators, not utility companies.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat" data-animate>
+                        <span class="stat-number">73%</span>
+                        <span class="stat-label">of EV drivers rate current charging experiences as "poor" or "very poor"</span>
+                        <span class="stat-source">J.D. Power, 2025</span>
+                    </div>
+                    <div class="stat" data-animate>
+                        <span class="stat-number">67%</span>
+                        <span class="stat-label">cite lack of amenities as a top complaint</span>
+                    </div>
+                    <div class="stat" data-animate>
+                        <span class="stat-number">54%</span>
+                        <span class="stat-label">cite no weather protection at charging locations</span>
+                    </div>
+                </div>
             </div>
-          </div>
+        </div>
+    </section>
 
-          <div class="feature-item animate-on-scroll">
-            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
-              <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
-              <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
-              <line x1="12" y1="20" x2="12.01" y2="20"/>
-            </svg>
-            <div>
-              <h4>High-Speed WiFi</h4>
-              <p>Stay seamlessly connected. Work or browse at your leisure.</p>
+    <!-- Indoor Comfort Guarantee -->
+    <section class="section comfort" id="comfort">
+        <div class="container">
+            <div class="comfort-inner">
+                <p class="section-eyebrow section-eyebrow--light">An Industry First</p>
+                <h2 class="comfort-title">The Indoor Comfort Guarantee</h2>
+                <p class="comfort-text">Every Rangeway Basecamp and Waystation guarantees climate-controlled indoor comfort. No other charging network in America makes this promise.</p>
+                <div class="comfort-image" data-animate>
+                    <img src="images/trailhead-interior1.jpg" alt="Inside a Rangeway Driver's Lounge with comfortable seating, Wi-Fi, and natural light" loading="lazy">
+                </div>
+                <div class="comfort-features">
+                    <div class="comfort-feature" data-animate>
+                        <div class="comfort-feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path>
+                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Climate-Controlled Lounges</h3>
+                        <p>Step inside to heated or air-conditioned comfort, no matter the weather outside.</p>
+                    </div>
+                    <div class="comfort-feature" data-animate>
+                        <div class="comfort-feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 8h1a4 4 0 010 8h-1"></path>
+                                <path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"></path>
+                                <line x1="6" y1="1" x2="6" y2="4"></line>
+                                <line x1="10" y1="1" x2="10" y2="4"></line>
+                                <line x1="14" y1="1" x2="14" y2="4"></line>
+                            </svg>
+                        </div>
+                        <h3>Thoughtful Amenities</h3>
+                        <p>Curated cafes, comfortable seating, premium restrooms, and high-speed Wi-Fi.</p>
+                    </div>
+                    <div class="comfort-feature" data-animate>
+                        <div class="comfort-feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                            </svg>
+                        </div>
+                        <h3>Ultra-Fast Charging</h3>
+                        <p>Reliable chargers designed for speed and consistency at every location.</p>
+                    </div>
+                    <div class="comfort-feature" data-animate>
+                        <div class="comfort-feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3>Stay Connected</h3>
+                        <p>High-speed Wi-Fi keeps you productive while your vehicle charges.</p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Network -->
-<section class="network-section" id="network">
-  <div class="container">
-    <div class="network-layout">
-      <div>
-        <div class="section-header">
-          <span class="section-label">Our Network</span>
-          <h2>Opening 2026 across America</h2>
-          <p>Premier destinations along the routes that transform travel into an experience.</p>
+    <!-- The Network: Three Formats -->
+    <section class="section network" id="network">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">The Network</p>
+                <h2 class="section-title">Three Formats. One Standard.</h2>
+                <p class="section-subtitle">Every location is purpose-built for its market. All deliver a level of quality the charging industry has never seen.</p>
+            </div>
+
+            <div class="formats">
+                <!-- Basecamp -->
+                <div class="format-card format-card--basecamp" data-animate>
+                    <div class="format-card-image">
+                        <img src="images/basecamp.jpg" alt="Rangeway Basecamp with solar canopy, cafe, and charging bays" loading="lazy">
+                        <div class="format-card-badge">Flagship</div>
+                    </div>
+                    <div class="format-card-body">
+                    <h3 class="format-card-title">Basecamp</h3>
+                    <p class="format-card-tagline">The Full-Service Destination</p>
+                    <p class="format-card-description">Our flagship experience. Staffed, full-service locations designed for premium hospitality on high-traffic corridors.</p>
+                    <ul class="format-card-features">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            10 to 12 ultra-fast chargers
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            2,500+ sq ft Driver's Lounge
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Staffed cafe with curated menu
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Hospitality-trained team on site
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Premium restrooms and high-speed Wi-Fi
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+
+                <!-- Waystation -->
+                <div class="format-card format-card--waystation" data-animate>
+                    <div class="format-card-image">
+                        <img src="images/waystation.jpg" alt="Rangeway Waystation nestled in a mountain setting with timber and glass design" loading="lazy">
+                    </div>
+                    <div class="format-card-body">
+                    <h3 class="format-card-title">Waystation</h3>
+                    <p class="format-card-tagline">Streamlined Comfort</p>
+                    <p class="format-card-description">The same indoor comfort guarantee in a more efficient format. Automated and designed for reliable comfort on every route.</p>
+                    <ul class="format-card-features">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            8 to 10 ultra-fast chargers
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            800 to 1,000 sq ft Driver's Lounge
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Climate-controlled indoor comfort
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Automated retail and grab-and-go
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Premium restrooms and high-speed Wi-Fi
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+
+                <!-- Trailhead -->
+                <div class="format-card format-card--trailhead" data-animate>
+                    <div class="format-card-image">
+                        <img src="images/trailhead.jpg" alt="Rangeway Trailhead with sculpted solar canopy and vehicles charging" loading="lazy">
+                    </div>
+                    <div class="format-card-body">
+                    <h3 class="format-card-title">Trailhead</h3>
+                    <p class="format-card-tagline">Efficient Entry Point</p>
+                    <p class="format-card-description">Ultra-fast charging with essential comfort amenities. Purpose-built for emerging corridors and communities.</p>
+                    <ul class="format-card-features">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            2 to 4 ultra-fast chargers
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Covered charging canopy
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Clean restrooms nearby
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Wi-Fi connectivity
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Scalable: designed to grow with demand
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="locations-grid stagger">
-          <div class="location-card animate-on-scroll">
-            <h5>Pacific Northwest</h5>
-            <p>Rainforests, volcanic peaks, and rugged coastline.</p>
-          </div>
-          <div class="location-card animate-on-scroll">
-            <h5>Heartland</h5>
-            <p>Rolling plains, river bluffs, and historic byways.</p>
-          </div>
-          <div class="location-card animate-on-scroll">
-            <h5>Mountain West</h5>
-            <p>Mountain passes, red rock, and national park gateways.</p>
-          </div>
-          <div class="location-card animate-on-scroll">
-            <h5>Southwest</h5>
-            <p>Desert corridors, canyon roads, and sun-drenched highways.</p>
-          </div>
+    </section>
+
+    <!-- The Experience -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="experience-hero" data-animate>
+                <img src="images/waystation-exterior1-az.jpg" alt="Rangeway Waystation at sunset with desert mountains in the background" loading="lazy">
+            </div>
+            <div class="section-header">
+                <p class="section-eyebrow">The Experience</p>
+                <h2 class="section-title">Built Around You, Not Just Your Vehicle</h2>
+            </div>
+            <div class="experience-grid">
+                <div class="experience-item" data-animate>
+                    <div class="experience-number">01</div>
+                    <h3>Arrive</h3>
+                    <p>Pull in and plug in. Ultra-fast chargers and plug-and-charge technology make starting a session effortless.</p>
+                </div>
+                <div class="experience-item" data-animate>
+                    <div class="experience-number">02</div>
+                    <h3>Relax</h3>
+                    <p>Step inside the Driver's Lounge. Enjoy climate-controlled comfort, a curated cafe, comfortable seating, and premium restrooms.</p>
+                </div>
+                <div class="experience-item" data-animate>
+                    <div class="experience-number">03</div>
+                    <h3>Recharge</h3>
+                    <p>Catch up on work with high-speed Wi-Fi, grab a coffee, or simply unwind. Your vehicle charges while you do.</p>
+                </div>
+                <div class="experience-item" data-animate>
+                    <div class="experience-number">04</div>
+                    <h3>Depart</h3>
+                    <p>Get a notification when your charge is complete. Head back to the road feeling refreshed and ready for the journey ahead.</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="network-image animate-on-scroll">
-        <img src="{{ '/images/waystation-exterior-alamo2.jpg' | relative_url }}" alt="Rangeway location concept" loading="lazy">
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Pathfinder Rewards Preview -->
-<section class="pathfinder-preview" id="pathfinder">
-  <div class="container">
-    <div class="pathfinder-layout">
-      <div class="pathfinder-content">
-        <div class="section-header">
-          <span class="section-label">Pathfinder Rewards</span>
-          <h2>Earn Your Status, Explore Your Way</h2>
-          <p>Our hospitality-inspired loyalty program rewards your journey with credits back, exclusive experiences, and recognition at every location.</p>
+    <!-- Pathfinder Rewards -->
+    <section class="section pathfinder" id="pathfinder">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow section-eyebrow--light">Loyalty Program</p>
+                <h2 class="section-title section-title--light">Pathfinder Rewards</h2>
+                <p class="section-subtitle section-subtitle--light">The first true hospitality loyalty program in EV charging. Modeled after the programs you already know and love. Free to join. Status earned, never purchased.</p>
+            </div>
+
+            <div class="tiers">
+                <div class="tier-card" data-animate>
+                    <div class="tier-card-header tier-card-header--explorer">
+                        <h3>Explorer</h3>
+                        <span class="tier-qualifier">Free and Automatic</span>
+                    </div>
+                    <div class="tier-card-body">
+                        <ul>
+                            <li>Full Rangeway experience</li>
+                            <li>Session history and tracking</li>
+                            <li>Rangeway app access</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tier-card" data-animate>
+                    <div class="tier-card-header tier-card-header--voyager">
+                        <h3>Voyager</h3>
+                        <span class="tier-qualifier">10+ sessions per year</span>
+                    </div>
+                    <div class="tier-card-body">
+                        <div class="tier-perk-highlight">5% Credits Back</div>
+                        <ul>
+                            <li>Preferred parking</li>
+                            <li>Complimentary beverage at Basecamps</li>
+                            <li>Partner discounts</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tier-card tier-card--featured" data-animate>
+                    <div class="tier-card-header tier-card-header--pioneer">
+                        <h3>Pioneer</h3>
+                        <span class="tier-qualifier">25+ sessions per year</span>
+                    </div>
+                    <div class="tier-card-body">
+                        <div class="tier-perk-highlight">10% Credits Back + $100 Annual Credit</div>
+                        <ul>
+                            <li>Lounge upgrades</li>
+                            <li>Guest passes</li>
+                            <li>Member events</li>
+                            <li>Priority support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tier-card" data-animate>
+                    <div class="tier-card-header tier-card-header--trailblazer">
+                        <h3>Trailblazer</h3>
+                        <span class="tier-qualifier">Invite Only</span>
+                    </div>
+                    <div class="tier-card-body">
+                        <div class="tier-perk-highlight">15% Credits Back + $500 Annual Credit</div>
+                        <ul>
+                            <li>Dedicated relationship manager</li>
+                            <li>Exclusive experiences</li>
+                            <li>Founding member recognition</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <p class="pathfinder-note">Credits never expire as long as you charge at least once every 24 months. Valid network-wide at all Rangeway locations.</p>
         </div>
+    </section>
 
-        <div class="tier-preview-grid stagger">
-          <div class="tier-preview-card animate-on-scroll">
-            <span class="tier-icon">&#128506;</span>
-            <span class="tier-name">Explorer</span>
-            <span class="tier-benefit">Free to Join</span>
-          </div>
-          <div class="tier-preview-card animate-on-scroll">
-            <span class="tier-icon">&#9968;</span>
-            <span class="tier-name">Voyager</span>
-            <span class="tier-benefit">5% Credits Back</span>
-          </div>
-          <div class="tier-preview-card animate-on-scroll">
-            <span class="tier-icon">&#127956;</span>
-            <span class="tier-name">Pioneer</span>
-            <span class="tier-benefit">10% Credits Back</span>
-          </div>
-          <div class="tier-preview-card highlight animate-on-scroll">
-            <span class="tier-icon">&#127957;</span>
-            <span class="tier-name">Trailblazer</span>
-            <span class="tier-benefit">Invite Only</span>
-          </div>
+    <!-- Founder -->
+    <section class="section founder" id="founder">
+        <div class="container">
+            <div class="founder-grid">
+                <div class="founder-content">
+                    <p class="section-eyebrow">Our Founder</p>
+                    <h2 class="section-title">Hospitality DNA Meets EV Passion</h2>
+                    <p class="founder-text"><strong>Zak Winnick, Founder and CEO</strong>, brings over 15 years of experience across hospitality operations and technology. His professional background includes IT leadership and hospitality operations at Wynn Las Vegas, Cosmopolitan of Las Vegas, Grand Hyatt Nashville, and Sensei wellness retreats.</p>
+                    <p class="founder-text">As Community Director of the Bay Area Rivian Club and co-founder of NorCal EVs, Zak combines deep hospitality expertise with firsthand EV community insight. That combination drives Rangeway's mission to transform charging from a logistics burden into a premium experience.</p>
+                </div>
+                <div class="founder-quote">
+                    <blockquote>
+                        <p>"The EV charging industry has treated charging as a utility problem when it is actually a hospitality problem. Drivers deserve better, and we're building it."</p>
+                        <cite>Zak Winnick, Founder and CEO</cite>
+                    </blockquote>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <a href="https://pathfinderrewards.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-          Find Out More
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="5" y1="12" x2="19" y2="12"/>
-            <polyline points="12 5 19 12 12 19"/>
-          </svg>
-        </a>
-      </div>
-
-      <div class="pathfinder-visual animate-on-scroll">
-        <img src="{{ '/images/baker-exterior3.jpg' | relative_url }}" alt="Rangeway location" loading="lazy">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq">
-  <div class="container">
-    <div class="section-header centered">
-      <span class="section-label">Questions</span>
-      <h2>Frequently Asked</h2>
-    </div>
-
-    <div class="faq-grid stagger">
-      <div class="faq-item animate-on-scroll">
-        <h4>When are you opening?</h4>
-        <p>Our first locations debut in 2026, with expansion across the United States to follow. Subscribe to Field Notes for priority notification.</p>
-      </div>
-
-      <div class="faq-item animate-on-scroll">
-        <h4>What EVs do you accommodate?</h4>
-        <p>Every location features both CCS and NACS connectors. We welcome all electric vehicles.</p>
-      </div>
-
-      <div class="faq-item animate-on-scroll">
-        <h4>How fast is the charging?</h4>
-        <p>Our ultra-fast DC charging typically brings most vehicles from 20% to 80% in 20-30 minutes. Just enough time to enjoy a freshly prepared coffee.</p>
-      </div>
-
-      <div class="faq-item animate-on-scroll">
-        <h4>Is the lounge complimentary?</h4>
-        <p>Every charging guest enjoys full access to our climate-controlled lounges, high-speed WiFi, and pristine facilities at no additional charge.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-  <div class="container">
-    <div class="cta-content">
-      <h2>Be among the first to experience Rangeway.</h2>
-      <p>Join our exclusive list for launch updates and early access to Pathfinder Rewards.</p>
-      <a href="https://fieldnotes.rangewayev.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
-        Subscribe to Field Notes
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="5" y1="12" x2="19" y2="12"/>
-          <polyline points="12 5 19 12 12 19"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact">
-  <div class="container">
-    <div class="section-header centered">
-      <span class="section-label">Get in Touch</span>
-      <h2>We'd love to hear from you</h2>
-    </div>
-
-    <div class="contact-grid stagger">
-      <div class="contact-card animate-on-scroll">
-        <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-            <polyline points="22,6 12,13 2,6"/>
-          </svg>
+    <!-- Locations / Coming Soon -->
+    <section class="section locations" id="locations">
+        <div class="locations-bg">
+            <img src="images/waystation-exterior1-shasta.jpg" alt="Rangeway Waystation with Mt. Shasta in the background" loading="lazy">
         </div>
-        <h4>General Inquiries</h4>
-        <p>Questions, feedback, or just want to say hello?</p>
-        <a href="mailto:hello@rangewayev.com" class="contact-link">hello@rangewayev.com</a>
-      </div>
-
-      <div class="contact-card animate-on-scroll">
-        <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1m2 13a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2z"/>
-          </svg>
+        <div class="container">
+            <div class="locations-inner">
+                <p class="section-eyebrow">Locations</p>
+                <h2 class="section-title">Coming 2026</h2>
+                <p class="locations-text">Our first Rangeway locations are in development, with openings planned for later this year. Site announcements are coming soon.</p>
+                <p class="locations-text">Want to be the first to know when we announce our locations? Subscribe to Field Notes, our newsletter.</p>
+                <a href="https://buttondown.com/rangeway" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--large">Subscribe to Field Notes</a>
+            </div>
         </div>
-        <h4>Media & Press</h4>
-        <p>Visit our newsroom or reach our media team.</p>
-        <a href="https://newsroom.rangeway.energy" target="_blank" rel="noopener" class="contact-link">Newsroom</a>
-        <a href="mailto:media@rangewayev.com" class="contact-link">media@rangewayev.com</a>
-      </div>
+    </section>
 
-      <div class="contact-card animate-on-scroll">
-        <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="12" y1="1" x2="12" y2="23"/>
-            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-          </svg>
+    <!-- Contact / CTA -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p class="section-eyebrow">Get in Touch</p>
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p class="contact-text">Whether you're an EV driver excited about what we're building, a potential partner, or an investor who shares our vision, we would love to hear from you.</p>
+                    <div class="contact-details">
+                        <a href="mailto:hello@rangewayev.com" class="contact-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            hello@rangewayev.com
+                        </a>
+                        <a href="investors.html" class="contact-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                            </svg>
+                            Investor Hub
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contact-form" action="https://formsubmit.co/hello@rangewayev.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Rangeway Website Inquiry">
+                        <input type="hidden" name="_template" value="table">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="interest">I'm interested as a...</label>
+                            <select id="interest" name="interest">
+                                <option value="driver">EV Driver</option>
+                                <option value="partner">Potential Partner</option>
+                                <option value="investor">Investor</option>
+                                <option value="media">Media</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <h4>Investors</h4>
-        <p>Learn about partnership and investment opportunities.</p>
-        <a href="{{ '/investors.html' | relative_url }}" class="contact-link">Investor Relations</a>
-        <a href="mailto:investors@rangewayev.com" class="contact-link">investors@rangewayev.com</a>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo" aria-label="Rangeway Home">
+                        <svg width="24" height="28" viewBox="0 0 96 112" aria-hidden="true">
+                            <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100"
+                                  stroke="#ffffff" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="58" cy="32" r="10" fill="#f4a855"/>
+                        </svg>
+                        <span class="footer-logo-wordmark">Rangeway</span>
+                    </a>
+                    <p class="footer-tagline">Travel farther, stop better.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#network">The Network</a></li>
+                        <li><a href="#pathfinder">Pathfinder Rewards</a></li>
+                        <li><a href="#locations">Locations</a></li>
+                        <li><a href="investors.html">Investors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:hello@rangewayev.com">Email Us</a></li>
+                        <li><a href="https://buttondown.com/rangeway" target="_blank" rel="noopener noreferrer">Field Notes Newsletter</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Rangeway. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
