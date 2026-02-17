@@ -1316,7 +1316,7 @@ ul {
 
     .nav-menu .nav-link--cta {
         margin-left: 0;
-        margin-top: 16px;
+        margin-top: 24px;
     }
 
     .nav-toggle {
@@ -1512,7 +1512,6 @@ body {
 .section-title {
     letter-spacing: -0.018em;
     font-size: clamp(36px, 4.2vw, 62px);
-    max-width: 14ch;
     line-height: 1.04;
 }
 
@@ -1818,8 +1817,21 @@ body {
         transform: translateX(-50%);
     }
 
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image-banner {
+        transform: none;
+    }
+
+    .section-title {
+        max-width: none;
+    }
+
     .formats {
         grid-template-columns: 1fr;
+        max-width: 520px;
     }
 
     .formats .format-card:nth-child(1),
@@ -1847,6 +1859,8 @@ body {
     .nav-menu {
         background: rgba(45, 45, 45, 0.95);
         border: 0;
+        padding: 24px;
+        gap: 8px;
     }
 
     .hero-bg-image {
