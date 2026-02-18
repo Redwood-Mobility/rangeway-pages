@@ -871,10 +871,10 @@ ul {
     color: rgba(255, 255, 255, 0.5);
 }
 
-.tier-card-header--explorer h3 { color: var(--gray-200); }
-.tier-card-header--voyager h3 { color: #86b5d9; }
-.tier-card-header--pioneer h3 { color: var(--warm); }
-.tier-card-header--trailblazer h3 { color: #d4a574; }
+.tier-card--explorer .tier-card-header h3 { color: #B87333; }
+.tier-card--voyager .tier-card-header h3 { color: #a8c4d8; }
+.tier-card--pioneer .tier-card-header h3 { color: #FFD700; }
+.tier-card--trailblazer .tier-card-header h3 { color: var(--warm); }
 
 .tier-card-body {
     padding: 20px;
@@ -882,7 +882,7 @@ ul {
 
 .tier-perk-highlight {
     font-family: var(--font-heading);
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     color: var(--warm);
     padding: 8px 14px;
@@ -890,6 +890,7 @@ ul {
     border-radius: 6px;
     margin-bottom: 16px;
     text-align: center;
+    letter-spacing: 0.02em;
 }
 
 .tier-card-body ul {
@@ -1709,14 +1710,75 @@ body {
     border-color: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
+    border-top: 3px solid rgba(255, 255, 255, 0.12);
 }
+
+.tier-card--explorer { border-top-color: #B87333; }
+.tier-card--voyager { border-top-color: #a8c4d8; }
+.tier-card--pioneer { border-top-color: #FFD700; }
+.tier-card--trailblazer { border-top-color: var(--warm); }
 
 .tier-card-header h3 {
     letter-spacing: -0.02em;
+    font-size: 22px;
+}
+
+.tier-card-credit {
+    padding: 20px 20px 16px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tier-credit-value {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 4px;
+    letter-spacing: -0.03em;
+}
+
+.tier-card--explorer .tier-credit-value { color: #B87333; }
+.tier-card--voyager .tier-credit-value { color: #a8c4d8; }
+.tier-card--pioneer .tier-credit-value { color: #FFD700; }
+.tier-card--trailblazer .tier-credit-value { color: var(--warm); }
+
+.tier-card--explorer .tier-credit-value {
+    font-size: 0;
+}
+
+.tier-card--explorer .tier-credit-value svg {
+    width: 36px;
+    height: 36px;
+    color: #B87333;
+}
+
+.tier-credit-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.4);
 }
 
 .tier-card--featured {
-    box-shadow: 0 0 0 1px rgba(244, 168, 85, 0.42), 0 14px 40px rgba(10, 10, 10, 0.28);
+    border-color: rgba(255, 215, 0, 0.25);
+    background: rgba(255, 215, 0, 0.03);
+    box-shadow: 0 0 0 1px rgba(255, 215, 0, 0.18), 0 14px 40px rgba(10, 10, 10, 0.28);
+}
+
+.tier-card--featured .tier-card-header h3 {
+    color: #FFD700;
+}
+
+.pathfinder-bottom {
+    text-align: center;
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
 }
 
 .founder {
