@@ -1298,14 +1298,14 @@ ul {
         justify-content: center;
         gap: 8px;
         padding: 24px;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s ease;
+        transform: translateX(100%);
+        visibility: hidden;
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
     }
 
     .nav-menu.active {
-        opacity: 1;
-        pointer-events: all;
+        transform: translateX(0);
+        visibility: visible;
     }
 
     .nav-menu .nav-link {
@@ -1611,7 +1611,7 @@ body {
 
 .formats {
     gap: 26px;
-    grid-template-columns: 1.15fr 1fr 0.85fr;
+    grid-template-columns: repeat(3, 1fr);
     align-items: start;
 }
 
@@ -1863,6 +1863,8 @@ body {
 
     .nav-menu {
         background: rgba(45, 45, 45, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         border: 0;
         padding: 24px;
         gap: 8px;
