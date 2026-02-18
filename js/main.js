@@ -26,6 +26,7 @@
     navToggle.addEventListener('click', function () {
         navToggle.classList.toggle('active');
         navMenu.classList.toggle('active');
+        nav.classList.toggle('menu-open');
         document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
     });
 
@@ -34,6 +35,7 @@
         link.addEventListener('click', function () {
             navToggle.classList.remove('active');
             navMenu.classList.remove('active');
+            nav.classList.remove('menu-open');
             document.body.style.overflow = '';
         });
     });
