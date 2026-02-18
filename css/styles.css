@@ -1859,6 +1859,11 @@ body {
     .nav.menu-open {
         backdrop-filter: none;
         -webkit-backdrop-filter: none;
+        /* Only transition these properties — NOT backdrop-filter.
+           backdrop-filter must change instantly to avoid creating a
+           containing block that traps the fixed-position nav-menu
+           inside the 64px-tall nav bar. */
+        transition: background 0.3s ease, box-shadow 0.3s ease, border-bottom 0.3s ease;
     }
 
     .nav-menu {
@@ -1869,6 +1874,7 @@ body {
         padding: 24px;
         gap: 8px;
         z-index: 5;
+        overscroll-behavior: contain;
     }
 
     .hero-bg-image {
@@ -1885,5 +1891,46 @@ body {
 
     .section::before {
         display: none;
+    }
+}
+
+/* Accessibility: Focus-visible styles for keyboard navigation
+   ========================================================================== */
+:focus-visible {
+    outline: 2px solid var(--warm);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+.nav-link:focus-visible {
+    outline-offset: 2px;
+}
+
+.btn:focus-visible {
+    outline-offset: 4px;
+}
+
+/* Accessibility: Reduced motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    [data-animate] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .hero-bg-image {
+        animation: none !important;
     }
 }
