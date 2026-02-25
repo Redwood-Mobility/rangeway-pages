@@ -50,6 +50,18 @@ Standalone page with its own page-specific styles in a `<style>` block. Shares `
 --warm-dark: #e8923a;   /* Hover/active state for warm */
 --cream: #f5f1eb;       /* Light section backgrounds */
 --sage: #4a5d52;        /* Secondary accent (rarely used) */
+--white: #ffffff;
+--gray-100: #f8f7f5;    /* Subtle background variation */
+--gray-200: #e5e5e5;    /* Borders, dividers */
+--gray-400: #999999;    /* Placeholder text */
+--gray-600: #666666;    /* Secondary text */
+```
+
+### Layout Tokens
+```css
+--nav-height: 80px;
+--container-max: 1200px;
+--section-padding: 120px;
 ```
 
 ### Typography
@@ -102,3 +114,15 @@ Standalone page with its own page-specific styles in a `<style>` block. Shares `
 GitHub Pages deploys automatically on push to `main`. No build step required.
 
 **IMPORTANT:** The `CNAME` file must contain `rangewayev.com` — do not change this or the site will 404.
+
+### Local Preview
+
+Any static file server works. Quick options:
+```bash
+# Python
+python3 -m http.server 8000
+
+# Node (npx, no install)
+npx serve .
+```
+Then open `http://localhost:8000`.

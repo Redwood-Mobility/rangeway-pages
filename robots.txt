@@ -7,9 +7,5 @@ Allow: /
 # Sitemap location
 Sitemap: https://rangewayev.com/sitemap.xml
 
-# Disallow internal/admin pages
-Disallow: /_archive/
-Disallow: /_includes/
-Disallow: /_layouts/
-Disallow: /assets/
+# Disallow internal paths
 Disallow: /.git/

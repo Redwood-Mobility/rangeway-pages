@@ -18,3 +18,9 @@ vendor/
 *.swp
 *.swo
 *~
+
+# Firebase
+firebase-debug.log
+
+# Claude Code local overrides
+.claude.local.md
