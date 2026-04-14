@@ -1357,6 +1357,19 @@ ul {
         border-radius: 24px;
     }
 
+    .format-card--support .format-media {
+        min-height: 220px;
+        aspect-ratio: auto;
+    }
+
+    .format-card--support .format-media img {
+        min-height: 220px;
+    }
+
+    .format-card--support .format-body {
+        padding-top: 28px;
+    }
+
     .step {
         grid-template-columns: 1fr;
         gap: 10px;
