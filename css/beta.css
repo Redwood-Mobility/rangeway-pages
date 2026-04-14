@@ -259,8 +259,8 @@ ul {
     position: relative;
     min-height: 100vh;
     display: flex;
-    align-items: end;
-    padding: 136px 0 54px;
+    align-items: center;
+    padding: 136px 0 72px;
     color: var(--white);
     background: var(--ink);
 }
@@ -290,7 +290,7 @@ ul {
     display: grid;
     grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
     gap: 34px;
-    align-items: end;
+    align-items: center;
 }
 
 .eyebrow {
@@ -644,6 +644,11 @@ ul {
     grid-template-columns: 1fr;
 }
 
+.format-card--support .format-media {
+    min-height: 280px;
+    aspect-ratio: 16 / 10;
+}
+
 .format-media {
     position: relative;
     min-height: 100%;
@@ -854,6 +859,8 @@ ul {
     position: relative;
     z-index: 1;
     max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .location-content .section-title,
@@ -864,6 +871,10 @@ ul {
 .location-content .section-copy,
 .investor-hero-copy .section-copy {
     color: rgba(255, 255, 255, 0.78);
+}
+
+.location-content .dual-actions {
+    justify-content: center;
 }
 
 .contact-card {
@@ -1029,8 +1040,8 @@ ul {
     position: relative;
     min-height: 92vh;
     display: flex;
-    align-items: end;
-    padding: 136px 0 56px;
+    align-items: center;
+    padding: 136px 0 72px;
     color: var(--white);
     background: var(--ink);
 }
@@ -1041,7 +1052,7 @@ ul {
     display: grid;
     grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
     gap: 30px;
-    align-items: end;
+    align-items: center;
 }
 
 .back-link {
@@ -1169,11 +1180,16 @@ ul {
     color: var(--charcoal);
     background: linear-gradient(135deg, #f0bc7b 0%, var(--warm) 45%, var(--warm-dark) 100%);
     box-shadow: var(--shadow);
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .cta-banner p {
     max-width: 620px;
     color: rgba(45, 45, 45, 0.76);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .investor-contact-card {
@@ -1185,6 +1201,8 @@ ul {
         radial-gradient(circle at top right, rgba(244, 168, 85, 0.16), transparent 30%),
         linear-gradient(180deg, #26211f 0%, #171514 100%);
     box-shadow: var(--shadow);
+    margin: 0 auto;
+    text-align: center;
 }
 
 .investor-contact-card h3 {
@@ -1201,6 +1219,11 @@ ul {
 .investor-contact-card a {
     color: var(--warm);
     font-weight: 700;
+}
+
+.cta-banner .dual-actions,
+.investor-contact-card .dual-actions {
+    justify-content: center;
 }
 
 [data-reveal] {
@@ -1305,7 +1328,7 @@ ul {
     .investor-hero {
         min-height: auto;
         padding-top: 118px;
-        padding-bottom: 34px;
+        padding-bottom: 48px;
     }
 
     .section {
