@@ -1,6 +1,5 @@
 ---
 import PathMark from "./PathMark.astro";
-import ContactForm from "./ContactForm.astro";
 const year = new Date().getFullYear();
 ---
 
@@ -43,17 +42,24 @@ const year = new Date().getFullYear();
 
     <div class="site-footer__columns">
       <div>
-        <h4>Company</h4>
+        <h4>Explore</h4>
         <ul>
           <li><a href="/network">The Network</a></li>
           <li><a href="/our-story">Our Story</a></li>
           <li><a href="/team">Team</a></li>
           <li><a href="/partners">Partners</a></li>
-          <li><a href="/investors">Investors</a></li>
         </ul>
       </div>
       <div>
-        <h4>Connect</h4>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/investors">Investors</a></li>
+          <li><a href="https://www.linkedin.com/company/rangewayenergy/jobs/" target="_blank" rel="noopener">Careers</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow along</h4>
         <ul>
           <li><a href="https://fieldnotes.rangewayev.com" target="_blank" rel="noopener">Field Notes</a></li>
           <li><a href="https://newsroom.rangeway.energy" target="_blank" rel="noopener">Newsroom</a></li>
@@ -62,14 +68,6 @@ const year = new Date().getFullYear();
           <li><a href="https://x.com/RangewayEV" target="_blank" rel="noopener">X</a></li>
         </ul>
       </div>
-    </div>
-
-    <div class="site-footer__contact">
-      <h4>Say hello</h4>
-      <p class="site-footer__contact-lead">
-        Questions about the network, partnerships, or the road ahead. We read every note.
-      </p>
-      <ContactForm />
     </div>
   </div>
 
@@ -103,7 +101,7 @@ const year = new Date().getFullYear();
 
   .site-footer__inner {
     display: grid;
-    grid-template-columns: 1fr 1fr 1.5fr;
+    grid-template-columns: 1.1fr 1.9fr;
     gap: var(--space-8);
     padding-bottom: var(--space-9);
   }
@@ -157,7 +155,7 @@ const year = new Date().getFullYear();
 
   .site-footer__columns {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-6);
   }
 
@@ -218,12 +216,6 @@ const year = new Date().getFullYear();
   .site-footer a:hover {
     opacity: 1;
     color: var(--color-warm);
-  }
-
-  .site-footer__contact-lead {
-    font-size: 0.95rem;
-    opacity: 0.75;
-    max-width: 44ch;
   }
 
   .site-footer__legal {
