@@ -90,9 +90,17 @@ const team = [
         Rangeway is looking for hospitality operators, site leads, energy engineers, and people who
         care about how a good stop feels. If the thesis rings true, we want to hear from you.
       </p>
-      <div style="margin-top: var(--space-6);">
+      <div class="hiring-ctas">
         <a class="btn btn-primary" href="mailto:careers@rangewayev.com?subject=Joining%20Rangeway">
           Email careers@rangewayev.com
+        </a>
+        <a
+          class="btn btn-outline"
+          href="https://www.linkedin.com/company/rangewayenergy/jobs/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View LinkedIn jobs
         </a>
       </div>
     </div>
@@ -100,6 +108,14 @@ const team = [
 </BaseLayout>
 
 <style>
+  .hiring-ctas {
+    display: flex;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: var(--space-6);
+  }
+
   .team-grid {
     list-style: none;
     padding: 0;
