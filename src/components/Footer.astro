@@ -72,8 +72,13 @@ const year = new Date().getFullYear();
   </div>
 
   <div class="site-footer__legal">
-    <div class="container">
+    <div class="container site-footer__legal-row">
       <p>© {year} Rangeway Energy, Inc. All rights reserved.</p>
+      <p class="site-footer__legal-links">
+        <a href="/privacy">Privacy Policy</a>
+        <span aria-hidden="true">·</span>
+        <a href="/terms">Terms of Service</a>
+      </p>
     </div>
   </div>
 </footer>
@@ -225,8 +230,35 @@ const year = new Date().getFullYear();
     opacity: 0.6;
   }
 
+  .site-footer__legal-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
   .site-footer__legal p {
     margin: 0;
+  }
+
+  .site-footer__legal-links {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .site-footer__legal-links a {
+    color: var(--color-cream);
+    opacity: 1;
+  }
+
+  .site-footer__legal-links a:hover {
+    color: var(--color-warm);
+  }
+
+  .site-footer__legal-links span {
+    opacity: 0.4;
   }
 
   @media (max-width: 960px) {
