@@ -65,15 +65,12 @@ const amenities = [
 
   <section class="format-gallery section">
     <div class="container">
-      <div class="gallery-grid">
-        <div class="gallery-grid__item gallery-grid__item--lg reveal">
+      <div class="gallery-grid gallery-grid--duo">
+        <div class="gallery-grid__item reveal">
           <img src="/images/trailhead-hero.jpg" alt="A Trailhead canopy with warm lighting" loading="lazy" />
         </div>
         <div class="gallery-grid__item reveal">
-          <img src="/images/trailhead-exterior-2.png" alt="Trailhead exterior detail" loading="lazy" />
-        </div>
-        <div class="gallery-grid__item reveal">
-          <img src="/images/trailhead-interior.jpg" alt="Trailhead adjacent lounge interior" loading="lazy" />
+          <img src="/images/trailhead-canopy-dusk.jpg" alt="A Trailhead wooden canopy at dusk with two vehicles charging" loading="lazy" />
         </div>
       </div>
     </div>
@@ -143,6 +140,11 @@ const amenities = [
     gap: var(--space-4);
   }
 
+  .gallery-grid--duo {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 480px;
+  }
+
   .gallery-grid__item {
     overflow: hidden;
     border-radius: var(--radius-md);
@@ -166,6 +168,9 @@ const amenities = [
     .gallery-grid {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3, 240px);
+    }
+    .gallery-grid--duo {
+      grid-template-rows: repeat(2, 240px);
     }
     .gallery-grid__item--lg {
       grid-row: auto;

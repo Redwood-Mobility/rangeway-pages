@@ -82,14 +82,19 @@ const experiences = [
     </div>
   </section>
 
-  <section class="summit-gallery">
-    <div class="gallery-split">
-      <figure class="reveal">
-        <img src="/images/summit-2.jpg" alt="Summit Lookout interior" loading="lazy" />
-      </figure>
-      <figure class="reveal">
-        <img src="/images/summit-3.jpg" alt="Summit clubhouse at dusk" loading="lazy" />
-      </figure>
+  <section class="format-gallery section">
+    <div class="container">
+      <div class="gallery-grid">
+        <div class="gallery-grid__item gallery-grid__item--lg reveal">
+          <img src="/images/summit-solar-aerial.jpg" alt="Aerial view of a Summit with clubhouse, Lookouts, and off-grid solar array in the desert" loading="lazy" />
+        </div>
+        <div class="gallery-grid__item reveal">
+          <img src="/images/summit-clubhouse-mountains.jpg" alt="A Summit clubhouse with charging canopy and desert mountains behind" loading="lazy" />
+        </div>
+        <div class="gallery-grid__item reveal">
+          <img src="/images/summit-2.jpg" alt="Summit Lookout interior" loading="lazy" />
+        </div>
+      </div>
     </div>
   </section>
 
@@ -181,22 +186,23 @@ const experiences = [
     margin: 0;
   }
 
-  .summit-gallery {
-    padding: 0;
-  }
-
-  .gallery-split {
+  .gallery-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 280px);
+    gap: var(--space-4);
   }
 
-  .gallery-split figure {
-    margin: 0;
-    aspect-ratio: 4 / 3;
+  .gallery-grid__item {
     overflow: hidden;
+    border-radius: var(--radius-md);
   }
 
-  .gallery-split img {
+  .gallery-grid__item--lg {
+    grid-row: span 2;
+  }
+
+  .gallery-grid__item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -235,13 +241,17 @@ const experiences = [
   @media (max-width: 900px) {
     .summit-intro,
     .summit-pillars,
-    .experiences,
-    .gallery-split {
+    .experiences {
       grid-template-columns: 1fr;
     }
 
-    .gallery-split figure {
-      aspect-ratio: 16 / 10;
+    .gallery-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 240px);
+    }
+
+    .gallery-grid__item--lg {
+      grid-row: auto;
     }
   }
 </style>
