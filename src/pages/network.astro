@@ -73,6 +73,13 @@ const formats = [
 
   <section class="section">
     <div class="container">
+      <div class="network-heading reveal">
+        <p class="eyebrow">The formats</p>
+        <h2>One standard, four expressions.</h2>
+        <p class="network-heading__lede">
+          Each format delivers the same hospitality promise at a scale that fits the corridor.
+        </p>
+      </div>
       <div class="network-grid">
         {formats.map((f) => <FormatCard {...f} />)}
       </div>
@@ -97,6 +104,17 @@ const formats = [
 </BaseLayout>
 
 <style>
+  .network-heading {
+    max-width: 620px;
+    margin-bottom: var(--space-7);
+  }
+
+  .network-heading__lede {
+    margin-top: var(--space-4);
+    color: var(--color-text-muted);
+    font-size: 1.08rem;
+  }
+
   .network-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
