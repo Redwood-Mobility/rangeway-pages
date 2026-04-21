@@ -1,0 +1,89 @@
+---
+interface Props {
+  name: string;
+  role: string;
+  href: string;
+  logo?: string;
+}
+const { name, role, href, logo } = Astro.props;
+const isExternal = href.startsWith("http");
+---
+
+<a
+  class="partner-logo reveal"
+  href={href}
+  target={isExternal ? "_blank" : undefined}
+  rel={isExternal ? "noopener" : undefined}
+>
+  {logo && (
+    <div class="partner-logo__image">
+      <img src={logo} alt={`${name} logo`} loading="lazy" />
+    </div>
+  )}
+  <span class="partner-logo__name">{name}</span>
+  <span class="partner-logo__role">{role}</span>
+</a>
+
+<style>
+  .partner-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-2);
+    padding: var(--space-6) var(--space-4);
+    min-height: 180px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--surface-raised);
+    transition: transform var(--dur-fast) var(--ease-standard),
+      border-color var(--dur-fast) var(--ease-standard),
+      box-shadow var(--dur-fast) var(--ease-standard);
+  }
+
+  .partner-logo:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-warm);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .partner-logo__image {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-3);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: var(--surface-alt);
+  }
+
+  .partner-logo__image img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .partner-logo__name {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: var(--ls-tight);
+    color: var(--color-text);
+  }
+
+  .partner-logo__role {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  .partner-logo:hover .partner-logo__name {
+    color: var(--color-warm-deep);
+  }
+</style>

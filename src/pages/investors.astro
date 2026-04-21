@@ -1,0 +1,439 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+
+const thesis = [
+  {
+    title: "The charging market is under-served at the top.",
+    body: "Public charging is dominated by utility-first operators. No national network is designed for premium drivers or competes on experience. The category has a ceiling, and nobody is approaching it."
+  },
+  {
+    title: "Hospitality unlocks new economics.",
+    body: "Dwell time is a liability for a utility company and an asset for a hospitality operator. Our model turns the mandatory 20 to 30 minutes of a fast-charge stop into revenue, loyalty, and brand."
+  },
+  {
+    title: "The site-level experience is the moat.",
+    body: "Hardware commoditizes. Electricity commoditizes. Experience does not. Running a network that feels like a hotel is operationally hard, and that difficulty is the durable advantage."
+  },
+  {
+    title: "Four formats, one brand, one standard.",
+    body: "Rangeway scales hospitality across corridor types without compromising on what the network stands for. Trailhead, Waystation, Basecamp, and Summit each earn their place in the map."
+  }
+];
+---
+
+<BaseLayout
+  title="Investors · Rangeway"
+  description="The investment case for the first hospitality-driven premium EV charging network in America."
+  image="/images/waystation-gualala.png"
+>
+  <PageHero
+    eyebrow="Investors"
+    title="A hospitality category the charging industry never built."
+    lede="Rangeway is a premium hospitality brand for EV drivers. Charging is our beachhead. Experience is the business."
+    image="/images/waystation-gualala.png"
+    imageAlt="A Waystation in the evening light"
+  >
+    <div class="hero-ctas">
+      <a class="btn btn-warm" href="https://investors.rangewayev.com" target="_blank" rel="noopener">
+        Visit the Investor Hub
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 17L17 7" />
+          <polyline points="7 7 17 7 17 17" />
+        </svg>
+      </a>
+      <a class="btn btn-outline" href="mailto:investors@rangewayev.com?subject=Investor%20Briefing%20Request">
+        investors@rangewayev.com
+      </a>
+    </div>
+  </PageHero>
+
+  <section class="section">
+    <div class="container investors-intro">
+      <div class="reveal">
+        <p class="eyebrow">The opportunity</p>
+        <h2>Charging is a hospitality problem the industry has misread.</h2>
+      </div>
+      <div class="investors-intro__body reveal">
+        <p class="prose-lg">
+          Premium EV drivers spend 20 to 30 minutes at a charger on every long drive. Today, that
+          time happens in a parking lot. Rangeway is building the first national network designed
+          for the people inside the vehicle, not just the vehicle itself, with hospitality
+          operators at the helm.
+        </p>
+        <p class="prose-lg muted">
+          The investment case is simple. Hospitality is a learnable craft, the chargers are a
+          solved problem, and the category is wide open. We are building the brand that will
+          define it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section recognition">
+    <div class="container">
+      <div class="reveal" style="max-width: 620px; margin-bottom: var(--space-6);">
+        <p class="eyebrow">Recognition</p>
+        <h2>Early validation.</h2>
+      </div>
+      <ul class="recognition-list reveal">
+        <li>
+          <span class="recognition__label">Top emerging charge point operators</span>
+          <span class="recognition__detail">Named among the next generation of charge point operators in Ohm Analytics' Q3 2025 US EV Charging Market Report</span>
+        </li>
+        <li>
+          <span class="recognition__label">Pepperdine Most Fundable Companies</span>
+          <span class="recognition__detail">Quarter-finalist</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-cream">
+    <div class="container">
+      <div class="reveal" style="max-width: 640px; margin-bottom: var(--space-8);">
+        <p class="eyebrow">The thesis</p>
+        <h2>Four convictions the plan rests on.</h2>
+      </div>
+
+      <div class="thesis">
+        {thesis.map((t, i) => (
+          <article class="thesis-item reveal">
+            <span class="thesis-item__num">/{String(i + 1).padStart(2, "0")}</span>
+            <h3>{t.title}</h3>
+            <p>{t.body}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section metrics">
+    <div class="container">
+      <div class="reveal" style="max-width: 640px; margin-bottom: var(--space-8);">
+        <p class="eyebrow">The plan in numbers</p>
+        <h2>Built to scale, built to last.</h2>
+        <p class="prose-lg muted" style="margin-top: var(--space-4); max-width: 58ch;">
+          A four-year view of the market, the network, and the capital required to build it. The
+          detailed corridor economics, unit model, and source attribution live in the full
+          briefing.
+        </p>
+      </div>
+
+      <div class="metrics__group">
+        <p class="eyebrow eyebrow-muted reveal">Market sizing</p>
+        <div class="metrics__grid">
+          <article class="metric reveal">
+            <span class="metric__value">$7B → $30B+</span>
+            <span class="metric__label">US DC fast charging market, present to 2035</span>
+          </article>
+          <article class="metric reveal">
+            <span class="metric__value">18,000+</span>
+            <span class="metric__label">New DC ports added in the US in 2025, the largest single-year expansion ever</span>
+          </article>
+          <article class="metric reveal">
+            <span class="metric__value">1 in 3</span>
+            <span class="metric__label">Public charging attempts that still fail today, per ChargerHelp 2025</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="metrics__group">
+        <p class="eyebrow eyebrow-muted reveal">Network targets</p>
+        <div class="metrics__grid">
+          <article class="metric reveal">
+            <span class="metric__value">3 → 33</span>
+            <span class="metric__label">Sites operating from Year 1 through Year 4</span>
+          </article>
+          <article class="metric reveal">
+            <span class="metric__value">$2.2M</span>
+            <span class="metric__label">Annualized charging revenue per mature site</span>
+          </article>
+          <article class="metric reveal">
+            <span class="metric__value">Q4 2026</span>
+            <span class="metric__label">First sites targeted for operation, with Q1 2027 rollout</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="metrics__group">
+        <p class="eyebrow eyebrow-muted reveal">Financial targets</p>
+        <div class="metrics__grid">
+          <article class="metric reveal">
+            <span class="metric__value">$112M</span>
+            <span class="metric__label">Projected Year 4 annual revenue</span>
+          </article>
+          <article class="metric reveal">
+            <span class="metric__value">$4M → $112M</span>
+            <span class="metric__label">Revenue growth arc from Year 1 to Year 4</span>
+          </article>
+          <article class="metric reveal">
+            <span class="metric__value">31% → 36%</span>
+            <span class="metric__label">EBITDA margin expansion over the four-year plan</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="metrics__group">
+        <p class="eyebrow eyebrow-muted reveal">Capital</p>
+        <div class="metrics__grid metrics__grid--two">
+          <article class="metric reveal">
+            <span class="metric__value">$60M</span>
+            <span class="metric__label">Current round target, approximately $7M per site</span>
+          </article>
+          <article class="metric reveal">
+            <span class="metric__value">70% · $42M</span>
+            <span class="metric__label">Site development and real estate</span>
+          </article>
+        </div>
+      </div>
+
+      <p class="metrics__footnote reveal">
+        The full five-year model, milestone roadmap, and source attribution are available in the
+        investor briefing on request.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-cream milestones">
+    <div class="container">
+      <div class="reveal" style="max-width: 620px; margin-bottom: var(--space-8);">
+        <p class="eyebrow">Milestones</p>
+        <h2>A multi-year roadmap.</h2>
+      </div>
+      <ol class="milestone-list">
+        <li class="reveal">
+          <span class="milestone__when">Q4 2026</span>
+          <p>Close raise, site control secured on the first 3 to 5 locations.</p>
+        </li>
+        <li class="reveal">
+          <span class="milestone__when">Mid 2027</span>
+          <p>First sites generating revenue.</p>
+        </li>
+        <li class="reveal">
+          <span class="milestone__when">Late 2027</span>
+          <p>Network expanding. Additional sites under development.</p>
+        </li>
+        <li class="reveal">
+          <span class="milestone__when">2028</span>
+          <p>First Summit welcoming overnight guests.</p>
+        </li>
+        <li class="reveal">
+          <span class="milestone__when">2029</span>
+          <p>Multi-state network operational.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="container investor-cta">
+      <div class="reveal">
+        <p class="eyebrow" style="color: var(--color-warm);">Get in touch</p>
+        <h2>Request the investor briefing.</h2>
+        <p class="prose-lg" style="margin-top: var(--space-5); opacity: 0.88; max-width: 52ch;">
+          Our investor materials include the market thesis, corridor strategy, format economics,
+          partner roster, and capital plan. We share them with serious partners on request.
+        </p>
+        <div style="margin-top: var(--space-6); display: flex; gap: var(--space-4); flex-wrap: wrap;">
+          <a class="btn btn-warm" href="mailto:investors@rangewayev.com?subject=Investor%20Briefing%20Request">
+            Email investors@rangewayev.com
+          </a>
+          <a class="btn btn-outline" href="/our-story">Read our story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero-ctas {
+    display: flex;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    margin-top: var(--space-6);
+  }
+
+  .investors-intro {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: var(--space-8);
+    align-items: start;
+  }
+
+  .investors-intro__body p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+
+  .thesis {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-7);
+  }
+
+  .thesis-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .thesis-item__num {
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    letter-spacing: 0.22em;
+    color: var(--color-warm-deep);
+    font-weight: 600;
+  }
+
+  .thesis-item h3 {
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+
+  .thesis-item p {
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .investor-cta {
+    max-width: 640px;
+  }
+
+  .metrics__group {
+    margin-bottom: var(--space-8);
+  }
+
+  .metrics__group .eyebrow {
+    display: block;
+    margin-bottom: var(--space-5);
+  }
+
+  .metrics__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .metrics__grid--two {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .metric {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .metric__value {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: clamp(2.2rem, 3.5vw, 3rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--color-warm-deep);
+  }
+
+  .metric__label {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    max-width: 28ch;
+  }
+
+  .metrics__footnote {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-top: var(--space-6);
+    max-width: 54ch;
+  }
+
+  .milestone-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .milestone-list li {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: var(--space-6);
+    align-items: baseline;
+    padding: var(--space-5) 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .milestone-list li:first-child {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .milestone__when {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-warm-deep);
+    letter-spacing: 0.02em;
+  }
+
+  .milestone-list p {
+    font-size: 1.05rem;
+    color: var(--color-text);
+    margin: 0;
+    max-width: 54ch;
+  }
+
+  .recognition-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5);
+  }
+
+  .recognition-list li {
+    padding: var(--space-5);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--surface-raised);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .recognition__label {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--color-text);
+  }
+
+  .recognition__detail {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 900px) {
+    .investors-intro,
+    .thesis {
+      grid-template-columns: 1fr;
+    }
+    .metrics__grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-5);
+    }
+    .milestone-list li {
+      grid-template-columns: 1fr;
+      gap: var(--space-2);
+    }
+    .recognition-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,70 @@
+---
+import PartnerLogo from "../components/PartnerLogo.astro";
+
+const partners = [
+  { name: "Carbon DC", role: "Energy infrastructure", href: "https://carbondc.io" },
+  { name: "ChargeMate", role: "24/7 AI driver support", href: "https://chargemate.ai" },
+  { name: "Ekoenergetyka", role: "Ultra-fast charging hardware", href: "https://ekoenergetyka.com/america/" },
+  { name: "HyWatts", role: "Modular off-grid power systems", href: "https://hywatts.com" },
+  { name: "Juice", role: "Plug-and-charge technology", href: "https://js.eco" },
+  { name: "Monta", role: "Charge point management", href: "https://monta.com" },
+  { name: "ReNuTeq", role: "Structural and building partner", href: "https://renuteq.com" },
+  { name: "WattsUp", role: "Predictive maintenance", href: "https://wattsupev.io/" }
+];
+---
+
+<section class="partners section">
+  <div class="container">
+    <div class="partners__heading reveal">
+      <p class="eyebrow">Partners</p>
+      <h2>Built with the best.</h2>
+    </div>
+
+    <div class="partners__grid">
+      {partners.map((p) => <PartnerLogo {...p} />)}
+    </div>
+
+    <div class="partners__cta reveal">
+      <a class="btn-link" href="/partners">
+        See all partners
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12" />
+          <polyline points="13 6 19 12 13 18" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .partners__heading {
+    max-width: 560px;
+    margin-bottom: var(--space-7);
+  }
+
+  .partners__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-5);
+  }
+
+  .partners__grid > :nth-child(n + 5) {
+    grid-column: span 1;
+  }
+
+  .partners__cta {
+    margin-top: var(--space-7);
+  }
+
+  @media (max-width: 960px) {
+    .partners__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 620px) {
+    .partners__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

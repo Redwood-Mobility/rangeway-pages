@@ -1,26 +1,17 @@
-# Jekyll
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-
-# Ruby
-Gemfile.lock
-vendor/
-.bundle/
-
-# macOS
+node_modules/
+dist/
+.astro/
 .DS_Store
-
-# Editor files
+.env
+.env.production
 .vscode/
-.idea/
-*.swp
-*.swo
-*~
+.playwright-mcp/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Firebase
-firebase-debug.log
-
-# Claude Code local overrides
-.claude.local.md
+# Local test screenshots
+/home-*.png
+/waystation-*.png
+/summit-*.png
