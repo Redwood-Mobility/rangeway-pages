@@ -12,6 +12,14 @@ const year = new Date().getFullYear();
         <span>Rangeway</span>
       </a>
       <p class="site-footer__tag">Travel farther, stop better.</p>
+      <address class="site-footer__address">
+        2661 Market Street, STE 85787<br />
+        San Francisco, CA 94114
+      </address>
+      <ul class="site-footer__details-list">
+        <li><a href="tel:+16504206300">(650) 420-6300</a></li>
+        <li><a href="mailto:hello@rangewayev.com">hello@rangewayev.com</a></li>
+      </ul>
       <div class="site-footer__social">
         <a href="https://instagram.com/RangewayEV" aria-label="Instagram" target="_blank" rel="noopener">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
@@ -153,6 +161,38 @@ const year = new Date().getFullYear();
     gap: var(--space-6);
   }
 
+  .site-footer__address {
+    font-style: normal;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--color-cream);
+    opacity: 0.78;
+    margin: var(--space-5) 0 var(--space-3);
+  }
+
+  .site-footer__details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    font-size: 0.92rem;
+  }
+
+  .site-footer__details-list a {
+    color: var(--color-cream);
+    opacity: 0.85;
+    border-bottom: 1px solid rgba(245, 241, 235, 0.2);
+    padding-bottom: 2px;
+  }
+
+  .site-footer__details-list a:hover {
+    color: var(--color-warm);
+    opacity: 1;
+    border-bottom-color: var(--color-warm);
+  }
+
   .site-footer h4 {
     font-size: 0.78rem;
     letter-spacing: 0.18em;
@@ -201,6 +241,13 @@ const year = new Date().getFullYear();
     .site-footer__inner {
       grid-template-columns: 1fr;
       gap: var(--space-7);
+    }
+
+  }
+
+  @media (max-width: 560px) {
+    .site-footer__columns {
+      grid-template-columns: 1fr;
     }
   }
 </style>

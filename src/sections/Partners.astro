@@ -1,15 +1,13 @@
 ---
-import PartnerLogo from "../components/PartnerLogo.astro";
-
 const partners = [
-  { name: "Carbon DC", role: "Energy infrastructure", href: "https://carbondc.io" },
-  { name: "ChargeMate", role: "24/7 AI driver support", href: "https://chargemate.ai" },
-  { name: "Ekoenergetyka", role: "Ultra-fast charging hardware", href: "https://ekoenergetyka.com/america/" },
-  { name: "HyWatts", role: "Modular off-grid power systems", href: "https://hywatts.com" },
-  { name: "Juice", role: "Plug-and-charge technology", href: "https://js.eco" },
-  { name: "Monta", role: "Charge point management", href: "https://monta.com" },
-  { name: "ReNuTeq", role: "Structural and building partner", href: "https://renuteq.com" },
-  { name: "WattsUp", role: "Predictive maintenance", href: "https://wattsupev.io/" }
+  { name: "Carbon DC", href: "https://carbondc.io", logo: "/images/partners/carbondc.png" },
+  { name: "ChargeMate", href: "https://chargemate.ai", logo: "/images/partners/chargemate.jpg" },
+  { name: "Ekoenergetyka", href: "https://ekoenergetyka.com/america/", logo: "/images/partners/eko-trans.webp" },
+  { name: "HyWatts", href: "https://hywatts.com", logo: "/images/partners/hywatts.webp" },
+  { name: "Juice", href: "https://js.eco", logo: "/images/partners/juice.png" },
+  { name: "Monta", href: "https://monta.com", logo: "/images/partners/monta.png" },
+  { name: "ReNuTeq", href: "https://renuteq.com", logo: "/images/partners/renuteq.jpg" },
+  { name: "WattsUp", href: "https://wattsupev.io/", logo: "/images/partners/wattsup.png" }
 ];
 ---
 
@@ -18,10 +16,26 @@ const partners = [
     <div class="partners__heading reveal">
       <p class="eyebrow">Partners</p>
       <h2>Built with the best.</h2>
+      <p class="partners__lede">
+        Built with trusted partners across energy, hardware, and technology.
+      </p>
     </div>
 
-    <div class="partners__grid">
-      {partners.map((p) => <PartnerLogo {...p} />)}
+    <div class="partners__strip">
+      {partners.map((p) => (
+        <a
+          class:list={["partners__logo", !p.logoDark && "partners__logo--auto-dark"]}
+          href={p.href}
+          target="_blank"
+          rel="noopener"
+          aria-label={`${p.name} (opens in new tab)`}
+        >
+          <picture>
+            {p.logoDark && <source srcset={p.logoDark} media="(prefers-color-scheme: dark)" />}
+            <img src={p.logo} alt={`${p.name} logo`} loading="lazy" />
+          </picture>
+        </a>
+      ))}
     </div>
 
     <div class="partners__cta reveal">
@@ -38,33 +52,86 @@ const partners = [
 
 <style>
   .partners__heading {
-    max-width: 560px;
+    max-width: 620px;
     margin-bottom: var(--space-7);
   }
 
-  .partners__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-5);
+  .partners__lede {
+    margin-top: var(--space-4);
+    color: var(--color-text-muted);
+    font-size: 1.08rem;
   }
 
-  .partners__grid > :nth-child(n + 5) {
-    grid-column: span 1;
+  .partners__strip {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-7);
+    padding: var(--space-7) var(--space-5);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .partners__logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    max-width: 180px;
+    filter: grayscale(1);
+    opacity: 0.65;
+    transition: filter var(--dur-fast) var(--ease-standard),
+      opacity var(--dur-fast) var(--ease-standard),
+      transform var(--dur-fast) var(--ease-standard);
+  }
+
+  .partners__logo:hover {
+    filter: grayscale(0);
+    opacity: 1;
+    transform: translateY(-1px);
+  }
+
+  .partners__logo img,
+  .partners__logo picture {
+    height: 100%;
+    max-height: 44px;
+    width: auto;
+    max-width: 180px;
+    object-fit: contain;
   }
 
   .partners__cta {
     margin-top: var(--space-7);
   }
 
-  @media (max-width: 960px) {
-    .partners__grid {
-      grid-template-columns: repeat(3, 1fr);
+  @media (prefers-color-scheme: dark) {
+    .partners__logo--auto-dark {
+      background: var(--color-cream);
+      border-radius: var(--radius-sm);
+      padding: 6px 12px;
+      filter: none;
+      opacity: 0.88;
+    }
+
+    .partners__logo--auto-dark:hover {
+      opacity: 1;
+      background: var(--color-white);
     }
   }
 
-  @media (max-width: 620px) {
-    .partners__grid {
-      grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 720px) {
+    .partners__strip {
+      gap: var(--space-5);
+      padding: var(--space-6) var(--space-3);
+    }
+
+    .partners__logo {
+      height: 36px;
+    }
+
+    .partners__logo img {
+      max-height: 36px;
     }
   }
 </style>

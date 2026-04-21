@@ -6,26 +6,30 @@ const team = [
   {
     name: "Zak Winnick",
     role: "Founder and CEO",
-    bio: "Hospitality operator with over 15 years at premium properties including Wynn Las Vegas, the Cosmopolitan of Las Vegas, Grand Hyatt Nashville, and Sensei. Community Director of the Bay Area Rivian Club, co-founder of NorCal EVs, and host of the Trail Marker Podcast and the Rivian Clubs of America Podcast.",
-    photo: "/images/team/zak-winnick.jpg"
+    bio: "Hospitality operator with over 15 years across luxury resorts, wellness retreats, and flagship urban hotels. Longtime EV driver, community organizer, and host of two EV podcasts, with firsthand insight into what charging actually feels like on a long trip.",
+    photo: "/images/team/zak-winnick.jpg",
+    linkedin: "https://www.linkedin.com/in/zakwinnick"
   },
   {
     name: "Theo Reichgelt",
     role: "Brand and Growth",
     bio: "Founder of Nexxt Industry, Europe's leading eMobility marketing agency. Over eight years specializing in charging network brand development and market positioning. Host of The eMobility Marketing Podcast.",
-    photo: "/images/team/theo-reichgelt.jpg"
+    photo: "/images/team/theo-reichgelt.jpg",
+    linkedin: "https://www.linkedin.com/in/theoreichgelt/"
   },
   {
     name: "James Regan",
     role: "Finance and Strategy",
     bio: "Over 30 years in corporate development and business analytics. Managing Partner at CapitalWorks. Expert in infrastructure project financing and capital strategy for the buildout of the Rangeway network.",
-    photo: "/images/team/james-regan.jpg"
+    photo: "/images/team/james-regan.jpg",
+    linkedin: "https://www.linkedin.com/in/james-regan-913915a/"
   },
   {
     name: "Stephanie McGreevy",
     role: "Policy and Public Capital",
     bio: "Over 15 years in zero-emission vehicle infrastructure. Founder of Open Energy Alliance. Specializes in LCFS optimization and grant funding strategies, including NEVI and state-level incentive programs.",
-    photo: "/images/team/stephanie-mcgreevy.jpg"
+    photo: "/images/team/stephanie-mcgreevy.jpg",
+    linkedin: "https://www.linkedin.com/in/smcgreevy/"
   }
 ];
 ---
@@ -59,6 +63,18 @@ const team = [
               <h3>{m.name}</h3>
               <p class="team-card__role">{m.role}</p>
               <p class="team-card__bio">{m.bio}</p>
+              <a
+                class="team-card__linkedin"
+                href={m.linkedin}
+                target="_blank"
+                rel="noopener"
+                aria-label={`${m.name} on LinkedIn`}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.4c0-1.3-.03-2.98-1.82-2.98-1.82 0-2.1 1.42-2.1 2.88V21h-4V9z" />
+                </svg>
+                <span>LinkedIn</span>
+              </a>
             </div>
           </li>
         ))}
@@ -156,7 +172,23 @@ const team = [
     font-size: 1rem;
     line-height: 1.65;
     color: var(--color-text);
-    margin: 0;
+    margin: 0 0 var(--space-4);
+  }
+
+  .team-card__linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  .team-card__linkedin:hover {
+    color: var(--color-warm-deep);
   }
 
   .team-card--placeholder .team-card__bio {
