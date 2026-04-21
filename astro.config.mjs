@@ -6,5 +6,8 @@ export default defineConfig({
   trailingSlash: 'ignore',
   build: {
     format: 'directory'
+  },
+  redirects: {
+    '/summit': '/network/summit'
   }
 });

@@ -36,7 +36,7 @@ const formats = [
       "Modular Lookouts, a central clubhouse, and 100% off-grid solar charging. A hospitality-first destination where the stop itself becomes part of the journey.",
     image: "/images/summit-1.jpg",
     imageAlt: "A Summit Lookout framed by the desert at dusk",
-    href: "/summit"
+    href: "/network/summit"
   }
 ];
 ---
@@ -53,7 +53,17 @@ const formats = [
     </div>
 
     <div class="network__grid">
-      {formats.map((f) => <FormatCard {...f} />)}
+      {formats.map((f) => <FormatCard {...f} compact />)}
+    </div>
+
+    <div class="network__cta reveal">
+      <a class="btn btn-primary" href="/network">
+        Explore all four formats
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12" />
+          <polyline points="13 6 19 12 13 18" />
+        </svg>
+      </a>
     </div>
   </div>
 </section>
@@ -74,6 +84,12 @@ const formats = [
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-6);
+  }
+
+  .network__cta {
+    margin-top: var(--space-7);
+    display: flex;
+    justify-content: center;
   }
 
   @media (max-width: 900px) {
