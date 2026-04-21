@@ -109,17 +109,16 @@ const values = [
     </div>
   </section>
 
-  <section class="section section-dark">
-    <div class="container-narrow text-center reveal">
+  <section class="section section-dark where-dark">
+    <div class="container-narrow reveal">
       <p class="eyebrow" style="color: var(--color-warm);">Where we're going</p>
-      <h2>Three sites in active development across California, Nevada, and Texas.</h2>
-      <p class="prose-lg" style="margin-top: var(--space-5); opacity: 0.88;">
-        Detailed pipeline available to
-        <a href="/investors" style="color: var(--color-warm); font-weight: 600; text-decoration: underline; text-underline-offset: 3px;">qualified investors under NDA</a>.
-        More routes will follow. Subscribe to Field Notes for first access to site announcements,
-        format openings, and the stories behind them.
-      </p>
-      <div style="margin-top: var(--space-6); display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+      <h2>The road ahead.</h2>
+      <ul class="where-dark__list">
+        <li>Three sites in active development across California, Nevada, and Texas.</li>
+        <li>Urban cluster development underway in Missouri.</li>
+        <li>Detailed pipeline available to <a href="/investors">qualified investors under NDA</a>.</li>
+      </ul>
+      <div class="where-dark__cta">
         <a class="btn btn-warm" href="/investors">Request investor briefing</a>
         <a class="btn btn-outline" href="https://fieldnotes.rangewayev.com" target="_blank" rel="noopener">Subscribe to Field Notes</a>
       </div>
@@ -163,6 +162,49 @@ const values = [
 
   .team-strip__heading {
     max-width: 620px;
+  }
+
+  .where-dark__list {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-5) 0 0;
+    max-width: 68ch;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .where-dark__list li {
+    position: relative;
+    padding-left: var(--space-5);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    opacity: 0.92;
+  }
+
+  .where-dark__list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-warm);
+  }
+
+  .where-dark__list a {
+    color: var(--color-warm);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .where-dark__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    margin-top: var(--space-7);
   }
 
   @media (max-width: 900px) {
