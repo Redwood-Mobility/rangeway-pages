@@ -6,12 +6,13 @@ interface Props {
   image: string;
   imageAlt: string;
   align?: "left" | "center";
+  scrim?: "default" | "strong";
 }
 
-const { eyebrow, title, lede, image, imageAlt, align = "left" } = Astro.props;
+const { eyebrow, title, lede, image, imageAlt, align = "left", scrim = "default" } = Astro.props;
 ---
 
-<section class={`page-hero page-hero--${align}`}>
+<section class={`page-hero page-hero--${align} page-hero--scrim-${scrim}`}>
   <div class="page-hero__media">
     <img src={image} alt={imageAlt} fetchpriority="high" />
     <div class="page-hero__scrim"></div>
@@ -62,6 +63,12 @@ const { eyebrow, title, lede, image, imageAlt, align = "left" } = Astro.props;
     background:
       linear-gradient(180deg, rgba(23, 21, 20, 0.55) 0%, rgba(23, 21, 20, 0.28) 40%, rgba(23, 21, 20, 0.82) 100%),
       radial-gradient(circle at 20% 85%, rgba(244, 168, 85, 0.2), transparent 40%);
+  }
+
+  .page-hero--scrim-strong .page-hero__scrim {
+    background:
+      linear-gradient(180deg, rgba(23, 21, 20, 0.75) 0%, rgba(23, 21, 20, 0.5) 45%, rgba(23, 21, 20, 0.9) 100%),
+      radial-gradient(circle at 20% 85%, rgba(244, 168, 85, 0.22), transparent 40%);
   }
 
   .page-hero--center .page-hero__inner {
