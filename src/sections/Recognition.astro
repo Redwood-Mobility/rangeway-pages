@@ -8,11 +8,25 @@
       <div class="recognition-strip__items">
         <article>
           <span class="recognition-strip__label">Top emerging charge point operators</span>
-          <span class="recognition-strip__source">Ohm Analytics · Q3 2025 US EV Charging Market Report</span>
+          <span class="recognition-strip__source">
+            <a href="https://ohmanalytics.com" target="_blank" rel="noopener">Ohm Analytics</a>
+            ·
+            <a
+              href="https://hs-21752392.f.hubspotstarter.net/hubfs/21752392/OhmAnalytics_EVCharging_2025Q3Report_20251211_Sample.pdf"
+              target="_blank"
+              rel="noopener"
+            >Q3 2025 US EV Charging Market Report</a>
+          </span>
         </article>
         <article>
-          <span class="recognition-strip__label">Pepperdine Most Fundable Companies</span>
-          <span class="recognition-strip__source">Quarter-finalist</span>
+          <span class="recognition-strip__label">
+            <a
+              href="https://bschool.pepperdine.edu/events/most-fundable-companies/"
+              target="_blank"
+              rel="noopener"
+            >Pepperdine Most Fundable Companies</a>
+          </span>
+          <span class="recognition-strip__source">Quarter-finalist 2026</span>
         </article>
       </div>
     </div>
@@ -62,6 +76,21 @@
     font-size: 0.88rem;
     color: var(--color-text-muted);
     line-height: 1.4;
+  }
+
+  .recognition-strip__source a,
+  .recognition-strip__label a {
+    color: inherit;
+    border-bottom: 1px solid var(--color-border-strong);
+    padding-bottom: 1px;
+    transition: color var(--dur-fast) var(--ease-standard),
+      border-color var(--dur-fast) var(--ease-standard);
+  }
+
+  .recognition-strip__source a:hover,
+  .recognition-strip__label a:hover {
+    color: var(--color-warm-deep);
+    border-bottom-color: var(--color-warm-deep);
   }
 
   @media (max-width: 900px) {
