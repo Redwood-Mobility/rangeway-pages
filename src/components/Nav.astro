@@ -16,7 +16,8 @@ import PathMark from "./PathMark.astro";
         <li><a href="/team">Team</a></li>
         <li><a href="/partners">Partners</a></li>
         <li><a href="https://newsroom.rangeway.energy" target="_blank" rel="noopener">Newsroom</a></li>
-        <li><a class="nav-investors" href="/investors">Investors</a></li>
+        <li><a href="/investors">Investors</a></li>
+        <li><a href="/contact">Contact</a></li>
         <li class="nav-social" aria-label="Social">
           <a href="https://instagram.com/RangewayEV" aria-label="Instagram" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
@@ -54,6 +55,7 @@ import PathMark from "./PathMark.astro";
       <a href="/partners">Partners</a>
       <a href="https://newsroom.rangeway.energy" target="_blank" rel="noopener">Newsroom</a>
       <a href="/investors">Investors</a>
+      <a href="/contact">Contact</a>
       <div class="nav-mobile__social">
         <a href="https://instagram.com/RangewayEV" target="_blank" rel="noopener">Instagram</a>
         <a href="https://www.linkedin.com/company/rangewayenergy" target="_blank" rel="noopener">LinkedIn</a>
@@ -136,18 +138,6 @@ import PathMark from "./PathMark.astro";
   .nav-links a:hover {
     color: var(--color-white);
     background: rgba(255, 255, 255, 0.08);
-  }
-
-  .nav-links .nav-investors {
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    margin-left: 4px;
-    font-weight: 600;
-  }
-
-  .nav-links .nav-investors:hover {
-    background: var(--color-warm);
-    color: var(--color-ink);
-    border-color: var(--color-warm);
   }
 
   .nav-social {
@@ -241,7 +231,7 @@ import PathMark from "./PathMark.astro";
     background: transparent;
   }
 
-  @media (max-width: 1080px) {
+  @media (max-width: 1180px) {
     .nav-links {
       display: none;
     }
