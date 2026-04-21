@@ -6,7 +6,7 @@ const partners = [
   { name: "HyWatts", href: "https://hywatts.com", logo: "/images/partners/hywatts.webp" },
   { name: "Juice", href: "https://js.eco", logo: "/images/partners/juice.png" },
   { name: "Monta", href: "https://monta.com", logo: "/images/partners/monta.png" },
-  { name: "ReNuTeq", href: "https://renuteq.com", logo: "/images/partners/renuteq.jpg" },
+  { name: "ReNuTeq", href: "https://renuteq.com", logo: "/images/partners/renuteq.jpg", scale: 0.7 },
   { name: "WattsUp", href: "https://wattsupev.io/", logo: "/images/partners/wattsup.png" }
 ];
 ---
@@ -29,6 +29,7 @@ const partners = [
           target="_blank"
           rel="noopener"
           aria-label={`${p.name} (opens in new tab)`}
+          style={p.scale ? `--logo-scale: ${p.scale}` : undefined}
         >
           <picture>
             {p.logoDark && <source srcset={p.logoDark} media="(prefers-color-scheme: dark)" />}
@@ -74,11 +75,12 @@ const partners = [
   }
 
   .partners__logo {
+    --logo-scale: 1;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 44px;
-    max-width: 180px;
+    height: calc(44px * var(--logo-scale));
+    max-width: calc(180px * var(--logo-scale));
     filter: grayscale(1);
     opacity: 0.65;
     transition: filter var(--dur-fast) var(--ease-standard),
@@ -95,9 +97,9 @@ const partners = [
   .partners__logo img,
   .partners__logo picture {
     height: 100%;
-    max-height: 44px;
+    max-height: calc(44px * var(--logo-scale));
     width: auto;
-    max-width: 180px;
+    max-width: calc(180px * var(--logo-scale));
     object-fit: contain;
   }
 
@@ -127,11 +129,11 @@ const partners = [
     }
 
     .partners__logo {
-      height: 36px;
+      height: calc(36px * var(--logo-scale));
     }
 
     .partners__logo img {
-      max-height: 36px;
+      max-height: calc(36px * var(--logo-scale));
     }
   }
 </style>
