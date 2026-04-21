@@ -25,7 +25,8 @@ const partners = [
     description:
       "European engineering for the chargers at the core of the experience. Ekoenergetyka hardware is chosen for reliability, service life, and a design language worthy of a hospitality-forward site.",
     href: "https://ekoenergetyka.com/america/",
-    logo: "/images/partners/ekoenergetyka.png"
+    logo: "/images/partners/ekoenergetyka.png",
+    logoDark: "/images/partners/ekoenergetyka-white.png"
   },
   {
     name: "HyWatts",
@@ -91,7 +92,12 @@ const partners = [
             <div class="partner-row__label">
               <span class="partner-row__num">/{String(i + 1).padStart(2, "0")}</span>
               <div class="partner-row__mark">
-                {p.logo && <img src={p.logo} alt={`${p.name} logo`} loading="lazy" />}
+                {p.logo && (
+                  <picture>
+                    {p.logoDark && <source srcset={p.logoDark} media="(prefers-color-scheme: dark)" />}
+                    <img src={p.logo} alt={`${p.name} logo`} loading="lazy" />
+                  </picture>
+                )}
               </div>
               <div>
                 <h3>{p.name}</h3>
