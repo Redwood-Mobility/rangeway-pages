@@ -2,71 +2,86 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHero from "../components/PageHero.astro";
 
-const partners = [
+const partnerGroups = [
   {
-    name: "Carbon DC",
-    role: "Energy infrastructure",
-    description:
-      "Our partner on behind-the-meter energy systems. Carbon DC designs and delivers the power architecture that makes premium sites feasible, including utility interconnect, battery, and solar integration.",
-    href: "https://carbondc.io",
-    logo: "/images/partners/carbondc.png"
+    title: "Structural and Building",
+    partners: [
+      {
+        name: "ReNuTeq",
+        role: "Structural and building partner",
+        description:
+          "Purpose-built structures for every Rangeway format. ReNuTeq helps us ship high-quality canopies, lounges, and supporting buildings faster than traditional construction allows.",
+        href: "https://renuteq.com",
+        logo: "/images/partners/renuteq.jpg"
+      }
+    ]
   },
   {
-    name: "ChargeMate",
-    role: "24/7 AI driver support",
-    description:
-      "The always-on concierge for every Rangeway site. ChargeMate combines AI-led troubleshooting with escalation to real Trailkeepers, so no driver is ever stuck.",
-    href: "https://chargemate.ai",
-    logo: "/images/partners/chargemate.jpg"
+    title: "Energy and Infrastructure",
+    partners: [
+      {
+        name: "Carbon DC",
+        role: "Energy infrastructure",
+        description:
+          "Our partner on behind-the-meter energy systems. Carbon DC designs and delivers the power architecture that makes premium sites feasible, including utility interconnect, battery, and solar integration.",
+        href: "https://carbondc.io",
+        logo: "/images/partners/carbondc.png"
+      },
+      {
+        name: "Ekoenergetyka",
+        role: "Ultra-fast charging hardware",
+        description:
+          "European engineering for the chargers at the core of the experience. Ekoenergetyka hardware is chosen for reliability, service life, and a design language worthy of a hospitality-forward site.",
+        href: "https://ekoenergetyka.com/america/",
+        logo: "/images/partners/ekoenergetyka.png",
+        logoDark: "/images/partners/ekoenergetyka-white.png"
+      },
+      {
+        name: "HyWatts",
+        role: "Modular off-grid power systems",
+        description:
+          "Modular Power-Plant-in-a-Box systems that integrate solar, battery storage, and hydrogen-ready generation. HyWatts enables grid-independent operation at sites where utility interconnection is slow, expensive, or unavailable.",
+        href: "https://hywatts.com",
+        logo: "/images/partners/hywatts.webp"
+      }
+    ]
   },
   {
-    name: "Ekoenergetyka",
-    role: "Ultra-fast charging hardware",
-    description:
-      "European engineering for the chargers at the core of the experience. Ekoenergetyka hardware is chosen for reliability, service life, and a design language worthy of a hospitality-forward site.",
-    href: "https://ekoenergetyka.com/america/",
-    logo: "/images/partners/ekoenergetyka.png",
-    logoDark: "/images/partners/ekoenergetyka-white.png"
-  },
-  {
-    name: "HyWatts",
-    role: "Modular off-grid power systems",
-    description:
-      "Modular Power-Plant-in-a-Box systems that integrate solar, battery storage, and hydrogen-ready generation. HyWatts enables grid-independent operation at sites where utility interconnection is slow, expensive, or unavailable.",
-    href: "https://hywatts.com",
-    logo: "/images/partners/hywatts.webp"
-  },
-  {
-    name: "Juice",
-    role: "Plug-and-charge technology",
-    description:
-      "Seamless authentication and session handling. Juice powers the plug-and-charge experience that lets drivers arrive, plug in, and go, without apps or friction.",
-    href: "https://js.eco",
-    logo: "/images/partners/juice.png"
-  },
-  {
-    name: "Monta",
-    role: "Charge point management",
-    description:
-      "The software layer that runs the chargers. Monta handles payments, roaming, uptime monitoring, and the operational backbone that keeps every stall reliable.",
-    href: "https://monta.com",
-    logo: "/images/partners/monta.png"
-  },
-  {
-    name: "ReNuTeq",
-    role: "Structural and building partner",
-    description:
-      "Purpose-built structures for every Rangeway format. ReNuTeq helps us ship high-quality canopies, lounges, and supporting buildings faster than traditional construction allows.",
-    href: "https://renuteq.com",
-    logo: "/images/partners/renuteq.jpg"
-  },
-  {
-    name: "WattsUp",
-    role: "Predictive maintenance",
-    description:
-      "The quiet work of staying reliable. WattsUp analyzes charger telemetry to anticipate failures before drivers ever feel them, keeping uptime where hospitality expects it.",
-    href: "https://wattsupev.io/",
-    logo: "/images/partners/wattsup.png"
+    title: "Software and Driver Experience",
+    partners: [
+      {
+        name: "ChargeMate",
+        role: "24/7 AI driver support",
+        description:
+          "The always-on concierge for every Rangeway site. ChargeMate combines AI-led troubleshooting with escalation to real Trailkeepers, so no driver is ever stuck.",
+        href: "https://chargemate.ai",
+        logo: "/images/partners/chargemate.jpg"
+      },
+      {
+        name: "Juice",
+        role: "Plug-and-charge technology",
+        description:
+          "Seamless authentication and session handling. Juice powers the plug-and-charge experience that lets drivers arrive, plug in, and go, without apps or friction.",
+        href: "https://js.eco",
+        logo: "/images/partners/juice.png"
+      },
+      {
+        name: "Monta",
+        role: "Charge point management",
+        description:
+          "The software layer that runs the chargers. Monta handles payments, roaming, uptime monitoring, and the operational backbone that keeps every stall reliable.",
+        href: "https://monta.com",
+        logo: "/images/partners/monta.png"
+      },
+      {
+        name: "WattsUp",
+        role: "Predictive maintenance",
+        description:
+          "The quiet work of staying reliable. WattsUp analyzes charger telemetry to anticipate failures before drivers ever feel them, keeping uptime where hospitality expects it.",
+        href: "https://wattsupev.io/",
+        logo: "/images/partners/wattsup.png"
+      }
+    ]
   }
 ];
 ---
@@ -86,37 +101,41 @@ const partners = [
 
   <section class="section">
     <div class="container">
-      <ul class="partners-list">
-        {partners.map((p, i) => (
-          <li class="partner-row reveal">
-            <div class="partner-row__label">
-              <span class="partner-row__num">/{String(i + 1).padStart(2, "0")}</span>
-              <div class="partner-row__mark">
-                {p.logo && (
-                  <picture>
-                    {p.logoDark && <source srcset={p.logoDark} media="(prefers-color-scheme: dark)" />}
-                    <img src={p.logo} alt={`${p.name} logo`} loading="lazy" />
-                  </picture>
-                )}
-              </div>
-              <div>
-                <h3>{p.name}</h3>
-                <p class="partner-row__role">{p.role}</p>
-              </div>
-            </div>
-            <div class="partner-row__body">
-              <p>{p.description}</p>
-              <a class="btn-link" href={p.href} target="_blank" rel="noopener">
-                Visit {p.name}
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M7 17L17 7" />
-                  <polyline points="7 7 17 7 17 17" />
-                </svg>
-              </a>
-            </div>
-          </li>
-        ))}
-      </ul>
+      {partnerGroups.map((group) => (
+        <div class="partner-group">
+          <p class="eyebrow eyebrow--plain partner-group__title reveal">{group.title}</p>
+          <ul class="partners-list">
+            {group.partners.map((p) => (
+              <li class="partner-row reveal">
+                <div class="partner-row__label">
+                  <div class="partner-row__mark">
+                    {p.logo && (
+                      <picture>
+                        {p.logoDark && <source srcset={p.logoDark} media="(prefers-color-scheme: dark)" />}
+                        <img src={p.logo} alt={`${p.name} logo`} loading="lazy" />
+                      </picture>
+                    )}
+                  </div>
+                  <div>
+                    <h3>{p.name}</h3>
+                    <p class="partner-row__role">{p.role}</p>
+                  </div>
+                </div>
+                <div class="partner-row__body">
+                  <p>{p.description}</p>
+                  <a class="btn-link" href={p.href} target="_blank" rel="noopener">
+                    Visit {p.name}
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M7 17L17 7" />
+                      <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                  </a>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </div>
   </section>
 
@@ -183,12 +202,13 @@ const partners = [
     object-fit: contain;
   }
 
-  .partner-row__num {
-    font-family: var(--font-heading);
-    font-size: 0.8rem;
-    letter-spacing: 0.22em;
+  .partner-group + .partner-group {
+    margin-top: var(--space-9);
+  }
+
+  .partner-group__title {
+    margin: 0 0 var(--space-4);
     color: var(--color-warm-deep);
-    font-weight: 600;
   }
 
   .partner-row h3 {
