@@ -24,13 +24,6 @@ const values = [
     body: "A Trailhead in a small town and a Summit on a weekend should feel made by the same hands. Same voice. Same care."
   }
 ];
-
-const heritage = [
-  { place: "Wynn Las Vegas", role: "Luxury hospitality operations" },
-  { place: "Cosmopolitan of Las Vegas", role: "Guest experience and programming" },
-  { place: "Grand Hyatt Nashville", role: "Openings and lifecycle" },
-  { place: "Sensei", role: "Wellness and retreat hospitality" }
-];
 ---
 
 <BaseLayout
@@ -49,83 +42,29 @@ const heritage = [
   <section class="section">
     <div class="container-narrow prose-lg reveal">
       <p>
-        Rangeway was founded by a hospitality operator with over 15 years at premium properties
-        including Wynn Las Vegas, the Cosmopolitan of Las Vegas, Grand Hyatt Nashville, and Sensei
-        wellness retreats. That is an unusual background for an EV charging company. That is the
-        point.
+        Rangeway was founded by a hospitality operator with over 15 years at premium luxury
+        resorts, wellness retreats, and flagship urban hotels. That is an unusual background for
+        an EV charging company. That is the point.
       </p>
       <p>
-        The conviction behind Rangeway is simple. The EV charging industry has treated charging as
-        a utility problem. We believe it is a hospitality problem. Drivers are guests. Stops are
-        experiences. The wait is the product.
+        It is also only half of the story. Rangeway's founder is equally rooted in the EV driver
+        community, as an EV club director and co-founder. The instincts behind every Rangeway
+        decision come from 15 years of running guest experiences at the highest level and from
+        thousands of real conversations with real drivers on real road trips.
       </p>
       <p>
-        We are building the answer on our own terms. Every location is designed as a place you
+        That combination is the conviction behind Rangeway. The EV charging industry has treated
+        charging as a utility problem. We believe it is a hospitality problem. Drivers are guests.
+        Stops are experiences. The wait is the product. We know which stops have broken the trip,
+        which lounges never existed, and which corridors have been left behind. We have been the
+        drivers stopping at them.
+      </p>
+      <p>
+        So we are building the answer on our own terms. Every location is designed as a place you
         would choose, not a place you tolerate. Every format, from the smallest Trailhead to the
         largest Summit, holds the same hospitality standard. The scale shifts with the road. The
         care does not.
       </p>
-    </div>
-  </section>
-
-  <section class="section section-cream community">
-    <div class="container community__inner">
-      <div class="reveal community__text">
-        <p class="eyebrow">Rooted in the EV community</p>
-        <h2>Built by drivers, for drivers.</h2>
-        <p class="prose-lg" style="margin-top: var(--space-5);">
-          Rangeway is not a company that observed the EV community from outside. Our founder is
-          Community Director of the Bay Area Rivian Club, co-founder of NorCal EVs, and host of the
-          Trail Marker Podcast and the Rivian Clubs of America Podcast. The instincts behind every Rangeway decision
-          are shaped by thousands of real conversations with real drivers on real road trips.
-        </p>
-        <p class="prose-lg muted">
-          We know which stops have broken the trip. We know which lounges never existed. We know
-          which corridors have been left behind. Rangeway is the network that community wanted
-          someone to build, built by the people who wanted it.
-        </p>
-      </div>
-
-      <ul class="community__affiliations reveal">
-        <li>
-          <span class="community__role">Community Director</span>
-          <span class="community__org">Bay Area Rivian Club</span>
-        </li>
-        <li>
-          <span class="community__role">Co-founder</span>
-          <span class="community__org">NorCal EVs</span>
-        </li>
-        <li>
-          <span class="community__role">Host</span>
-          <span class="community__org">Trail Marker Podcast</span>
-        </li>
-        <li>
-          <span class="community__role">Host</span>
-          <span class="community__org">Rivian Clubs of America Podcast</span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section team-strip">
-    <div class="container">
-      <div class="team-strip__heading reveal">
-        <p class="eyebrow">The team</p>
-        <h2>The people behind Rangeway.</h2>
-        <p class="prose-lg muted" style="margin-top: var(--space-4); max-width: 52ch;">
-          A small group of hospitality operators, energy veterans, and EV community organizers,
-          building the network together.
-        </p>
-      </div>
-      <div style="margin-top: var(--space-6);">
-        <a class="btn btn-link" href="/team">
-          Meet the team
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12" />
-            <polyline points="13 6 19 12 13 18" />
-          </svg>
-        </a>
-      </div>
     </div>
   </section>
 
@@ -148,25 +87,25 @@ const heritage = [
     </div>
   </section>
 
-  <section class="section">
-    <div class="container heritage">
-      <div class="reveal">
-        <p class="eyebrow">Where the instincts come from</p>
-        <h2>A hospitality lineage.</h2>
-        <p class="prose-lg muted" style="margin-top: var(--space-4); max-width: 50ch;">
-          Every decision at Rangeway is shaped by 15 years of running hospitality at the highest
-          level. The details our team watches for are the ones guests never have to notice.
+  <section class="section team-strip">
+    <div class="container">
+      <div class="team-strip__heading reveal">
+        <p class="eyebrow">The team</p>
+        <h2>The people behind Rangeway.</h2>
+        <p class="prose-lg muted" style="margin-top: var(--space-4); max-width: 52ch;">
+          A small group of hospitality operators, energy veterans, and EV community organizers,
+          building the network together.
         </p>
       </div>
-
-      <ul class="heritage-list reveal">
-        {heritage.map((h) => (
-          <li>
-            <span class="heritage-list__place">{h.place}</span>
-            <span class="heritage-list__role">{h.role}</span>
-          </li>
-        ))}
-      </ul>
+      <div style="margin-top: var(--space-6);">
+        <a class="btn btn-link" href="/team">
+          Meet the team
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="13 6 19 12 13 18" />
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -220,100 +159,12 @@ const heritage = [
     max-width: 52ch;
   }
 
-  .heritage {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-8);
-    align-items: start;
-  }
-
-  .heritage-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .heritage-list li {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: var(--space-4);
-    padding: var(--space-5) 0;
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .heritage-list li:first-child {
-    border-top: 1px solid var(--color-border);
-  }
-
-  .heritage-list__place {
-    font-family: var(--font-heading);
-    font-weight: 600;
-    font-size: 1.15rem;
-  }
-
-  .heritage-list__role {
-    font-size: 0.9rem;
-    color: var(--color-text-muted);
-    text-align: right;
-  }
-
-  .community__inner {
-    display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: var(--space-8);
-    align-items: center;
-  }
-
-  .community__affiliations {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .community__affiliations li {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: var(--space-4);
-    padding: var(--space-5) 0;
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .community__affiliations li:first-child {
-    border-top: 1px solid var(--color-border);
-  }
-
-  .community__role {
-    font-family: var(--font-heading);
-    font-size: 0.78rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--color-warm-deep);
-    font-weight: 600;
-  }
-
-  .community__org {
-    font-family: var(--font-heading);
-    font-weight: 600;
-    font-size: 1.05rem;
-    color: var(--color-text);
-    text-align: right;
-  }
-
   .team-strip__heading {
     max-width: 620px;
   }
 
   @media (max-width: 900px) {
-    .values,
-    .heritage,
-    .community__inner {
+    .values {
       grid-template-columns: 1fr;
     }
   }
