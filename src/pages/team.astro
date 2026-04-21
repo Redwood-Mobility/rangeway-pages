@@ -7,36 +7,24 @@ const team = [
     name: "Zak Winnick",
     role: "Founder and CEO",
     bio: "Hospitality operator with over 15 years at premium properties including Wynn Las Vegas, the Cosmopolitan of Las Vegas, Grand Hyatt Nashville, and Sensei. Community Director of the Bay Area Rivian Club, co-founder of NorCal EVs, and host of the Trail Marker Podcast and the Rivian Clubs of America Podcast.",
-    affiliations: [
-      "Bay Area Rivian Club",
-      "NorCal EVs",
-      "Trail Marker Podcast",
-      "Rivian Clubs of America Podcast"
-    ],
     photo: "/images/team/zak-winnick.jpg"
   },
   {
     name: "Theo Reichgelt",
     role: "Brand and Growth",
     bio: "Founder of Nexxt Industry, Europe's leading eMobility marketing agency. Over eight years specializing in charging network brand development and market positioning. Host of The eMobility Marketing Podcast.",
-    affiliations: [
-      "Nexxt Industry",
-      "The eMobility Marketing Podcast"
-    ],
     photo: "/images/team/theo-reichgelt.jpg"
   },
   {
     name: "James Regan",
     role: "Finance and Strategy",
     bio: "Over 30 years in corporate development and business analytics. Managing Partner at CapitalWorks. Expert in infrastructure project financing and capital strategy for the buildout of the Rangeway network.",
-    affiliations: ["CapitalWorks"],
     photo: "/images/team/james-regan.jpg"
   },
   {
     name: "Stephanie McGreevy",
     role: "Policy and Public Capital",
     bio: "Over 15 years in zero-emission vehicle infrastructure. Founder of Open Energy Alliance. Specializes in LCFS optimization and grant funding strategies, including NEVI and state-level incentive programs.",
-    affiliations: ["Open Energy Alliance"],
     photo: "/images/team/stephanie-mcgreevy.jpg"
   }
 ];
@@ -71,9 +59,6 @@ const team = [
               <h3>{m.name}</h3>
               <p class="team-card__role">{m.role}</p>
               <p class="team-card__bio">{m.bio}</p>
-              <ul class="team-card__affiliations">
-                {m.affiliations.map((a) => <li>{a}</li>)}
-              </ul>
             </div>
           </li>
         ))}
@@ -171,32 +156,12 @@ const team = [
     font-size: 1rem;
     line-height: 1.65;
     color: var(--color-text);
-    margin: 0 0 var(--space-4);
+    margin: 0;
   }
 
   .team-card--placeholder .team-card__bio {
     color: var(--color-text-muted);
     font-style: italic;
-  }
-
-  .team-card__affiliations {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-2);
-  }
-
-  .team-card__affiliations li {
-    font-family: var(--font-heading);
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-text-muted);
-    padding: 4px 10px;
-    border: 1px solid var(--color-border);
-    border-radius: 999px;
   }
 
   @media (max-width: 900px) {
