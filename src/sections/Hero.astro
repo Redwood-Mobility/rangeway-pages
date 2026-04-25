@@ -1,10 +1,15 @@
 ---
-const image = "/images/hero-mountain-waystation.png";
+const desktopImage = "/images/hero-mountain-waystation.png";
+const mobileImage = "/images/hero-mountain-waystation-mobile.png";
+const heroAlt = "A Rangeway Waystation at dusk with sunset-lit mountains behind, lounge interior glowing through the glass facade, and a Rivian charging under the timber canopy";
 ---
 
 <section class="hero">
   <div class="hero__media">
-    <img src={image} alt="A Rangeway Waystation at dusk with sunset-lit mountains behind, lounge interior glowing through the glass facade, and a Rivian charging under the timber canopy" fetchpriority="high" />
+    <picture>
+      <source media="(max-width: 720px)" srcset={mobileImage} />
+      <img src={desktopImage} alt={heroAlt} fetchpriority="high" />
+    </picture>
     <div class="hero__scrim"></div>
   </div>
 
@@ -56,7 +61,7 @@ const image = "/images/hero-mountain-waystation.png";
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 35% 60%;
+    object-position: center 65%;
   }
 
   .hero__scrim {
@@ -152,12 +157,7 @@ const image = "/images/hero-mountain-waystation.png";
       display: none;
     }
     .hero__media img {
-      object-position: 22% 55%;
-    }
-    .hero__scrim {
-      background:
-        linear-gradient(180deg, rgba(17, 13, 12, 0.55) 0%, rgba(17, 13, 12, 0.7) 55%, rgba(17, 13, 12, 0.92) 100%),
-        radial-gradient(circle at 20% 30%, rgba(244, 168, 85, 0.2), transparent 55%);
+      object-position: center center;
     }
   }
 </style>
