@@ -14,14 +14,6 @@ const heroAlt = "A Rangeway Waystation at dusk with sunset-lit mountains behind,
   </div>
 
   <div class="hero__inner container">
-    <a class="hero__pill" href="https://climatize.earth" target="_blank" rel="noopener">
-      <span class="hero__pill-dot" aria-hidden="true"></span>
-      <span class="hero__pill-text">Now raising on Climatize. Build Mojave with us.</span>
-      <svg class="hero__pill-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <line x1="5" y1="12" x2="19" y2="12" />
-        <polyline points="13 6 19 12 13 18" />
-      </svg>
-    </a>
     <p class="eyebrow hero__eyebrow">America's First Hospitality-Driven EV Charging Network</p>
     <h1 class="hero__headline">Travel Farther, <br />Stop Better.</h1>
     <p class="hero__lede">
@@ -84,54 +76,6 @@ const heroAlt = "A Rangeway Waystation at dusk with sunset-lit mountains behind,
     position: relative;
     z-index: 2;
     max-width: 820px;
-  }
-
-  .hero__pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 7px 14px 7px 12px;
-    margin: 0 0 var(--space-5);
-    border-radius: var(--radius-pill);
-    background: rgba(244, 168, 85, 0.14);
-    border: 1px solid rgba(244, 168, 85, 0.45);
-    color: var(--color-warm-lite, #f7c27a);
-    font-family: var(--font-heading);
-    font-weight: 600;
-    font-size: 0.86rem;
-    letter-spacing: 0.01em;
-    white-space: nowrap;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    transition: background var(--dur-fast) var(--ease-standard),
-      border-color var(--dur-fast) var(--ease-standard),
-      transform var(--dur-fast) var(--ease-standard),
-      color var(--dur-fast) var(--ease-standard);
-  }
-
-  .hero__pill:hover {
-    background: rgba(244, 168, 85, 0.22);
-    border-color: rgba(244, 168, 85, 0.7);
-    color: var(--color-white);
-    transform: translateY(-1px);
-  }
-
-  .hero__pill-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 999px;
-    background: var(--color-warm);
-    box-shadow: 0 0 0 4px rgba(244, 168, 85, 0.18);
-    flex: 0 0 auto;
-  }
-
-  .hero__pill-arrow {
-    flex: 0 0 auto;
-    transition: transform var(--dur-fast) var(--ease-standard);
-  }
-
-  .hero__pill:hover .hero__pill-arrow {
-    transform: translateX(3px);
   }
 
   .hero__eyebrow {
@@ -214,14 +158,6 @@ const heroAlt = "A Rangeway Waystation at dusk with sunset-lit mountains behind,
     }
     .hero__media img {
       object-position: center center;
-    }
-    .hero__pill {
-      font-size: 0.72rem;
-      padding: 5px 11px 5px 9px;
-      gap: 8px;
-    }
-    .hero__pill-arrow {
-      display: none;
     }
   }
 </style>
