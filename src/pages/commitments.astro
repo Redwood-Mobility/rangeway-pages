@@ -186,9 +186,6 @@ const sections = [
   .commit-toc {
     border-bottom: 1px solid var(--color-border);
     background: var(--color-cream);
-    position: sticky;
-    top: calc(var(--nav-height) + 12px);
-    z-index: 5;
   }
 
   .commit-toc ul {
@@ -291,10 +288,6 @@ const sections = [
   }
 
   @media (max-width: 780px) {
-    .commit-toc {
-      position: static;
-    }
-
     .commit-toc ul {
       gap: var(--space-3) var(--space-5);
     }
