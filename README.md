@@ -1,6 +1,6 @@
 # rangeway-redesign
 
-The new rangewayev.com. Astro, static, deploys to GitHub Pages.
+The new rangeway.co. Astro, static, deploys to GitHub Pages.
 
 ## Local development
 
@@ -22,7 +22,7 @@ npm run preview
 
 Pushes to `main` trigger `.github/workflows/deploy.yml`, which builds and publishes to GitHub Pages. Enable Pages in repo settings with source set to **GitHub Actions**.
 
-Custom domain (CNAME for `rangewayev.com`) is not committed yet. Flip the DNS and add a CNAME file when ready to replace the legacy site at `rangeway-pages`.
+Custom domain `rangeway.co` is configured via `public/CNAME`.
 
 ## Writing rules
 
