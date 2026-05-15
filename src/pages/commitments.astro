@@ -6,6 +6,7 @@ const sections = [
   {
     id: "environment",
     eyebrow: "01 — Environment",
+    tocLabel: "Environment",
     title: "Environmental sustainability",
     lead:
       "Rangeway exists because the way America travels is changing. Every premium charging session we deliver helps another driver make long-distance electric travel feel normal, comfortable, and reliable. That is how the transition actually happens. Environmental responsibility is built into how every Rangeway location is designed, financed, built, and operated.",
@@ -35,6 +36,7 @@ const sections = [
   {
     id: "social-impact",
     eyebrow: "02 — Communities",
+    tocLabel: "Communities",
     title: "Social impact",
     lead:
       "We build where charging is thinnest. Rural communities, smaller cities, and the corridors that connect them are the places where the EV transition stalls without good infrastructure. A Rangeway location is designed to be a real economic presence in those communities, not a kiosk in a parking lot.",
@@ -59,6 +61,7 @@ const sections = [
   {
     id: "inclusion",
     eyebrow: "03 — Inclusion",
+    tocLabel: "Inclusion",
     title: "Diversity, equity, and inclusion",
     lead:
       "Premium hospitality should welcome everyone. The same standard applies to who we serve at our locations and to who we build our company with.",
@@ -83,6 +86,7 @@ const sections = [
   {
     id: "growth",
     eyebrow: "04 — People",
+    tocLabel: "People",
     title: "Career growth and learning",
     lead:
       "We think like hotel operators, not utility companies. That shapes how we hire, how we train, and what we offer the people who work at a Rangeway location.",
@@ -124,9 +128,9 @@ const sections = [
     <div class="container">
       <ul>
         {sections.map((s) => (
-          <li><a href={`#${s.id}`}>{s.title}</a></li>
+          <li><a href={`#${s.id}`}>{s.tocLabel}</a></li>
         ))}
-        <li><a href="#reporting">Showing our work</a></li>
+        <li><a href="#reporting">Accountability</a></li>
       </ul>
     </div>
   </nav>
@@ -185,7 +189,7 @@ const sections = [
 <style>
   .commit-toc {
     border-bottom: 1px solid var(--color-border);
-    background: var(--color-cream);
+    background: var(--surface-alt);
   }
 
   .commit-toc ul {
